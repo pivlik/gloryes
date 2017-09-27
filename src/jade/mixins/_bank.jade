@@ -1,0 +1,22 @@
+mixin bank(img, disabled)
+    .l-banks__item.b-bank(class=(disabled) ? "b-bank_is_disabled" : "")
+        .b-bank__row
+            .b-bank__col
+                .b-bank__img-wrap
+                    img(src!=img).b-bank__img
+            .b-bank__col
+                a(href="#" target="_blank").b-bank__link Условия программы
+        .b-bank__row.b-bank__row_border_bottom
+            .b-bank__col
+                .b-bank__key минимальный кредит
+                .b-bank__val от 300 000<span class="b-ruble">o</span>
+            .b-bank__col
+                .b-bank__key процентная ставка
+                .b-bank__val от 11,4%
+        .b-bank__row
+            .b-bank__col
+                .b-bank__key первый взнос
+                .b-bank__val от 20%
+            .b-bank__col
+                .b-bank__key срок кредита
+                .b-bank__val до 20 лет

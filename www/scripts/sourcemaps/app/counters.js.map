@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/counters.js"],"names":["define"],"mappings":"AAAA,YAIAA,QAAO,gBAAiB,UAAW,WAC/B","file":"../../app/counters.js","sourcesContent":["'use strict';\n\n/* jshint ignore:start */\n//jscs:disable\ndefine('app/counters', ['jquery'], function () {\n    return {};\n});\n//jscs:enablex\n/* jshint ignore:end */"]}

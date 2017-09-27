@@ -1,0 +1,25 @@
+$documents: 'doc', 'jpg', 'pdf', 'png', 'xls', 'zip';
+
+@each $document in $documents {
+    .b-documents__item_format_#{$document} {
+        $image: 'document-#{$document}';
+
+        &:after {
+            background-image: url('/img/documents/#{$document}.svg');
+            width: 50px;
+            height: 55px;
+        }
+    }
+}
+
+.b-documents__item_format_xlsx:after {
+    background-image: url('/img/documents/xls.svg');
+    width: 50px;
+    height: 55px;
+}
+
+.b-documents__item_format_docx:after {
+    background-image: url('/img/documents/doc.svg');
+    width: 50px;
+    height: 55px;
+}

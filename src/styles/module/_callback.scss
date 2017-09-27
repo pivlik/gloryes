@@ -1,0 +1,58 @@
+.b-popup__cnt {
+    border: 5px solid $green;
+
+    .b-btn {
+        background-color: $green;
+        border-color: $green;
+
+        &:hover {
+            background-color: rgba($green, .9);
+            color: $white;
+        }
+    }
+
+    input {
+        &::placeholder {
+            color: $green;
+            font-style: $input-placeholder-font-style;
+            font-size: $input-placeholder-font-size;
+            opacity: $input-placeholder-opacity;
+        }
+
+        &:focus,
+        &:hover {
+            border-color: $green;
+        }
+    }
+}
+
+.b-callback {
+    @include rhythm-padding(2);
+
+    color: $green;
+
+    @media #{$medium-up} {
+        min-width: 580px;
+    }
+}
+
+.b-callback__ttl {
+    font-size: 24px;
+    line-height: rhythm(1.5);
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.b-callback__row {
+    @include margin-trailer(3);
+
+    &:last-child {
+        @include margin-trailer(0);
+    }
+}
+
+.b-callback__lbl {
+    @include margin-trailer(1);
+    display: block;
+    color: $green;
+}

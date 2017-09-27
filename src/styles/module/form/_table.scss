@@ -1,0 +1,19 @@
+table {
+    @include margin-trailer(2);
+    width: 100%;
+}
+
+th {
+    line-height: $base-vertical-rhythm * 1.5;
+    padding: 0 gutter();
+    font-weight: 900;
+    color: $gray;
+}
+
+tr {
+    border-bottom: 1px solid $gray;
+}
+
+td {
+    padding: 20px gutter();
+}

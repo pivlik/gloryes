@@ -1,0 +1,140 @@
+$select-font-size: 16px;
+$select-font-family: inherit;
+
+$select-border-width: 1px;
+$select-border-color: #ccc;
+$select-border-radius: 4px;
+
+$select-color: $black;
+$select-item-color-hover: #999;
+
+$select-item-background-color: $white;
+$select-item-background-color-selected: #ccc;
+$select-item-background-color-hover: lighten($select-item-background-color-selected, 15%);
+
+$select-item-border-width: 1px;
+$select-item-border-color: #eee;
+
+$select-height: $btn-height; // rhythm unit
+
+$select-height-current: rhythm($select-height) - ($select-border-width * 2);
+
+// Ignore Select2 rules
+// scss-lint:disable SelectorFormat
+select {
+    opacity: 0;
+}
+
+.selectric-wrapper {
+    font-family: $select-font-family;
+}
+
+.selectric {
+    border: $select-border-width solid $select-border-color;
+    border-radius: $select-border-radius;
+    background-color: $select-item-background-color;
+
+    .label {
+        font-size: $select-font-size;
+        color: $select-color;
+        height: $select-height-current;
+        line-height: $select-height-current;
+        width: 80%;
+        margin-right: 0;
+    }
+
+    .button {
+        width: $select-height-current;
+        height: $select-height-current;
+
+        &:after {
+            border-top-color: $select-border-color;
+        }
+    }
+}
+
+.selectric-open {
+
+    .selectric {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-color: $select-border-color;
+
+        .button:after {
+            border-top: transparent;
+            border-bottom: 4px solid $select-border-color;
+        }
+    }
+}
+
+.selectric-hover {
+
+    .selectric {
+        border-color: $select-border-color;
+
+        .button:after {
+            border-top-color: $select-border-color;
+        }
+    }
+}
+
+.selectric-above.selectric-open {
+
+    .selectric {
+        border-bottom-left-radius: $select-border-radius;
+        border-bottom-right-radius: $select-border-radius;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .selectric-items {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: $select-border-radius;
+        border-top-right-radius: $select-border-radius;
+        border-top: $select-border-width solid $select-border-color;
+        border-bottom: none;
+
+        li {
+            border-bottom: $select-item-border-width solid $select-item-border-color;
+        }
+    }
+}
+
+.selectric-items {
+    overflow: hidden;
+    border-bottom-left-radius: $select-border-radius;
+    border-bottom-right-radius: $select-border-radius;
+    border: $select-border-width solid $select-border-color;
+    border-top: none;
+
+    li {
+        font-size: $select-font-size;
+        background-color: $select-item-background-color;
+        color: $select-color;
+        border-bottom: $select-item-border-width solid $select-item-border-color;
+        border-top: none;
+
+        &:hover {
+            background-color: $select-item-background-color-hover;
+            color: $select-item-color-hover;
+        }
+
+        &.selected {
+            background-color: $select-item-background-color-selected;
+            color: $select-item-color-hover;
+        }
+
+        &.selected:hover {
+            background-color: $select-item-background-color-selected;
+        }
+
+        &:first-child {
+            border-top: none;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

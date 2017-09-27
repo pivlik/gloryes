@@ -1,0 +1,16 @@
+.l-mortgage {
+    @extend %l-row;
+}
+
+.l-mortgage__range-slider {
+
+    @include margin-trailer(2);
+}
+
+.l-mortgage__banks-item {
+
+
+    @media #{$medium-up} {
+
+    }
+}

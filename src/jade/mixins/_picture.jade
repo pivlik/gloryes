@@ -1,0 +1,33 @@
+//-source     - {String}  - путь до картиинки
+//-alt        - {String}  - альтернатиный текст для тега img
+//-imageWudth - {Number}  - указывается, когда картинка меньше 2560px и нужно сгенерировать не все source
+//-webp       - {Boolean} - добавляет в тег генерацию webp формата, но не удаляет основной формат, т.е. будет,
+//- допустим, и jpg и webp
+
+mixin picture(source, alt, imageWidth, webp)
+    -var imagePath = source.split('.')[0]
+    -var imageExtension = source.split('.')[1]
+    -var imageWidth = imageWidth || 2562
+    -var settings = [];
+    -var counter = 0;
+    -settings.push({breakpoint: 320, width: 320})
+    -settings.push({breakpoint: 321, width: 670})
+    -settings.push({breakpoint: 671, width: 960})
+    -settings.push({breakpoint: 961, width: 1280})
+    -settings.push({breakpoint: 1281, width: 1920})
+    -settings.push({breakpoint: 1921, width: 2560})
+    -settings.push({breakpoint: 2561, width: ''})
+
+    picture
+        each size in settings.reverse()
+            if (imageWidth > size.breakpoint)
+                if (counter === 0)
+                    -counter++
+                    if (webp)
+                        source(media='(min-width: #{size.breakpoint}px)' srcset='/img/#{imagePath}.webp' type="image/webp")
+                    source(media='(min-width: #{size.breakpoint}px)' srcset='/img/#{imagePath}.#{imageExtension}' type="image/jpeg")
+                else
+                    if (webp)
+                        source(media='(min-width: #{size.breakpoint}px)' srcset='/img/#{imagePath}.webp' type="image/webp")
+                    source(media='(min-width: #{size.breakpoint}px)' srcset='/img/#{imagePath}-#{size.width}.#{imageExtension}' type="image/jpeg")
+        img(src='/img/#{imagePath}.#{imageExtension}' alt=alt)

@@ -1,0 +1,8 @@
+mixin anim-label(name, type, required)
+    -var type = type || 'text'
+    -var required = required || false
+    -var random = Math.ceil(Math.random() * 1000);
+
+    .b-anim-label.j-anim-label
+        input(id="input-#{random}" type=type required=required)
+        label(for="input-#{random}")=name

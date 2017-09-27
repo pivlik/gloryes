@@ -1,0 +1,25 @@
+.l-flat {
+    @extend %l-row;
+    @include rhythm-padding(3);
+}
+
+.l-flat__title {
+
+}
+
+.l-flat__cnt {
+    @include clearfix();
+}
+
+.l-flat__item {
+
+    @include margin-trailer(1);
+
+    @media #{$medium-up} {
+
+    }
+
+    @media #{$xlarge-up} {
+
+    }
+}

@@ -1,0 +1,23 @@
+.al-b-menu_is_active {
+    top: 0;
+}
+
+.al-b-menu_pos_bottom {
+    bottom: -120px;
+    top: auto;
+    border: {
+        bottom: none;
+        top: 5px solid $controls-color;
+    }
+;
+
+    .al-b-menu__ctrl {
+        bottom: 100%;
+        top: auto;
+    }
+
+    &.al-b-menu_is_active {
+        bottom: 0;
+    }
+}
+

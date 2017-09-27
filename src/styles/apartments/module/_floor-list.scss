@@ -1,0 +1,51 @@
+// LAYOUT
+@import '../layout/module/floor-list';
+
+// MODULE
+.al-b-floor-list {
+    text-align: center;
+}
+
+.al-b-floor-list__title {
+    @include text-transform();
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 45px;
+    color: rgba($black, .5);
+}
+
+.al-b-floor-list__wrap {
+    border: 1px solid rgba($black, .2);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.al-b-floor-list__item {
+    border-bottom: 1px solid rgba($black, .2);
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.al-b-floor-list__link {
+    $size: 48px;
+    width: $size;
+    height: $size;
+    line-height: $size;
+    font-size: 16px;
+    background-color: transparent;
+    color: $black;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+        background-color: rgba($white, .75);
+        color: $black;
+        text-decoration: none;
+    }
+}
+
+//STATE
+@import '../state/floor-list';

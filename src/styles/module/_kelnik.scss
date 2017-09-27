@@ -1,0 +1,31 @@
+$kelnik-color: $black;
+$kelnik-opacity: 1;
+$kelnik-width: 124px;
+$kelnik-height: 36px;
+// Hover
+$kelnik-color-hover: #808080;
+$kelnik-opacity-hover: 1;
+
+.b-kelnik {
+    text-decoration: none;
+    color: $kelnik-color;
+    display: inline-block;
+    overflow: hidden;
+    text-align: left;
+}
+
+.b-kelnik__img {
+    @include transition(fill, fill-opacity);
+    float: left;
+    width: $kelnik-width;
+    height: $kelnik-height;
+    fill: $kelnik-color;
+    margin-right: gutter(1);
+    fill-opacity: $kelnik-opacity;
+}
+
+//STATE
+.b-kelnik__img:hover {
+    fill-opacity: $kelnik-opacity-hover;
+    fill: $kelnik-color-hover;
+}

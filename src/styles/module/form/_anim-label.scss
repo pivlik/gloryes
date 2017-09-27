@@ -1,0 +1,41 @@
+$anim-label-font-size: $base-font-size;
+$anim-label-font-size-focus: 10px;
+$anim-label-tt-uppercase: false;
+$anim-label-tt-uppercase-focus: true;
+$anim-label-color: inherit;
+$anim-label-color-focus: inherit;
+
+.b-anim-label {
+    padding-top: rhythm($input-height);
+    position: relative;
+
+    label {
+        @include transition(top, font-size, text-transform, letter-spacing, color);
+        font-size: $anim-label-font-size;
+        line-height: rhythm($input-height);
+        display: block;
+        position: absolute;
+        top: rhythm($input-height);
+        left: gutter() / 2;
+        pointer-events: none;
+        cursor: text;
+        color: $anim-label-color;
+
+        @if ($anim-label-tt-uppercase) {
+            @include text-transform();
+        }
+    }
+
+    input:focus,
+    input.is-active {
+        ~ label {
+            font-size: $anim-label-font-size-focus;
+            top: 0;
+            color: $anim-label-color-focus;
+
+            @if ($anim-label-tt-uppercase-focus) {
+                @include text-transform();
+            }
+        }
+    }
+}

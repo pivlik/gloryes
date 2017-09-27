@@ -1,0 +1,51 @@
+<div class="al-l-pointers">
+    {{#each pointers}}
+        <div class="al-b-pointer
+                    {{#unless status}} al-b-pointer_is_disabled{{/unless}}
+                    {{#if @root.isSmooth}} animated zoomIn{{/if}}"
+            data-href="{{link}}"
+            data-status="{{status}}"
+            data-id="{{id}}"
+            data-left="{{left}}"
+            data-top="{{top}}"
+            style="top: {{top}}%; left: {{left}}%;"
+        >
+            {{#if header}}
+            <div class="al-b-pointer__num">
+                {{header}}
+            </div>
+            {{/if}}
+
+            {{#if content}}
+            <div class="al-b-pointer__txt">
+                {{content}}
+            </div>
+            {{/if}}
+        </div>
+    {{/each}}
+</div>
+
+{{#if floors}}
+    <div class="al-l-floor-list">
+        <div class="al-b-floor-list">
+            <div class="al-b-floor-list__title">Этаж</div>
+            <ul class="al-b-floor-list__wrap">
+                {{#each floors}}
+                    <li class="al-b-floor-list__item">
+                        <a class="al-b-floor-list__link {{#if selected}} al-b-floor-list__link_is_active{{/if}}"
+                            {{#if disabled}} disabled{{/if}}
+                            {{#unless disabled}} href="{{createPathBack link}}"{{/unless}}
+                        >
+                            {{number}}
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+{{/if}}
+
+<div id="bg"></div>
+<div id="svg_bottom"></div>
+<div id="plan"></div>
+<div id="svg_top"></div>

@@ -1,0 +1,14 @@
+{
+  "name": "eve-adobe",
+  "homepage": "https://github.com/adobe-webplatform/eve",
+  "version": "0.2.4",
+  "_release": "0.2.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.4",
+    "commit": "defdfcca6fb43ea46e33ae2bbb208a71c6b233a6"
+  },
+  "_source": "git://github.com/adobe-webplatform/eve.git",
+  "_target": "~0.2.4",
+  "_originalSource": "eve-adobe"
+}

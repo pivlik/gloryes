@@ -1,0 +1,13 @@
+ <ul class="b-dropdown__list">
+   {{#each floors}}
+        <li class="b-dropdown__item  {{#if disabled}} is-disabled {{/if}}     ">
+            {{#if link}}
+                <a class="b-dropdown__link {{#if selected}}is-active{{/if}} "
+                   href="{{@root.homePath}}{{link}}">
+                    {{number}}
+                </a>
+            {{/if}}
+        </li>
+
+    {{/each}}
+</ul>

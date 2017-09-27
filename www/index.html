@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie7"><![endif]-->
+<!--[if IE 8 ]><html class="ie8"><![endif]-->
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html><!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Author" content="Kelnik studios">
+    <meta name="viewport" content="width=1024">
+    <title>Main</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        #map {
+            width: 100%;
+            height: 500px;
+            height: 100%;
+            position: relative;
+            min-height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script>
+    var mapOpts = {
+        center: [60.1739546, 24.9334234],
+        zoom: 14,
+        markers: [
+            {
+                position: [60.167216, 24.917266],
+                icon: '/kswidgets/i/logo.png',
+                posIcon: [0, 0],
+                sizeIcon: [89, 36],
+                content: ''
+            }
+        ]
+    };
+    var mapOptions = {
+        center: new google.maps.LatLng(mapOpts.center[0], mapOpts.center[1]),
+        zoom: mapOpts.zoom,
+        zoomControl: true,
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.SMALL
+        },
+        panControl: false,
+        mapTypeControl: false,
+        streetViewControl: false,
+        // scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var initMaps = function() {
+        var gmap = document.getElementById('map');
+        if (!gmap) return;
+
+        var map = new google.maps.Map(gmap, mapOptions);
+        for (var i = 0, l = mapOpts.markers.length, marker, icon, infowindow, pos; i < l; i++) {
+            icon = new google.maps.MarkerImage(mapOpts.markers[i].icon, new google.maps.Size(mapOpts.markers[i].sizeIcon[0], mapOpts.markers[i].sizeIcon[1]), new google.maps.Point(mapOpts.markers[i].posIcon[0], mapOpts.markers[i].posIcon[1]));
+            pos = new google.maps.LatLng(mapOpts.markers[i].position[0], mapOpts.markers[i].position[1]);
+            marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+                icon: icon
+            });
+            if (typeof mapOpts.markers[i].content != 'undefined' && mapOpts.markers[i].content !== '') {
+                (function(map, mrk, info) {
+                    info = new google.maps.InfoWindow({
+                        content: mapOpts.markers[i].content,
+                        position: pos
+                    });
+                    google.maps.event.addListener(mrk, 'click', function() {
+                        mrk.setVisible(false);
+                        info.open(map);
+                    });
+                    google.maps.event.addListener(info, 'closeclick', function() {
+                        mrk.setVisible(true);
+                    });
+                })(map, marker, infowindow);
+            } else {
+                google.maps.event.addListener(marker, 'click', function() {
+                    window.location = '/kswidgets/';
+                });
+            }
+        }
+    };
+
+    initMaps();
+</script>
+</body>
+</html>

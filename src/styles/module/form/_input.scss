@@ -1,0 +1,96 @@
+// Fields
+$input-color: $black;
+$input-bg-color: $white;
+$input-bd-width: 1px;
+$input-bd-color: $gray;
+$input-border-radius: 4px;
+$input-font-size: 20px;
+$input-font-family: inherit;
+$input-height: 5; //rhythm unit
+$textarea-min-height: 10; // rows
+//Placeholder
+$input-placeholder-color: $black;
+$input-placeholder-font-style: normal;
+$input-placeholder-font-size: $input-font-size;
+$input-placeholder-opacity: 1;
+//Focus
+$input-bd-color-focus: #663399;
+
+%input {
+    @include transition(border-color);
+    font-family: $input-font-family;
+    color: $input-color;
+    background-color: $input-bg-color;
+    border: $input-bd-width solid $input-bd-color;
+    font-size: $input-font-size;
+    width: 100%;
+    border-radius: $input-border-radius;
+    padding: {
+        top: 0;
+        bottom: 0;
+        left: gutter(1);
+        right: gutter(1);
+    };
+
+
+    // Стили плейсходлера
+    &::placeholder {
+        color: $input-placeholder-color;
+        font-style: $input-placeholder-font-style;
+        font-size: $input-placeholder-font-size;
+        opacity: $input-placeholder-opacity;
+    }
+
+    // При фокусе
+    &:focus {
+        border-color: lighten($input-bd-color-focus, 25%);
+    }
+
+    // Отключаем стандартный крестик в полях в IE
+    &::-ms-clear {
+        display: none;
+    }
+
+    // когда происходит ошибка
+    &.has-error {
+        border-color: $gray;
+
+        &::placeholder {
+            color: $gray;
+        }
+    }
+
+    // отключенный инпут
+    &:disabled,
+    &.is-disabled,
+    &[disabled] {
+        background-color: rgba($gray, .3);
+        color: rgba($black, .5);
+        border-color: rgba($gray, .3);
+        cursor: default;
+
+        &:hover,
+        &:focus {
+            border-color: $btn-bd-color-disabled;
+        }
+
+        &::placeholder {
+            color: rgba($black, .5);
+        }
+    }
+}
+
+input {
+    @extend %input;
+    height: rhythm($input-height);
+}
+
+textarea {
+    @extend %input;
+    line-height: $base-vertical-rhythm;
+    min-height: rhythm($textarea-min-height);
+    padding: {
+        top: gutter(1);
+        bottom: gutter(1);
+    };
+}

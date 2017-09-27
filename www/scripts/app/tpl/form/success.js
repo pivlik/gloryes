@@ -1,0 +1,2 @@
+define(["handlebars"],function(e){return e.template({compiler:[6,">= 2.0.0-beta.1"],main:function(e,a,n,s){var l,t=a.helperMissing,h="function",r=this.escapeExpression;return'<h2 class="success">'+r((l=null!=(l=a.header||(null!=e?e.header:e))?l:t,typeof l===h?l.call(e,{name:"header",hash:{},data:s}):l))+"</h2>\n<p>"+r((l=null!=(l=a.message||(null!=e?e.message:e))?l:t,typeof l===h?l.call(e,{name:"message",hash:{},data:s}):l))+"</p>\n"},useData:!0})});
+//# sourceMappingURL=../../../sourcemaps/app/tpl/form/success.js.map

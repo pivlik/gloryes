@@ -1,0 +1,63 @@
+$tabs-color: #337ab7;
+$tabs-tab-background: $white;
+$tabs-font-size: 16px;
+$tabs-font-family: inherit;
+$tabs-border-radius: 4px;
+$tabs-border-size: 1px;
+$tabs-border-color: #eee;
+$tabs-horizontal-padding: 10px;
+$tabs-height: 5; //rhythm unit
+//active tab
+$tabs-color-active: #337ab7;
+$tabs-background-color-active: #e6e6e6;
+//disabled
+$tabs-color-disabled: #eee;
+$tabs-background-color-disabled: #ddd;
+//content
+$tabs-content-paddings: 20px;
+
+.b-tabs__triggers {
+    border-radius: $tabs-border-radius;
+    overflow: hidden;
+    display: flex;
+}
+
+.b-tabs__item {
+    @include transition(color, background-color);
+    line-height: rhythm($tabs-height);
+    height: rhythm($tabs-height);
+    color: $tabs-color;
+    padding: {
+        left: $tabs-horizontal-padding;
+        right: $tabs-horizontal-padding;
+    };
+    border: {
+        top: 1px solid $tabs-border-color;
+        bottom: 1px solid $tabs-border-color;
+        left: 1px solid $tabs-border-color;
+    }
+    background-color: $tabs-tab-background;
+    font-size: $tabs-font-size;
+    font-family: $tabs-font-family;
+    font-weight: 700;
+
+    &:last-child {
+        border-right: 1px solid $tabs-border-color;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:active {
+        color: darken($tabs-color, 5%);
+    }
+}
+
+.b-tabs__content {
+    display: none;
+    padding: $tabs-content-paddings;
+}
+
+// STATE
+@import '../state/tabs';

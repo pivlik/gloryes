@@ -1,0 +1,30 @@
+$toggle-bg-color: #92c022;
+
+// LAYOUT
+@import '../layout/module/toggle';
+
+//MODULE
+.al-b-toggle {
+    @include transition(background-color);
+    @include text-transform();
+    background-color: $toggle-bg-color;
+    color: $white;
+    display: block;
+    padding: 0 gutter(2);
+    height: 50px;
+    line-height: 50px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 700;
+
+    &:hover {
+        background-color: darken($toggle-bg-color, 5%);
+    }
+}
+
+.al-b-toggle__icon {
+    position: relative;
+    top: 2px;
+}

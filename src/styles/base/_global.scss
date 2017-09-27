@@ -1,0 +1,32 @@
+body {
+    color: $base-font-color;
+    text-size-adjust: 100%;
+    width: 100%;
+
+    &.disable-hover,
+    &.disable-hover * {
+        // крайне важдно переопределить pointer-events: auto на дочерних элементах
+        pointer-events: none !important;
+    }
+
+}
+
+a {
+    &[href^='tel:'],
+    &[href^='mailto:'] {
+        white-space: nowrap;
+    }
+}
+
+// Utility
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.b-ruble {
+    font-family: $font-ruble;
+}

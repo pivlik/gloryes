@@ -1,0 +1,43 @@
+$tooltip-border-radius: 3px 3px 3px 0;
+$tooltip-background-color: $white;
+$tooltip-paddings: 20px 20px;
+$tooltip-text-align: left;
+$tooltip-color: $black;
+$tooltip-arrow: 'al-b-pointer-arrow';
+
+.al-b-tooltip {
+    padding: $tooltip-paddings;
+    background-color: $tooltip-background-color;
+    text-align: $tooltip-text-align;
+    color: $tooltip-color;
+    border-radius: $tooltip-border-radius;
+    position: absolute;
+    z-index: 2;
+    box-shadow: 25px 25px 20px rgba($tooltip-color, .2);
+    cursor: pointer;
+}
+
+.al-b-tooltip__num {
+    font-size: 26px;
+    line-height: 26px;
+    font-family: inherit;
+}
+
+.al-b-tooltip__txt {
+    font-size: 16px;
+    line-height: 26px;
+    font-family: inherit;
+    color: $gray;
+}
+
+// Arrow
+.al-b-tooltip:after {
+    @include sprite($tooltip-arrow);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: '';
+}
+
+//STATE
+@import '../state/tooltip';

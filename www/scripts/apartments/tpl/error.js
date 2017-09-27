@@ -1,0 +1,2 @@
+define(["handlebars"],function(e){return e.template({compiler:[6,">= 2.0.0-beta.1"],main:function(e,n,a,s){var r;return'<div class="l-error">\n    <div class="b-error">\n        '+this.escapeExpression((r=null!=(r=n.message||(null!=e?e.message:e))?r:n.helperMissing,"function"==typeof r?r.call(e,{name:"message",hash:{},data:s}):r))+"\n    </div>\n</div>\n"},useData:!0})});
+//# sourceMappingURL=../../sourcemaps/apartments/tpl/error.js.map

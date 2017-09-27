@@ -1,0 +1,116 @@
+$nav-color: $black;
+$nav-font-size: 17px;
+$nav-font-family: inherit;
+$nav-text-transform: false;
+$nav-sublist-arrow: 'nav-sublist';
+//hover
+$nav-color-hover: #ff0000;
+//active
+$nav-color-active: #ffa500;
+
+// Extends
+%b-nav__item {
+    float: left; // Flexbox fallback
+    margin-right: gutter(1);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+%b-nav__link {
+    @include transition(color);
+    font-size: $nav-font-size;
+    line-height: $base-vertical-rhythm;
+    color: $nav-color;
+    font-family: $nav-font-family;
+    text-decoration: none;
+
+    @if ($nav-text-transform) {
+        @include text-transform();
+    }
+
+    &.is-active {
+        color: $nav-color-active;
+
+        &:hover {
+            text-decoration: none;
+            color: $nav-color-active;
+        }
+    }
+
+    &:hover {
+        color: $nav-color-hover;
+    }
+}
+
+.b-nav__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    position: relative; // Sublist position
+}
+
+.b-nav__item {
+    @extend %b-nav__item;
+    flex: 0 0 auto;
+
+    @media #{$medium-up} {
+        flex-grow: 1;
+    }
+}
+
+.b-nav__link {
+    @extend %b-nav__link;
+}
+
+// Submenu
+.b-nav__sublist {
+    width: 100%;
+    position: absolute;
+    top: rhythm(1);
+    left: 0;
+    display: none;
+}
+
+.b-nav__subitem {
+    @extend %b-nav__item;
+}
+
+.b-nav__sublink {
+    @extend %b-nav__link;
+}
+
+
+//STATE
+.b-nav__item:hover {
+
+    .b-nav__sublist {
+        display: block;
+    }
+}
+
+.b-nav__link_is_sublist {
+
+    .b-nav__link {
+        position: relative;
+        padding-right: sprite-width($nav-sublist-arrow) + gutter(1);
+
+        &:after {
+            @include sprite($nav-sublist-arrow);
+            @include transition(transform);
+            position: absolute;
+            top: 50%;
+            margin-top: -(sprite-height($nav-sublist-arrow) / 2);
+            right: 0;
+            content: '';
+        }
+    }
+
+    &:hover {
+
+        .b-nav__link:after {
+            transform: rotate(-180deg);
+        }
+    }
+}

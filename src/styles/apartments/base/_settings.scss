@@ -1,0 +1,15 @@
+$side-padding: 50px;
+
+//colors
+$controls-vertical-position: 2;
+$controls-color: #009bdf;
+$controls-color-hover: lighten($controls-color, 5%);
+$controls-color-disable: #a9a9a9;
+
+html,
+body {
+    height: 100%;
+    min-height: 600px;
+    color: $white;
+}
+

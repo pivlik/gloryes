@@ -1,0 +1,147 @@
+// Popup
+$popup-color: $base-font-color;
+$popup-bg-color: $white;
+$popup-overlay-color: $black;
+$popup-overlay-opacity: .8;
+$popup-border-radius: 0;
+
+// Popup close button
+//mobile
+$popup-btn-mobile-color: $white;
+$popup-btn-mobile-bg-color: $black;
+$popup-btn-mobile-font-size: 18px;
+$popup-btn-mobile-line-height: $base-vertical-rhythm;
+$popop-btn-mobile-height: $btn-height; //rhythm unit
+$popup-btn-mobile-tt-up: false;
+$popup-btn-mobile-font-family: $btn-font-family;
+//desktop
+$popup-btn-close-image: 'popup-close'; //image
+$popup-btn-opacity: .5;
+
+$popup-btn-height: (btn-vertical-paddings($popop-btn-mobile-height) * 2) + $popup-btn-mobile-line-height;
+
+// Magnific reset
+// scss-lint:disable ImportantRule
+
+.b-popup {
+    color: $popup-color;
+    background-color: $popup-bg-color;
+    min-height: 100%;
+    border-radius: $popup-border-radius;
+
+    @media #{$medium-up} {
+        position: static;
+        height: auto;
+        width: auto;
+        min-height: inherit;
+    }
+}
+
+// Close button mobile
+.b-popup__close {
+    @include btn-vertical-paddings($popop-btn-mobile-height);
+    font-family: $popup-btn-mobile-font-family;
+    color: $popup-btn-mobile-color;
+    background-color: $popup-btn-mobile-bg-color;
+    font-size: $popup-btn-mobile-font-size;
+    line-height: $popup-btn-mobile-line-height;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+
+    @if($popup-btn-mobile-tt-up) {
+        @include text-transform();
+        padding: {
+            top: btn-vertical-paddings($popop-btn-mobile-height) + 1px;
+            bottom: btn-vertical-paddings($popop-btn-mobile-height) - 1px;
+        };
+    }
+
+    &:active {
+        color: lighten($popup-btn-mobile-color, 10%);
+        background-color: lighten($popup-btn-mobile-bg-color, 10%);
+    }
+}
+
+// Close button desktop
+@media #{$medium-up} {
+    .b-popup__close {
+        @include sprite($popup-btn-close-image);
+        @include transition(opacity);
+        @include squish-text;
+        background-color: transparent;
+        position: fixed;
+        top: rhythm(1);
+        right: rhythm(1);
+        opacity: $popup-btn-opacity;
+        padding: 0;
+    }
+
+    .b-popup__close:active {
+        background-color: transparent;
+    }
+
+    // Close button desktop - hover state
+    .b-popup__close:hover {
+        opacity: 1 !important;
+    }
+
+    .mfp-container:hover {
+        cursor: pointer; //overlay state click
+
+        .b-popup__close {
+            opacity: 1;
+        }
+    }
+
+    .mfp-content:hover {
+        .b-popup__close {
+            opacity: $popup-btn-opacity;
+        }
+    }
+}
+
+// Popup content
+.b-popup__cnt {
+    padding: rhythm(1) gutter(1);
+
+    @media #{$medium-up} {
+        padding: rhythm(2);
+    }
+}
+
+.mfp-inline-holder .mfp-content,
+.mfp-ajax-holder .mfp-content {
+
+    @media #{$medium-up} {
+        width: auto;
+        max-width: 960px;
+        margin: rhythm(4) 0;
+    }
+}
+
+// Magnific reset
+.mfp-wrap {
+    opacity: 1; // theme style
+    -webkit-overflow-scrolling: touch;
+}
+
+.mfp-bg {
+    background-color: $popup-overlay-color;
+    opacity: $popup-overlay-opacity;
+}
+
+.mfp-container {
+    padding: 0;
+}
+
+.mfp-content {
+    height: 100%;
+
+    @media #{$medium-up} {
+        height: auto;
+    }
+}
+
+//STATE
+@import '../state/popup';

@@ -1,0 +1,10 @@
+// LAYOUT
+@import '../layout/module/compass';
+
+// MODULE
+$compass-size: 100px;
+
+.al-b-compass {
+    width: $compass-size;
+    height: $compass-size;
+}

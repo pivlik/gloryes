@@ -1,0 +1,249 @@
+//MIXINS
+// Import fonts
+@mixin font($family, $src, $weight: false, $style: false) {
+    @font-face {
+        display-font: swap;
+        font-family: quote($family);
+        src: url('/fonts/' + $src + '.woff2') format("woff2"),
+             url('/fonts/' + $src + '.woff') format("woff");
+
+        @if($weight) {
+            font-weight: $weight;
+        }
+
+        @if($style) {
+            font-style: $style;
+        }
+    }
+}
+
+// Adaptive typography
+@mixin font-size($typos) {
+    $small-fz: nth(nth($typos, 1), 1);
+    $small-lh: nth(nth($typos, 1), 2);
+    $medium-fz: nth(nth($typos, 2), 1);
+    $medium-lh: nth(nth($typos, 2), 2);
+    $large-fz: nth(nth($typos, 3), 1);
+    $large-lh: nth(nth($typos, 3), 2);
+
+    font-size: $small-fz;
+    line-height: $small-lh;
+
+    @media #{$medium-up} {
+        font-size: $medium-fz;
+        line-height: $medium-lh;
+    }
+
+    @media #{$large-up} {
+        font-size: $large-fz;
+        line-height: $large-lh;
+    }
+}
+
+// INCLUDE FONTS
+@include font(opensans, 'OpenSans/Regular/OpenSans-Regular', 400);
+@include font(opensans, 'OpenSans/Bold/OpenSans-Bold', 700);
+@include font(opensans, 'OpenSans/Italic/OpenSans-Italic', 400, italic);
+@include font(ruble, 'ruble/ruble-webfont');
+
+//VARIABLES
+$font: 'opensans', sans-serif;
+$font-ruble: 'ruble', sans-serif;
+
+// Base fonts
+html {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-family: -apple-system, BlinkMacSystemFont,
+            "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+            "Helvetica Neue", sans-serif;
+
+    &.font-loaded {
+        font-family: $font;
+    }
+}
+
+// HEADINGS
+h1 {
+    $fz: (40px 40px) (40px 40px) (55px 55px);
+    @include font-size($fz);
+}
+
+h2 {
+    $fz: (32px 34px) (32px 34px) (45px 50px);
+    @include font-size($fz);
+}
+
+h3 {
+    $fz: (26px 30px) (26px 30px) (36px 40px);
+    @include font-size($fz);
+}
+
+h4 {
+    $fz: (14px 22px) (14px 22px) (17px 28px);
+    @include font-size($fz);
+}
+
+h5 {
+    $fz: (14px 22px) (14px 22px) (15px 24px);
+    @include font-size($fz);
+}
+
+h6 {
+    $fz: (12px 20px) (12px 20px) (14px 22px);
+    @include font-size($fz);
+}
+
+// BLOCKQUOTE
+$blockquote-color: #8a8a8a;
+$blockquote-border-size: 1px;
+$blockquote-border-color: #cacaca;
+$blockquote-font-family: inherit;
+$blockquote-font-size: 16px;
+$blockquote-name-font-family: inherit;
+$blockquote-name-font-size: 14px;
+
+blockquote {
+    font-size: $blockquote-font-size;
+    line-height: $base-vertical-rhythm;
+    color: $blockquote-color;
+    padding: {
+        left: gutter(4);
+        top: rhythm(1);
+        bottom: rhythm(1);
+    };
+    border-left: $blockquote-border-size solid $blockquote-border-color;
+    font-family: $blockquote-font-family;
+    font-style: italic;
+}
+
+cite {
+    font-size: $blockquote-name-font-size;
+    line-height: $base-vertical-rhythm;
+    font-family: $blockquote-name-font-family;
+    display: block;
+
+    &:before {
+        content: '\2014 \0020';
+    }
+}
+
+
+// SMALL
+$small-font-size: $base-font-size - 2;
+
+small {
+    font-size: $small-font-size;
+}
+
+// PARAGRAPH
+$paragraph-margin-bottom: 1; // rhythm unit
+p {
+    @include margin-trailer($paragraph-margin-bottom);
+}
+
+// LINKS
+$link-color: #0000ff;
+$link-color-hover: lighten($link-color, 5%);
+$link-color-active: darken($link-color, 5%); // :active state
+$link-text-decoration: reset;
+
+a {
+    color: $link-color;
+
+    @if ($link-text-decoration == 'normal') {
+        text-decoration: none;
+    } @else if ($link-text-decoration == 'invert') {
+        text-decoration: underline;
+    } @else if ($link-text-decoration == 'reset') {
+        text-decoration: none;
+    }
+
+    @media #{$large-up} {
+        &:hover {
+            @if ($link-text-decoration == 'normal') {
+                text-decoration: underline;
+            } @else if ($link-text-decoration == 'invert') {
+                text-decoration: none;
+            } @else if ($link-text-decoration == 'reset') {
+                text-decoration: none;
+            }
+        }
+
+        &:active {
+            color: $link-color-active;
+        }
+    }
+}
+
+// LISTS
+$list-color: $black;
+$list-bullet-color: $gray;
+$list-font-size: 17px;
+$list-line-height: 28px;
+$list-sublist-padding-left: 2; // gutter value
+$list-margin-bottom: $paragraph-margin-bottom; // rhythm unit
+
+.b-typo-reset {
+
+    ul ul,
+    ol ol {
+        padding-left: gutter($list-sublist-padding-left);
+    }
+
+    ul,
+    ol {
+        @include margin-trailer($list-margin-bottom);
+
+        li {
+            margin-bottom: 13px;
+            font-size: $list-font-size;
+            line-height: $list-line-height;
+            font-weight: 400;
+            font-family: inherit;
+            color: $list-color;
+            padding-left: gutter(1);
+            position: relative;
+        }
+    }
+
+    ol {
+        counter-reset: list;
+
+        li:before {
+            counter-increment: list;
+            content: counter(list) '.';
+            color: $list-bullet-color;
+            padding-right: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    ul {
+
+        li:before {
+            content: '•';
+            padding-right: 5px;
+            color: $list-bullet-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+// b, strong
+b,
+strong {
+    font-family: inherit;
+    font-weight: 700;
+}
+
+// i, em
+i,
+em {
+    font-family: inherit;
+    font-style: italic;
+}

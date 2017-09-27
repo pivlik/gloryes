@@ -1,0 +1,64 @@
+include mixins/all-mixins
+doctype html
+html(lang='ru')
+    head
+        meta(charset="UTF-8")
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(name="cmsmagazine"  content="f2d72d3408f63252b7c735ac5b026ced")
+        link(type="text/plain" rel="author" href="/humans.txt")
+        meta(name="format-detection" content="telephone=no")
+
+        link(rel='shortcut icon' type='image/x-icon' href='/favicons/favicon.ico')
+        link(rel='apple-touch-icon-precomposed' sizes='57x57' href='/favicons/apple-touch-icon-57x57-precomposed.png')
+        link(rel='apple-touch-icon-precomposed' sizes='76x76' href='/favicons/apple-touch-icon-76x76-precomposed.png')
+        link(rel='apple-touch-icon-precomposed' sizes='120x120' href='/favicons/apple-touch-icon-120x120-precomposed.png')
+        link(rel='apple-touch-icon-precomposed' sizes='152x152' href='/favicons/apple-touch-icon-152x152-precomposed.png')
+        link(rel='apple-touch-icon-precomposed' sizes='180x180' href='/favicons/apple-touch-icon-180x180-precomposed.png')
+        link(rel='icon' sizes='192x192' href='/favicons/touch-icon-192x192.png')
+
+        link(rel='stylesheet' href="/scripts/lib/jquery-selectric/public/selectric.css")
+        link(rel='stylesheet' href="/scripts/lib/magnific-popup/dist/magnific-popup.css")
+        link(rel='stylesheet' href="/scripts/lib/fotorama/fotorama.css")
+        link(rel='stylesheet' href="/styles/app.css")
+        link(rel='stylesheet' href="/styles/print.css" media="print")
+
+        script(src="/scripts/lib/fontfaceobserver/fontfaceobserver.js")
+        script.
+            var font = new FontFaceObserver('opensans', {
+                weight: 400
+            });
+
+            var fontBold = new FontFaceObserver('opensans', {
+                weight: 700
+            });
+
+            var fontItalic = new FontFaceObserver('opensans', {
+                weight: 400,
+                style: "italic"
+            });
+
+            Promise.all(
+                [font.load(), fontBold.load(), fontItalic.load()]
+            ).then(function() {
+                document.documentElement.className += 'font-loaded';
+            })
+
+        block title
+            title Заголовок по умолчанию
+        <!--[if lte IE 9]>
+        link(rel='stylesheet' href="/styles/ie.css")
+        <![endif]-->
+    body
+        .l-wrap
+            //header.l-header
+                h2 шапка
+
+            main.l-main
+                block content
+                    h2 контент
+
+            //footer.l-footer
+                h2 подвал
+
+        include ../../www/img/sprite/sprite.svg
+        script(src="/scripts/lib/requirejs/require.min.js" data-main="/scripts/config.js")

@@ -1,0 +1,89 @@
+.b-map-tabs {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    @media #{$medium-up} {
+        position: static;
+    }
+}
+
+.b-map-tabs__btn {
+    display: none;
+    border-radius: 0;
+}
+
+.b-map-tabs__list {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: rhythm(2.1);
+    text-align: left;
+    width: 100%;
+
+    @media #{$medium-up} {
+        @include margin-trailer(1);
+        position: static;
+        display: block;
+        text-align: left;
+    }
+
+    &.is-active {
+        bottom: 100%;
+        display: block;
+    }
+}
+
+.b-map-tabs__item {
+    @include transition(background-color, color);
+    display: block;
+    padding: 0 10px;
+    line-height: 48px;
+    width: 100%;
+    text-align: center;
+    background-color: $white;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &.is-active {
+        background-color: $black;
+        color: $white;
+    }
+
+    @media #{$medium-up} {
+        border: 1px solid $black;
+        margin: 0 10px;
+        display: inline-block;
+        width: auto;
+        text-align: inherit;
+        line-height: inherit;
+    }
+}
+
+.b-map-tabs__link {
+    @include text-transform();
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:active {
+        color: $black;
+    }
+}
+
+// STATE
+@import '../../state/map/map-tabs';

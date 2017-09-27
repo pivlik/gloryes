@@ -1,0 +1,62 @@
+$radio: 'radio';
+$radio-checked: 'radio-checked';
+$radio-hover: 'radio-hover';
+$radio-disabled: 'radio-disabled';
+$radio-checked-hover: 'radio-checked-hover';
+
+.b-form__radio {
+    display: inline-block;
+
+    input {
+        display: none;
+    }
+
+    label {
+        position: relative;
+        display: inline-block;
+        padding-left: sprite-width($radio) + gutter(1);
+
+        &:after {
+            @include sprite($radio);
+            position: absolute;
+            top: $base-vertical-rhythm / 2;
+            margin-top: - (sprite-height($radio)) / 2;
+            left: 0;
+            content: '';
+        }
+    }
+
+    input:checked {
+
+        + label:after {
+            @include sprite($radio-checked);
+        }
+    }
+}
+
+// Hover
+.b-form__radio:hover {
+
+    label:after {
+        @include sprite($radio-hover);
+    }
+
+    input:checked {
+
+        + label:after {
+            @include sprite($radio-checked-hover);
+        }
+    }
+}
+
+// Disabled
+.b-form__radio input:disabled,
+.b-form__radio input[readonly='readonly'] {
+    + label {
+        cursor: default;
+    }
+
+    + label:after {
+        @include sprite($radio-disabled);
+    }
+}

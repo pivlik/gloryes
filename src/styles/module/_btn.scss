@@ -1,0 +1,76 @@
+$btn-color: $white;
+$btn-bg-color: $black;
+$btn-bd-width: 1px;
+$btn-bd-color: $black;
+$btn-border-radius: 3px;
+$btn-font-size: $base-font-size;
+$btn-line-height: $base-line-height;
+$btn-font-family: inherit;
+$btn-height: 2; //rhythm unit
+$btn-tt-uppercase: false;
+
+//hover
+$btn-color-hover: $black;
+$btn-bg-color-hover: $white;
+$btn-bd-color-hover: $white;
+
+//active
+$btn-color-active: $white;
+$btn-bg-color-active: $black;
+
+//disabled
+$btn-bd-color-disabled: transparent;
+$btn-color-disabled: #ccc;
+$btn-bg-color-disabled: #eee;
+
+// Button
+.b-btn {
+    @include transition(color, background-color, border-color);
+    @include btn-vertical-paddings($btn-height);
+    color: $btn-color;
+    background-color: $btn-bg-color;
+    border: $btn-bd-width solid $btn-bd-color;
+    border-radius: $btn-border-radius;
+    font-size: $btn-font-size;
+    line-height: $btn-line-height;
+    font-family: $btn-font-family;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    padding: {
+        left: gutter(1);
+        right: gutter(1);
+    };
+
+    @if($btn-tt-uppercase) {
+        @include text-transform();
+        padding: {
+            top: btn-vertical-paddings($btn-height) + 1px;
+            bottom: btn-vertical-paddings($btn-height) - 1px;
+        };
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+
+        @media #{$large-up} {
+            color: $btn-color-hover;
+            background-color: $btn-bg-color-hover;
+            border-color: $btn-bd-color-hover;
+        }
+    }
+
+    &:active {
+        @media #{$large-up} {
+            color: $btn-color-active;
+            background-color: $btn-bg-color-active;
+        }
+    }
+}
+
+// STATE
+@import '../state/btn';

@@ -1,0 +1,7 @@
+$logo: 'logo';
+
+.b-logo {
+    @include sprite($logo);
+    @include squish-text;
+    display: block;
+}

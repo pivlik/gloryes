@@ -1,0 +1,15 @@
+mixin range-slider( min, max, from, to, postfix, interval)
+    .b-range-slider.j-range-sliders.b-range-slider_double_inputs
+        .b-range-slider__input
+            input(type="text")
+        .b-range-slider__input
+            input(type="text")
+        .b-range-slider__base
+            .j-slider(
+                data-min!=min
+                data-max!=max
+                data-from!=from
+                data-to!=to
+                data-postfix="#{postfix}"
+            )
+

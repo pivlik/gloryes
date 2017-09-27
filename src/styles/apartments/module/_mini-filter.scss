@@ -1,0 +1,63 @@
+// LAYOUT
+@import '../layout/module/mini-filter';
+
+// MODULE
+$mini-filter-bg-color: #e2bf00;
+
+.b-mini-filter {
+    display: none;
+}
+
+.al-b-mini-filter__list {
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.al-b-mini-filter__item {
+    float: left;
+}
+
+.b-mini-filter__label {
+    @include text-transform();
+    color: $white;
+    display: block;
+    font-size: 12px;
+    height: 50px;
+    line-height: 52px;
+    padding: 0 21px;
+    font-family: inherit;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+    background-color: $mini-filter-bg-color;
+
+    &:hover {
+        background-color: lighten($mini-filter-bg-color, 10%);
+    }
+}
+
+.b-mini-filter:checked {
+    + .b-mini-filter__label {
+        background-color: darken($mini-filter-bg-color, 5%);
+
+        &:hover {
+            background-color: $mini-filter-bg-color;
+            border-color: $mini-filter-bg-color;
+        }
+    }
+}
+
+.b-mini-filter[disabled] {
+    + .b-mini-filter__label {
+        background-color: $gray;
+        border-color: $gray;
+        color: $gray;
+        cursor: default;
+
+        &:hover {
+            background-color: $gray;
+            color: $gray;
+            cursor: default;
+        }
+    }
+}

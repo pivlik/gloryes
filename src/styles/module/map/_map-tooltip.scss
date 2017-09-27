@@ -1,0 +1,82 @@
+$map-tooltip-border: #ff0000;
+
+.b-map-tooltip {
+    border: 2px solid $map-tooltip-border;
+    padding: 10px;
+    display: inline-block;
+    background-color: $white;
+    position: relative;
+    color: $black;
+    text-align: center;
+    width: auto;
+    min-width: 250px;
+    max-width: 250px;
+
+    &:after {
+        $width: 10px;
+        $height: 11px;
+        width: 0;
+        height: 0;
+        border-left: $width solid transparent;
+        border-right: $width solid transparent;
+        border-top: $height solid $white;
+        content: '';
+        position: absolute;
+        bottom: - $height;
+        left: 50%;
+        margin-left: -12px;
+
+        @media (-webkit-min-device-pixel-ratio: 1.5),
+        (min--moz-device-pixel-ratio: 1.5),
+        (-o-min-device-pixel-ratio: 3/2),
+        (min-device-pixel-ratio: 1.5) {
+            bottom: - $height + 1px;
+        }
+    }
+
+    @media #{$medium-up} {
+        max-width: none;
+    }
+}
+
+.b-map-tooltip__title {
+    font-size: 16px;
+    line-height: $base-vertical-rhythm;
+    font-family: inherit;
+}
+
+.b-map-tooltip__arrow {
+    $width: 12px;
+    $height: 13px;
+    width: 0;
+    height: 0;
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+
+    border-top-width: $height;
+    border-top-style: solid;
+    border-top-color: inherit;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -14px;
+}
+
+.b-map-tooltip__close {
+    $size: 20px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+    width: $size;
+    height: $size;
+    text-align: center;
+    line-height: $size;
+}
+
+
+// Google map reset style
+.gm-style img {
+    max-width: 100%;
+}

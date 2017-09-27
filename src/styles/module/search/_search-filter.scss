@@ -1,0 +1,169 @@
+//LAYOUT
+@import '../../layout/module/search/search-filter';
+
+//MODULE
+.b-search-filter {
+    @include clearfix();
+}
+
+.b-search-filter__ttl {
+    @include text-transform();
+    @include margin-trailer(1);
+
+    font-size: 15px;
+    line-height: 30px;
+}
+
+
+.b-search-filter__building-cnt,
+.b-search-filter__sub-cnt {
+    @include margin-trailer(1);
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.b-search-filter__build,
+.b-search-filter__sub-item {
+    margin-right: gutter(1);
+}
+
+.b-search-filter__input {
+    display: none;
+}
+
+// Фильтр по дому
+.b-search-filter__label {
+    @include transition(background-color, color, border-color);
+    display: block;
+    background-color: $white;
+    border: 1px solid $black;
+    border-radius: 3px;
+    padding: 20px;
+
+    @media #{$large-up} {
+        &:hover {
+            background-color: darken($white, 20%);
+        }
+    }
+}
+
+// Фильтр по доп параметру
+.b-search-filter__sub-label {
+    padding: 0 gutter(2);
+    border: 1px solid $black;
+    border-radius: 3px;
+
+    @media #{$large-up} {
+        &:hover {
+            background-color: darken($white, 20%);
+        }
+    }
+}
+
+// Range slider
+.b-search-filter__range-slider {
+    @include margin-trailer(2);
+}
+
+// Блок с отравкой
+.b-search-filter__dispatch {
+    @include clearfix();
+}
+
+.b-search-filter__reset {
+
+
+    @media #{$medium-up} {
+
+    }
+}
+
+.b-search-filter__submit {
+
+
+    @media #{$medium-up} {
+
+    }
+}
+
+.b-search-filter__submit-btn {
+    position: relative;
+    min-height: rhythm(2);
+}
+
+
+// Комнатность
+.b-search-filter__floors {
+    @include margin-trailer(2);
+    @include clearfix();
+}
+
+.b-search-filter__floors-cnt {
+
+}
+
+.b-search-filter__floor {
+    margin-right: gutter(1);
+}
+
+// Инпуты цуны и жилая площадь
+.b-search-filter__prices,
+.b-search-filter__areas {
+    @include margin-trailer(2);
+    @include clearfix();
+}
+
+.b-search-filter__price,
+.b-search-filter__area {
+
+    position: relative;
+
+    &:first-child:after {
+        content: '-';
+        position: absolute;
+        right: -3px;
+        top: 50%;
+        margin-top: -12px;
+    }
+}
+
+.b-search-filter__wrapper-input {
+    position: relative;
+
+    input {
+        padding-left: gutter(1.3);
+        padding-right: gutter(1);
+    }
+}
+
+.b-search-filter__clear-input {
+    @include transition(opacity);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    right: 3px;
+    font-size: 30px;
+    color: $gray;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+
+    @media #{$medium-up} {
+        right: gutter(1);
+        transform: translateY(-50%);
+    }
+}
+
+.b-search-filter__range-text {
+    position: absolute;
+    top: 50%;
+    left: gutter(.5);
+    margin-top: -12px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+// STATE
+@import '../../state/search/search-filter';

@@ -1,0 +1,25 @@
+{
+  "name": "google-infobox",
+  "main": "google-infobox.js",
+  "authors": [
+    "Pepijn Senders <p.senders92@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/PepijnSenders/google-infobox",
+  "_release": "9f3c818da2",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9f3c818da250955f8791108cd69f430536d19584"
+  },
+  "_source": "git://github.com/PepijnSenders/google-infobox.git",
+  "_target": "*",
+  "_originalSource": "google-infobox"
+}

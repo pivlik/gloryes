@@ -1,0 +1,38 @@
+//LAYOUT
+@import '../layout/module/rotate';
+
+//MODULE
+$rotate-bg-color: #92c022;
+
+.al-b-rotate {
+    @include text-transform();
+    height: 50px;
+    background-color: $rotate-bg-color;
+    display: block;
+    animation-duration: .5s;
+    padding-left: 65px;
+    padding-right: 27px;
+    border-radius: 24px;
+    padding-top: 17px;
+    color: $white;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: inherit;
+    font-weight: 700;
+
+    &:hover {
+        background-color: lighten($rotate-bg-color, 5%);
+        color: $white;
+    }
+
+    &:after {
+        $image: 'al-b-rotate';
+        @include sprite($image);
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: - (sprite-height($image) / 2);
+        left: 33px;
+    }
+}

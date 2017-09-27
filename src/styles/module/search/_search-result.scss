@@ -1,0 +1,17 @@
+//LAYOUT
+@import '../../layout/module/search/search-result';
+
+//MODULE
+.b-search-result__ttl {
+
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.b-search-result__buildings {
+
+}
+
+.b-search-result__building {
+    @include margin-trailer(2);
+}

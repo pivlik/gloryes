@@ -1,0 +1,24 @@
+$vertical-rhythm-debug: false !default;
+$vertical-rhythm-color-lines: #000 !default;
+
+@if $vertical-rhythm-debug == true {
+
+    html {
+        position: relative;
+        z-index: z(default);
+        min-height: 100vh;
+
+        &:after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: z(hide);
+            height: 100%;
+            content: '';
+            background: repeating-linear-gradient(180deg, transparent, transparent $base-vertical-rhythm - 1px, $vertical-rhythm-color-lines $base-vertical-rhythm);
+            pointer-events: none;
+        }
+    }
+}

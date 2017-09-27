@@ -1,0 +1,69 @@
+// Progress bar
+$progress-bar-color: $black;
+$progress-bar-line-color: $gray;
+$progress-bar-height: 10px;
+$progress-bar-padding: 2px;
+$progress-bar-border-radius: 6px;
+$progress-bar-animate: true;
+
+//Text
+$progress-bar-font-color: $black;
+$progress-bar-font-family: inherit;
+$progress-bar-font-size: 16px;
+$progress-bar-line-height: 24px;
+
+//Done
+$progress-bar-done-font-color: $black;
+$progress-bar-done-font-family: inherit;
+$progress-bar-done-font-size: 20px;
+$progress-bar-done-line-height: 24px;
+
+.b-progress-bar__base {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.b-progress-bar__line {
+    border-radius: $progress-bar-border-radius;
+    background-color: $progress-bar-color;
+    flex: 1 0 auto;
+    height: $progress-bar-height;
+    padding: $progress-bar-padding;
+}
+
+.b-progress-bar__current {
+    @include transition(width);
+    background-color: $progress-bar-line-color;
+    height: 100%;
+    border-radius: $progress-bar-border-radius / 2;
+
+    @if ($progress-bar-animate) {
+        background-size: 20px 20px;
+        background-image: linear-gradient(-45deg, rgba($white, .35) 25%, rgba($white, 0) 25%, rgba($white, 0) 50%, rgba($white, .35) 50%, rgba($white, .35) 75%, rgba($white, 0) 75%, rgba($white, 0));
+        animation: candystripe 1s linear infinite;
+    }
+}
+
+.b-progress-bar__text {
+    font-family: $progress-bar-font-family;
+    font-size: $progress-bar-font-size;
+    line-height: $progress-bar-line-height;
+    padding-left: gutter(1);
+}
+
+.b-progress-bar__done {
+    font-family: $progress-bar-done-font-family;
+    font-size: $progress-bar-done-font-size;
+    line-height: $progress-bar-done-line-height;
+    display: none;
+}
+
+@keyframes candystripe {
+    100% {
+        background-position: 20px 0;
+    }
+}
+
+//STATE
+@import '../../state/construction-progress/progress-bar';

@@ -1,0 +1,13 @@
+{
+  // Default options
+  'functions': true,
+  'variableNameTransforms': ['dasherize']
+}
+
+{{#block "sprites"}}
+$sprites-2x-map : (
+{{#each sprites}}
+  {{name}}: ({{px.x}}, {{px.y}}, {{px.offset_x}}, {{px.offset_y}}, {{px.width}}, {{px.height}}, {{px.total_width}}, {{px.total_height}}, '{{{escaped_image}}}', '{{name}}', ),
+{{/each}}
+);
+{{/block}}

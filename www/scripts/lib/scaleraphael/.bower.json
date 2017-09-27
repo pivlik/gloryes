@@ -1,0 +1,26 @@
+{
+  "name": "scaleraphael",
+  "main": "scaleraphael.js",
+  "homepage": "https://github.com/talkative/scaleraphael",
+  "authors": [
+    "Martin Lundin <martin@talkative.se>"
+  ],
+  "description": "ScaleRaphael by Zevan Rosser",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "aa2d902c70",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "aa2d902c70504ec23cd1a4dfea0004e8cb25cb6c"
+  },
+  "_source": "git://github.com/talkative/scaleraphael.git",
+  "_target": "*",
+  "_originalSource": "scaleraphael"
+}

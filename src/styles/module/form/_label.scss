@@ -1,0 +1,14 @@
+$label-font-family: $font !default;
+$label-font-size: 16px !default;
+$label-color: $black !default;
+$label-margin-bottom: rhythm(.25) !default;
+
+label {
+    font-size: $label-font-size;
+    line-height: $base-vertical-rhythm;
+    color: $label-color;
+    font-family: $label-font-family;
+    margin-bottom: $label-margin-bottom;
+    display: inline-block;
+    font-weight: 700;
+}

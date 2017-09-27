@@ -1,0 +1,433 @@
+// Dependencies
+@import 'breakpoints';
+
+// Functions
+
+/*
+    @parameter - $number {Number}
+    @return - number in pixels
+*/
+
+@function px($number) {
+    @return $number * 1px;
+}
+
+// framework settings (don't change)
+$scrollbar-width: 17;
+// base settings
+$columns: 36;
+$column-width: 38;
+// common settings
+$max-width-layout: false;
+
+
+@if ($max-width-layout) {
+    $max-width-layout: $max-width-layout;
+} @else {
+    $max-width-layout: ($columns * $column-width); // (36 * 38) = 1368
+}
+
+// MIXINS
+// Clearfix
+@mixin clearfix() {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+// SELECTORS
+// Container
+.container {
+    @include clearfix();
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: calc(100vw - #{px($scrollbar-width)});
+
+    .no-scrollbar & {
+        width: 100vw;
+    }
+}
+
+// Row
+.row {
+    @include clearfix();
+}
+
+// Columns
+[class*='col-'] {
+    float: left;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+// Loop generate styles
+@for $i from 0 through $columns {
+    $columnWidthInVieport: ($i / $columns) * 100vw;
+    $columnWidthInCalc: calc(#{$columnWidthInVieport} - #{$i / $columns * px($scrollbar-width)});
+
+    // Columns
+    .col-#{$i} {
+        width: $columnWidthInCalc;
+
+        .no-scrollbar & {
+            width: $columnWidthInVieport;
+        }
+    }
+
+    .col-md-#{$i} {
+        @media #{$medium-up} {
+            width: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                width: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-bg-#{$i} {
+        @media #{$big-up} {
+            width: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                width: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-lg-#{$i} {
+        @media #{$large-up} {
+            width: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                width: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-xlg-#{$i} {
+        @media #{$xlarge-up} {
+            width: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                width: $columnWidthInVieport;
+            }
+        }
+    }
+
+    // MQ push - margin-left
+    .col-push-#{$i} {
+        margin-left: $columnWidthInCalc;
+
+        .no-scrollbar & {
+            margin-left: $columnWidthInVieport;
+        }
+    }
+
+    .col-md-push-#{$i} {
+        @media #{$medium-up} {
+            margin-left: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                margin-left: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-bg-push-#{$i} {
+        @media #{$big-up} {
+            margin-left: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                margin-left: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-lg-push-#{$i} {
+        @media #{$large-up} {
+            margin-left: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                margin-left: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-xlg-push-#{$i} {
+        @media #{$xlarge-up} {
+            margin-left: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                margin-left: $columnWidthInVieport;
+            }
+        }
+    }
+
+    // MQ post - margin-right
+    .col-post-#{$i} {
+        margin-right: $columnWidthInCalc;
+
+        .no-scrollbar & {
+            margin-right: $columnWidthInVieport;
+        }
+    }
+
+    .col-md-post-#{$i} {
+        @media #{$medium-up} {
+            margin-right: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                margin-right: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-bg-post-#{$i} {
+        @media #{$big-up} {
+            margin-right: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                margin-right: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-lg-post-#{$i} {
+        @media #{$large-up} {
+            margin-right: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                margin-right: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-xlg-post-#{$i} {
+        @media #{$xlarge-up} {
+            margin-right: $columnWidthInCalc;
+        }
+    }
+
+    // MQ prefix - padding-left
+    .col-prefix-#{$i} {
+        padding-left: $columnWidthInCalc;
+
+        .no-scrollbar & {
+            padding-left: $columnWidthInVieport;
+        }
+    }
+
+    .col-md-prefix-#{$i} {
+        @media #{$medium-up} {
+            padding-left: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                padding-left: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-bg-prefix-#{$i} {
+        @media #{$big-up} {
+            padding-left: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                padding-left: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-lg-prefix-#{$i} {
+        @media #{$large-up} {
+            padding-left: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                padding-left: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-xlg-prefix-#{$i} {
+        @media #{$xlarge-up} {
+            padding-left: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                padding-left: $columnWidthInVieport;
+            }
+        }
+    }
+
+    // MQ suffix - padding-right
+    .col-suffix-#{$i} {
+        padding-right: $columnWidthInCalc;
+
+        .no-scrollbar & {
+            padding-right: $columnWidthInVieport;
+        }
+    }
+
+    .col-md-suffix-#{$i} {
+        @media #{$medium-up} {
+            padding-right: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                padding-right: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-bg-suffix-#{$i} {
+        @media #{$big-up} {
+            padding-right: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                padding-right: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-lg-suffix-#{$i} {
+        @media #{$large-up} {
+            padding-right: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                padding-right: $columnWidthInVieport;
+            }
+        }
+    }
+
+    .col-xlg-suffix-#{$i} {
+        @media #{$xlarge-up} {
+            padding-right: $columnWidthInCalc;
+
+            .no-scrollbar & {
+                padding-right: $columnWidthInVieport;
+            }
+        }
+    }
+}
+
+// Hide
+.col-hide {
+    display: none;
+}
+
+.col-md-hide {
+    @media #{$medium-up} {
+        display: none;
+    }
+}
+
+.col-bg-hide {
+    @media #{$big-up} {
+        display: none;
+    }
+}
+
+.col-lg-hide {
+    @media #{$large-up} {
+        display: none;
+    }
+}
+
+.col-xlg-hide {
+    @media #{$xlarge-up} {
+        display: none;
+    }
+}
+
+// Show
+.col-show {
+    display: block;
+}
+
+.col-md-show {
+    @media #{$medium-up} {
+        display: block;
+    }
+}
+
+.col-bg-show {
+    @media #{$big-up} {
+        display: block;
+    }
+}
+
+.col-lg-show {
+    @media #{$large-up} {
+        display: block;
+    }
+}
+
+.col-xlg-show {
+    @media #{$xlarge-up} {
+        display: block;
+    }
+}
+
+// Flexible
+.row_theme_flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+// Reset width
+.col-no-width {
+    width: auto;
+}
+
+.col-md-no-width {
+    @media #{$medium-up} {
+        width: auto;
+    }
+}
+
+.col-bg-no-width {
+    @media #{$big-up} {
+        width: auto;
+    }
+}
+
+.col-lg-no-width {
+    @media #{$large-up} {
+        width: auto;
+    }
+}
+
+.col-xlg-no-width {
+    @media #{$xlarge-up} {
+        width: auto;
+    }
+}
+
+// Reset float
+.col-no-float {
+    float: none;
+}
+
+.col-md-no-float {
+    @media #{$medium-up} {
+        float: none;
+    }
+}
+
+.col-bg-no-float {
+    @media #{$big-up} {
+        float: none;
+    }
+}
+
+.col-lg-no-float {
+    @media #{$large-up} {
+        float: none;
+    }
+}
+
+.col-xlg-no-float {
+    @media #{$xlarge-up} {
+        float: none;
+    }
+}

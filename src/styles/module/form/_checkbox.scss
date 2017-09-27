@@ -1,0 +1,63 @@
+$checkbox: 'checkbox';
+$checkbox-hover: 'checkbox-hover';
+$checkbox-checked: 'checkbox-checked';
+$checkbox-checked-hover: 'checkbox-checked-hover';
+$checkbox-disabled: 'checkbox-disabled';
+
+// Checkbox
+.b-form__checkbox {
+    display: inline-block;
+
+    input {
+        display: none;
+    }
+
+    label {
+        position: relative;
+        display: inline-block;
+        padding-left: sprite-width($checkbox) + gutter(1);
+
+        &:after {
+            @include sprite($checkbox);
+            position: absolute;
+            top: $base-vertical-rhythm / 2;
+            margin-top: - (sprite-height($checkbox)) / 2;
+            left: 0;
+            content: '';
+        }
+    }
+
+    input:checked {
+
+        + label:after {
+            @include sprite($checkbox-checked);
+        }
+    }
+}
+
+// Hover
+.b-form__checkbox:hover {
+
+    label:after {
+        @include sprite($checkbox-hover);
+    }
+
+    input:checked {
+
+        + label:after {
+            @include sprite($checkbox-checked-hover);
+        }
+    }
+}
+
+// Disabled
+.b-form__checkbox input:disabled,
+.b-form__checkbox input[readonly='readonly'] {
+    + label {
+        cursor: default;
+    }
+
+    + label:after {
+        @include sprite($checkbox-disabled);
+    }
+}

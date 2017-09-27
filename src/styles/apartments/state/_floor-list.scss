@@ -1,0 +1,15 @@
+.al-b-floor-list__link_is_active {
+    background-color: rgba($white, .75);
+    cursor: default;
+
+    &:hover {
+        background-color: darken(rgba($white, .75), 5%);
+        color: $white;
+    }
+}
+
+.al-b-floor-list__link[disabled] {
+    cursor: default;
+    background-color: $gray;
+    color: $black;
+}

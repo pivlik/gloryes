@@ -1,0 +1,20 @@
+{{#each flats}}
+<tr>
+    <td><img src="{{plan}}" alt="Планировка" class="b-building__plan" /></td>
+    <td><a href="{{link}}">Квартира №{{flat}}</a></td>
+    <td>{{room}}</td>
+    <td>{{building}}</td>
+    <td>{{floor}}</td>
+    <td>{{totalArea}} м<sup>2</sup></td>
+    <td>{{livingSpace}} м<sup>2</sup></td>
+    <td>{{price}} р.</td>
+    <td>
+        <a href="javascript:;" title="Добавить в избранное" class="b-favorite j-favorite{{#if inFavorite}} is-active{{/if}}" data-flat-id="{{id}}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="255" height="240" viewBox="0 0 51 48" class="b-favorite__svg">
+                <title>Добавить в избранное</title>
+                <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
+            </svg>
+        </a>
+    </td>
+</tr>
+{{/each}}

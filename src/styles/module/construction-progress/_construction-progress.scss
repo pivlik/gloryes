@@ -1,0 +1,71 @@
+// LAYOUT
+@import '../../layout/module/construction-progress';
+
+// MODULE
+$construction-progress-title-position: left;
+
+.b-construction-progress__ttl {
+
+    text-align: $construction-progress-title-position;
+
+    @media #{$medium-up} {
+        @include margin-trailer(1);
+    }
+}
+
+.b-construction-progress__row {
+    @include clearfix();
+    @include margin-trailer(2);
+}
+
+.b-construction-progress__selects {
+
+
+    @media #{$medium-up} {
+
+    }
+}
+
+.b-construction-progress__select {
+
+    @include margin-trailer(1);
+    padding: 0;
+
+    @media #{$medium-up} {
+
+        @include margin-trailer(0);
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.b-construction-progress__progress {
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 48px;
+
+    @media #{$medium-up} {
+
+    }
+}
+
+
+.b-construction-progress__gallery {
+
+    @include margin-trailer(2);
+}
+
+.b-construction-progress__content {
+
+}
+
+//STATE
+@import '../../state/construction-progress/construction-progress';

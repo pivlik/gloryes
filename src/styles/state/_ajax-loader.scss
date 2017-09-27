@@ -1,0 +1,25 @@
+.b-ajax-loader.is-active {
+    display: block;
+}
+
+// Ajax loader inside button
+$ajax-loader-size: 35px;
+
+.b-ajax-loader_theme_inside {
+    position: absolute;
+
+    .b-ajax-loader__overlay {
+        display: none;
+    }
+
+    .b-ajax-loader__icon {
+        width: $ajax-loader-size;
+        height: $ajax-loader-size;
+        margin-top: -$ajax-loader-size / 2;
+        margin-left: -$ajax-loader-size / 2;
+
+        path {
+            fill: $black;
+        }
+    }
+}
