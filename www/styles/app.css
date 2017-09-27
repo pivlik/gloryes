@@ -1731,7 +1731,7 @@ a {
 .b-typo-reset ol li:before {
   counter-increment: list;
   content: counter(list) ".";
-  color: #ccc;
+  color: #576572;
   padding-right: 5px;
   position: absolute;
   top: 0;
@@ -1741,7 +1741,7 @@ a {
 .b-typo-reset ul li:before {
   content: '•';
   padding-right: 5px;
-  color: #ccc;
+  color: #576572;
   position: absolute;
   top: 0;
   left: 0;
@@ -2122,8 +2122,49 @@ a[href^='tel:'],a[href^='mailto:'] {
   display: none;
 }
 
-.b-header {
+.b-header__dellvery {
+  padding-top: 15px;
+  padding-bottom: 14px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+
+.b-header__icon-car .b-icon__SVGs-06 {
+  width: 32px;
+  height: 23px;
+  fill: #576572;
+  margin-right: 9px;
+}
+
+.b-header__delivery-description {
+  font-color: #576572;
+}
+
+.header__navigation {
   background-color: #5cc5c8;
+}
+
+.b-header__menu {
+  color: #fff;
+  font-family: "opensans", sans-serif;
+}
+
+.b-header__menu-item_with-traingle {
+  position: relative;
+}
+
+.b-header__menu-item_with-traingle:after {
+  content: '';
+  display: block;
+  right: 0;
+  top: 0;
+  position: absolute;
+  border: 20px solid transparent;
+  border-top: 20px solid green;
 }
 
 .b-nav__item,.b-nav__subitem {

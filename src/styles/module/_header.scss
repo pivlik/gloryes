@@ -1,3 +1,42 @@
 .b-header {
+
+}
+.b-header__dellvery{
+  padding-top: 15px;
+  padding-bottom: 14px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+.b-header__icon-car {
+  .b-icon__SVGs-06 {
+    width: 32px;
+    height: 23px;
+    fill: $gray;
+    margin-right: 9px;
+  }
+}
+
+.b-header__delivery-description {
+  font-color: $gray;
+}
+.header__navigation{
   background-color: $main-blue;
+}
+.b-header__menu{
+  color: $white;
+  font-family: $font;
+}
+.b-header__menu-item_with-traingle {
+  position: relative;
+  &:after{
+    content: '';
+    display: block;
+    right: 0;
+    top: 0;
+    position: absolute;
+    border: 20px solid transparent;
+    border-top: 20px solid green;
+  }
 }

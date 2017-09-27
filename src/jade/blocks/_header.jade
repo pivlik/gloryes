@@ -1,2 +1,15 @@
+include ../mixins/all-mixins
 header.b-header
     .b-header__dellvery.row
+        .b-header__icon-car
+            +svg('SVGs-06')
+        .b-header__delivery-description
+            | БЕСПЛАТНАЯ ДОСТАВКА заказов со стиральным ЭКОпорошком ИЛИ заказов от 4000 руб.
+    nav.header__navigation.row
+        ul.b-header__menu.col-push-4.col-11
+            li.b-header__menu-item отзывы
+            li.b-header__menu-item видео
+            li.b-header__menu-item о нас
+            li.b-header__menu-item контакты
+            li.b-header__menu-item.b-header__menu-item_with-traingle помощь
+
