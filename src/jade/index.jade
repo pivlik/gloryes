@@ -1,16 +1,5 @@
 doctype html
 html(lang='ru')
     head
-        meta(charset="UTF-8")
-        link(rel='stylesheet' href="/styles/guideline.css")
-        title Гайдлайн проекта
+        title
     body
-        // Сверстанные страницы
-        -var links = []
-        -links.push({'url': 'home', 'name': 'Главная страница'});
-
-        h2 Список свёрстанных страниц
-        ol
-            -each link in links
-                li
-                    a(href!=link.url+'.html')=link.name
