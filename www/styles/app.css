@@ -2144,13 +2144,20 @@ a[href^='tel:'],a[href^='mailto:'] {
   font-color: #576572;
 }
 
-.header__navigation {
+.b-header__navigation {
   background-color: #5cc5c8;
 }
 
 .b-header__menu {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 21px;
+  padding-bottom: 20px;
   color: #fff;
-  font-family: "opensans", sans-serif;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 15px;
 }
 
 .b-header__menu-item_with-traingle {
@@ -2159,12 +2166,13 @@ a[href^='tel:'],a[href^='mailto:'] {
 
 .b-header__menu-item_with-traingle:after {
   content: '';
-  display: block;
-  right: 0;
-  top: 0;
+ /* display: block;
+    right: 0; */
+  top: 9px;
+  left: 58px;
   position: absolute;
-  border: 20px solid transparent;
-  border-top: 20px solid green;
+  border: 5px solid transparent;
+  border-top: 8px solid #fff;
 }
 
 .b-nav__item,.b-nav__subitem {
@@ -2266,6 +2274,10 @@ a[href^='tel:'],a[href^='mailto:'] {
 
 @font-face {
   display-font:swap;font-family:"ruble";src:url("/fonts/ruble/ruble-webfont.woff2") format("woff2"), url("/fonts/ruble/ruble-webfont.woff") format("woff");
+}
+
+@font-face {
+  display-font:swap;font-family:"Trebuchet MS";src:url("/fonts/Trebuchet MS/Trebuchet MS.woff2") format("woff2"), url("/fonts/Trebuchet MS/Trebuchet MS.woff") format("woff");font-weight:700;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-device-pixel-ratio: 1.5) {

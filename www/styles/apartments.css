@@ -1677,6 +1677,10 @@ i,em {
   display-font:swap;font-family:"ruble";src:url("/fonts/ruble/ruble-webfont.woff2") format("woff2"), url("/fonts/ruble/ruble-webfont.woff") format("woff");
 }
 
+@font-face {
+  display-font:swap;font-family:"Trebuchet MS";src:url("/fonts/Trebuchet MS/Trebuchet MS.woff2") format("woff2"), url("/fonts/Trebuchet MS/Trebuchet MS.woff") format("woff");font-weight:700;
+}
+
 @media only screen and (min-width: 670px) {
   .col-md-0 {
     width: calc(0vw - 0px);
