@@ -1636,7 +1636,7 @@ html {
 }
 
 html.font-loaded {
-  font-family: "opensans", sans-serif;
+  font-family: "HarmoniaSansProCyr", sans-serif;
 }
 
 h1 {
@@ -2122,6 +2122,10 @@ a[href^='tel:'],a[href^='mailto:'] {
   display: none;
 }
 
+.b-header {
+  font-family: "HarmoniaSansProCyr", sans-serif;
+}
+
 .b-header__dellvery {
   padding-top: 15px;
   padding-bottom: 14px;
@@ -2146,6 +2150,9 @@ a[href^='tel:'],a[href^='mailto:'] {
 
 .b-header__navigation {
   background-color: #5cc5c8;
+  padding-top: 21px;
+  padding-bottom: 20px;
+  cursor: pointer;
 }
 
 .b-header__menu {
@@ -2153,8 +2160,6 @@ a[href^='tel:'],a[href^='mailto:'] {
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 21px;
-  padding-bottom: 20px;
   color: #fff;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 15px;
@@ -2173,6 +2178,56 @@ a[href^='tel:'],a[href^='mailto:'] {
   position: absolute;
   border: 5px solid transparent;
   border-top: 8px solid #fff;
+}
+
+.b-header__promo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #576572;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.b-header__promo_icon-star .b-icon__SVGs-07 {
+  width: 12px;
+  height: 11px;
+  fill: #576572;
+  margin-right: 7px;
+}
+
+.b-header__social-buttons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  fill: #fff;
+}
+
+.b-header__social-buttons .b-icon__SVGs-14 {
+  width: 18px;
+  height: 17px;
+}
+
+.b-header__social-buttons .b-icon__SVGs-15 {
+  width: 26px;
+  height: 14px;
+}
+
+.b-header__social-buttons .b-icon__SVGs-16 {
+  width: 23px;
+  height: 16px;
+}
+
+.b-header__social-buttons .b-icon__SVGs-17 {
+  width: 11px;
+  height: 22px;
+}
+
+.b-header__login {
+  font-family: "Trebuchet MS", sans-serif;
+  color: #fff;
 }
 
 .b-nav__item,.b-nav__subitem {
@@ -2278,6 +2333,10 @@ a[href^='tel:'],a[href^='mailto:'] {
 
 @font-face {
   display-font:swap;font-family:"Trebuchet MS";src:url("/fonts/Trebuchet MS/Trebuchet MS.woff2") format("woff2"), url("/fonts/Trebuchet MS/Trebuchet MS.woff") format("woff");font-weight:700;
+}
+
+@font-face {
+  display-font:swap;font-family:"HarmoniaSansProCyr";src:url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Black.woff2") format("woff2"), url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Black.woff") format("woff");
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-device-pixel-ratio: 1.5) {

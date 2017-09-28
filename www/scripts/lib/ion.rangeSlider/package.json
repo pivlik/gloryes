@@ -45,7 +45,6 @@
         "ion-rangeSlider.jquery.json",
         "readme.ru.md"
     ],
-
     "spm": {
         "main": "js/ion.rangeSlider.js",
         "dependencies": {

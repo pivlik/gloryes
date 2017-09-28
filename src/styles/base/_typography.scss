@@ -46,11 +46,12 @@
 @include font(opensans, 'OpenSans/Italic/OpenSans-Italic', 400, italic);
 @include font(ruble, 'ruble/ruble-webfont');
 @include font(Trebuchet MS, 'Trebuchet MS/Trebuchet MS', 700);
+@include font(HarmoniaSansProCyr, 'HarmoniaSansProCyr/HarmoniaSansProCyr-Black');
 
 //VARIABLES
-$font: 'opensans', sans-serif;
+$font: 'HarmoniaSansProCyr', sans-serif;
 $font-ruble: 'ruble', sans-serif;
-$font-b-header__menu: 'Trebuchet MS', sans-serif;
+$font-b-header__trebuchet: 'Trebuchet MS', sans-serif;
 
 // Base fonts
 html {

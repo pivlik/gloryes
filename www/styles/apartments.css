@@ -1540,7 +1540,7 @@ html {
 }
 
 html.font-loaded {
-  font-family: "opensans", sans-serif;
+  font-family: "HarmoniaSansProCyr", sans-serif;
 }
 
 h1 {
@@ -1679,6 +1679,10 @@ i,em {
 
 @font-face {
   display-font:swap;font-family:"Trebuchet MS";src:url("/fonts/Trebuchet MS/Trebuchet MS.woff2") format("woff2"), url("/fonts/Trebuchet MS/Trebuchet MS.woff") format("woff");font-weight:700;
+}
+
+@font-face {
+  display-font:swap;font-family:"HarmoniaSansProCyr";src:url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Black.woff2") format("woff2"), url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Black.woff") format("woff");
 }
 
 @media only screen and (min-width: 670px) {
