@@ -15,21 +15,25 @@ header.b-header
         .b-header__promo.col-7
             .b-header__promo_icon-star
                 +svg('SVGs-07')
-            акции
+            | акции
         .b-header__social-buttons.col-3
-            +svg('SVGs-14')
-            +svg('SVGs-15')
-            +svg('SVGs-16')
-            +svg('SVGs-17')
+            a(href='').b-header__social-href
+                +svg('SVGs-14')
+            a(href='').b-header__social-href
+                +svg('SVGs-15')
+            a(href='').b-header__social-href
+                +svg('SVGs-16')
+            a(href='').b-header__social-href
+                +svg('SVGs-17')
         .b-header__login.col-push-4.col-4 вход/ регистрация
     .b-header__main-info.row
         .b-header__main-info_logo.col-push-4.col-6
             +svg('SVGs-01')
             .b-header__main-info_logo_tagline экотовары для малышей
         .b-header__main-info_search.col-push-3.col-7
-            form
-                input.b-header__main-info_search_input
-                .b-header__main-info_search_icon
+            form(action='' )#b-header_search-form
+                input(type='search').b-header__main-info_search_input
+                button(type='submit').b-header__main-info_search_icon
                     +svg('SVGs-13')
         .b-header__main-info_phone.col-push-3.col-4
             p 8 (800) 333-90-32
