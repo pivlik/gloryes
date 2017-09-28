@@ -65,6 +65,7 @@
   display: flex;
   justify-content: space-between;
   fill: $white;
+  margin-left: 50px;
   .b-icon__SVGs-14{
     width: 18px;
     height: 17px;
@@ -85,6 +86,9 @@
 .b-header__login{
   font-family: $font-b-header__trebuchet;
   color: $white;
+}
+.b-header__main-info{
+  margin-bottom: 34px;
 }
 .b-header__main-info_logo{
   display: flex;
@@ -128,6 +132,7 @@
   align-items: center;
   flex-direction: column;
   padding-top: 48px;
+  padding-right: 10px;
   p:nth-child(1){
     color: $header_pink;
     font-weight: 700;
@@ -146,6 +151,8 @@
   padding-top: 22px;
   text-align: center;
   padding-right: 27px;
+  position: relative;
+  left: 7px;
 
   .b-header__main-info_ordering_menu-item1{
     color: $gray;
@@ -180,4 +187,11 @@
   padding-top: 3px;
   cursor: pointer;
   background-color: $header_pink;
+}
+.b-header__site-sections_navigations{
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 400;
 }
