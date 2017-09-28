@@ -2153,6 +2153,7 @@ a[href^='tel:'],a[href^='mailto:'] {
   padding-top: 21px;
   padding-bottom: 20px;
   cursor: pointer;
+  margin-bottom: 14px;
 }
 
 .b-header__menu {
@@ -2171,8 +2172,6 @@ a[href^='tel:'],a[href^='mailto:'] {
 
 .b-header__menu-item_with-traingle:after {
   content: '';
- /* display: block;
-    right: 0; */
   top: 9px;
   left: 58px;
   position: absolute;
@@ -2228,6 +2227,110 @@ a[href^='tel:'],a[href^='mailto:'] {
 .b-header__login {
   font-family: "Trebuchet MS", sans-serif;
   color: #fff;
+}
+
+.b-header__main-info_logo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.b-header__main-info_logo .b-icon__SVGs-01 {
+  width: 130px;
+  height: 95px;
+}
+
+.b-header__main-info_logo .b-header__main-info_logo_tagline {
+  font-size: 15px;
+  font-weight: 400;
+  color: #576572;
+}
+
+.b-header__main-info_search .b-header__main-info_search_input {
+  margin-top: 50px;
+  width: 267px;
+  height: 38px;
+  border: 1px solid #bfbfbf;
+}
+
+.b-header__main-info_search_icon .b-icon__SVGs-13 {
+  position: relative;
+  left: 237px;
+  bottom: 30px;
+  width: 13px;
+  height: 11px;
+  fill: #576572;
+}
+
+.b-header__main-info_phone {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 48px;
+}
+
+.b-header__main-info_phone p:nth-child(1) {
+  color: #f27a80;
+  font-weight: 700;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.b-header__main-info_phone p:nth-child(2) {
+  color: #576572;
+  font-size: 15px;
+  font-weight: 400;
+  position: relative;
+  bottom: 15px;
+}
+
+.b-header__main-info_ordering {
+  font-family: "Trebuchet MS", sans-serif;
+  padding-top: 22px;
+  text-align: center;
+  padding-right: 27px;
+}
+
+.b-header__main-info_ordering .b-header__main-info_ordering_menu-item1 {
+  color: #576572;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.b-header__main-info_ordering .b-header__main-info_ordering_menu-item2 {
+  color: #f27a80;
+  font-size: 15px;
+  font-weight: 700;
+  bottom: 5px;
+  right: 2px;
+  position: relative;
+}
+
+.b-header__main-info_ordering_icon .b-icon__SVGs-11 {
+  float: left;
+  width: 24px;
+  height: 19px;
+  fill: #576572;
+  margin-top: 4px;
+}
+
+.b-header__main-info_ordering_btn {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 2px;
+  width: 140px;
+  height: 34px;
+  padding-top: 3px;
+  cursor: pointer;
+  background-color: #f27a80;
 }
 
 .b-nav__item,.b-nav__subitem {

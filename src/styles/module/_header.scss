@@ -26,6 +26,7 @@
   padding-top: 21px;
   padding-bottom: 20px;
   cursor: pointer;
+  margin-bottom: 14px;
 }
 .b-header__menu{
   display: flex;
@@ -38,8 +39,6 @@
   position: relative;
   &:after{
     content: '';
-   /* display: block;
-    right: 0; */
     top: 9px;
     left: 58px;
     position: absolute;
@@ -86,4 +85,99 @@
 .b-header__login{
   font-family: $font-b-header__trebuchet;
   color: $white;
+}
+.b-header__main-info_logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .b-icon__SVGs-01{
+    width: 130px;
+    height: 95px;
+  }
+  .b-header__main-info_logo_tagline{
+    font-size: 15px;
+    font-weight: 400;
+    color: $gray;
+  }
+}
+.b-header__main-info_search {
+  //display: flex;
+  //align-items: center;
+  //justify-content: flex-start;
+  //flex-direction: row;
+  //flex-wrap: wrap;
+  .b-header__main-info_search_input {
+    margin-top: 50px;
+    width: 267px;
+    height: 38px;
+    border: 1px solid #bfbfbf;
+  }
+}
+.b-header__main-info_search_icon{
+  .b-icon__SVGs-13{
+    position: relative;
+    left: 237px;
+    bottom: 30px;
+    width: 13px;
+    height: 11px;
+    fill: $gray;
+  }
+}
+.b-header__main-info_phone{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 48px;
+  p:nth-child(1){
+    color: $header_pink;
+    font-weight: 700;
+    align-self: center;
+  }
+  p:nth-child(2){
+    color: $gray;
+    font-size: 15px;
+    font-weight: 400;
+    position: relative;
+    bottom: 15px;
+  }
+}
+.b-header__main-info_ordering{
+  font-family: $font-b-header__trebuchet;
+  padding-top: 22px;
+  text-align: center;
+  padding-right: 27px;
+
+  .b-header__main-info_ordering_menu-item1{
+    color: $gray;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .b-header__main-info_ordering_menu-item2{
+    color: $header_pink;
+    font-size: 15px;
+    font-weight: 700;
+    bottom: 5px;
+    right: 2px;
+    position: relative;
+  }
+}
+.b-header__main-info_ordering_icon{
+  .b-icon__SVGs-11{
+    float: left;
+    width: 24px;
+    height: 19px;
+    fill: $gray;
+    margin-top: 4px;
+  }
+}
+.b-header__main-info_ordering_btn{
+  font-size: 15px;
+  font-weight: 700;
+  color: $white;
+  border-radius: 2px;
+  width: 140px;
+  height: 34px;
+  padding-top: 3px;
+  cursor: pointer;
+  background-color: $header_pink;
 }
