@@ -2179,11 +2179,11 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
 
 .b-header__menu-item_with-traingle:after {
   content: '';
-  top: 9px;
-  right: -20px;
+  top: 7px;
+  right: -15px;
   position: absolute;
   border: 5px solid transparent;
-  border-top: 8px solid #fff;
+  border-top: 6px solid #fff;
 }
 
 .b-header__promo {
@@ -2194,6 +2194,10 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   color: #576572;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.b-header__promo-title {
+  color: #576572;
 }
 
 .b-header__promo_icon-star .b-icon__SVGs-07 {
@@ -2239,6 +2243,9 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
 
 .b-header__login {
   font-family: "Trebuchet MS", sans-serif;
+}
+
+.b-header__login a {
   color: #fff;
 }
 
@@ -2404,6 +2411,10 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   background-color: #f27a80;
 }
 
+.b-header__main-info_ordering_btn a {
+  color: #fff;
+}
+
 .b-header__site-sections_navigations {
   display: -ms-flexbox;
   display: flex;
@@ -2414,16 +2425,20 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   font-weight: 400;
 }
 
-.b-header__site-sections_navigations-item {
+.b-header__site-sections_navigations-items {
   position: relative;
 }
 
-.b-header__site-sections_navigations-item:after {
+.b-header__site-sections_navigations-items a {
+  color: #000;
+}
+
+.b-header__site-sections_navigations-items:after {
   content: '';
   display: block;
   position: absolute;
-  right: -5px;
-  top: 0;
+  right: -11px;
+  top: 7px;
   width: 5px;
   height: 5px;
   background-color: transparent;
@@ -2431,6 +2446,16 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   border-left: 1px solid #000;
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+.b-header__site-sections_navigations-items:first-child:after {
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  top: 10px;
+}
+
+.b-header__site-sections_navigations-items .b-header__site-sections_navigations-item-1 {
+  color: #576572;
 }
 
 .b-nav__item,.b-nav__subitem {
@@ -2535,7 +2560,7 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
 }
 
 @font-face {
-  display-font:swap;font-family:"Trebuchet MS";src:url("/fonts/Trebuchet MS/Trebuchet MS.woff2") format("woff2"), url("/fonts/Trebuchet MS/Trebuchet MS.woff") format("woff");font-weight:700;
+  display-font:swap;font-family:"Trebuchet MS";src:url("/fonts/Trebuchet MS/Trebuchet MS.woff2") format("woff2"), url("/fonts/Trebuchet MS/Trebuchet MS.woff") format("woff");font-weight:400;
 }
 
 @font-face {

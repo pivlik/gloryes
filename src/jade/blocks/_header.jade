@@ -20,7 +20,7 @@ header.b-header
         .b-header__promo.col-7
             .b-header__promo_icon-star
                 +svg('SVGs-07')
-            | акции
+            a(href='').b-header__promo-title акции
         .b-header__social-buttons.col-3
             a(href='').b-header__social-href
                 +svg('SVGs-14')
@@ -30,10 +30,13 @@ header.b-header
                 +svg('SVGs-16')
             a(href='').b-header__social-href
                 +svg('SVGs-17')
-        .b-header__login.col-push-4.col-4 вход/ регистрация
+        .b-header__login.col-push-4.col-4
+            a(href='') вход/
+            a(href='') регистрация
     .b-header__main-info.row
         .b-header__main-info_logo.col-push-4.col-6
-            +svg('SVGs-01')
+            a(href='')
+                +svg('SVGs-01')
             .b-header__main-info_logo_tagline экотовары для малышей
         .b-header__main-info_search.col-push-3.col-7
             form(action='' )#b-header_search-form
@@ -49,15 +52,22 @@ header.b-header
             ul.b-header__main-info_ordering_menu
                 li.b-header__main-info_ordering_menu-item1 Корзина(3)
                 li.b-header__main-info_ordering_menu-item2 1451 Р
-            .b-header__main-info_ordering_btn оформить заказ
+            .b-header__main-info_ordering_btn
+                a(href='') оформить заказ
     .b-header__site-sections.col-push-4.col-26
         ul.b-header__site-sections_navigations
-            li.b-header__site-sections_navigations-item многоразовые подгузники
-            li.b-header__site-sections_navigations-item пленки
-            li.b-header__site-sections_navigations-item трусики
-            li.b-header__site-sections_navigations-item для мам
-            li.b-header__site-sections_navigations-item аксессуары
-            li.b-header__site-sections_navigations-item стиральный порошок
+            li.b-header__site-sections_navigations-items
+                a(href='').b-header__site-sections_navigations-item-1 многоразовые подгузники
+            li.b-header__site-sections_navigations-items
+                a(href='') пленки
+            li.b-header__site-sections_navigations-items
+                a(href='') трусики
+            li.b-header__site-sections_navigations-items
+                a(href='') для мам
+            li.b-header__site-sections_navigations-items
+                a(href='') аксессуары
+            li.b-header__site-sections_navigations-items
+                a(href='') стиральный порошок
 
 
 

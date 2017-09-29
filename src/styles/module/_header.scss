@@ -44,11 +44,11 @@
   position: relative;
   &:after {
     content: '';
-    top: 9px;
-    right: -20px;
+    top: 7px;
+    right: -15px;
     position: absolute;
     border: 5px solid transparent;
-    border-top: 8px solid $white;
+    border-top: 6px solid $white;
   }
 }
 
@@ -58,6 +58,9 @@
   color: $gray;
   text-transform: uppercase;
   font-weight: 700;
+}
+.b-header__promo-title{
+  color: $gray;
 }
 
 .b-header__promo_icon-star {
@@ -99,7 +102,9 @@
 
 .b-header__login {
   font-family: $font-b-header__trebuchet;
-  color: $white;
+  a{
+    color: $white;
+  }
 }
 
 .b-header__main-info {
@@ -253,6 +258,9 @@
   height: 34px;
   padding-top: 3px;
   background-color: $header_pink;
+  a{
+    color: $white;
+  }
 }
 
 .b-header__site-sections_navigations {
@@ -263,19 +271,29 @@
   font-weight: 400;
 }
 
-.b-header__site-sections_navigations-item {
+.b-header__site-sections_navigations-items {
   position: relative;
+  a{
+    color: $black;
+  }
   &:after {
     content: '';
     display: block;
     position: absolute;
-    right: -5px;
-    top: 0;
+    right: -11px;
+    top: 7px;
     width: 5px;
     height: 5px;
     background-color: transparent;
     border-bottom: 1px solid $black;
     border-left: 1px solid $black;
     transform: rotate(-45deg);
+  }
+  &:first-child:after {
+    transform: rotate(135deg);
+    top: 10px;
+  }
+  .b-header__site-sections_navigations-item-1{
+    color: $gray;
   }
 }
