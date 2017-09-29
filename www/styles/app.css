@@ -2458,12 +2458,43 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   color: #576572;
 }
 
-.b-footer__menu {
+.b-footer {
   background-color: #5cc5c8;
+}
+
+.b-footer__hr {
+  color: #576572;
+}
+
+.b-footer__nav {
+  background-color: #fff;
+}
+
+.b-footer__nav-list_element_link {
+  color: #000;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.b-footer__nav-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.b-footer__menu {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin-top: 35px;
 }
 
 .b-footer__menu_lists_items_link {
@@ -2481,6 +2512,85 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   text-transform: uppercase;
   margin-bottom: 30px;
   display: block;
+}
+
+.b-footer__menu_contact_social-buttons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.b-footer__social-href {
+  fill: #576572;
+  margin-bottom: 15px;
+}
+
+.b-footer__social-href .b-icon__SVGs-14 {
+  width: 34px;
+  height: 30px;
+}
+
+.b-footer__social-href .b-icon__SVGs-15 {
+  width: 46px;
+  height: 26px;
+}
+
+.b-footer__social-href .b-icon__SVGs-16 {
+  width: 46px;
+  height: 26px;
+}
+
+.b-footer__social-href .b-icon__SVGs-17 {
+  width: 46px;
+  height: 30px;
+  position: relative;
+  right: 10px;
+}
+
+.b-footer__menu_contact_lists_items_link-title {
+  font-weight: 700;
+  font-size: 17px;
+  font-family: "HarmoniaSansProCyr", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.b-footer__menu_contact_search-form {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.b-footer__menu_contact_search_input {
+  width: 170px;
+  height: 44px;
+  border: none;
+  box-shadow: none;
+  padding: 10px;
+  color: #576572;
+  font-family: "HarmoniaSansProCyr", sans-serif;
+}
+
+.b-footer__menu_contact_search_btn {
+  width: 52px;
+  height: 44px;
+  background-color: #dcdc3e;
+  border: none;
+  box-shadow: none;
+}
+
+.b-footer__menu_contact_search_btn p {
+  color: #fff;
+  font-family: "HarmoniaSansProCyr", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  padding-top: 2px;
+  padding-right: 2px;
 }
 
 .b-nav__item,.b-nav__subitem {
