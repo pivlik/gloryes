@@ -2156,7 +2156,6 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   background-color: #5cc5c8;
   padding-top: 21px;
   padding-bottom: 20px;
-  cursor: pointer;
   margin-bottom: 14px;
 }
 
@@ -2168,6 +2167,10 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   color: #fff;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 15px;
+}
+
+.b-header__menu-item {
+  color: #fff;
 }
 
 .b-header__menu-item_with-traingle {
@@ -2398,7 +2401,6 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   width: 140px;
   height: 34px;
   padding-top: 3px;
-  cursor: pointer;
   background-color: #f27a80;
 }
 
@@ -2537,7 +2539,15 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
 }
 
 @font-face {
-  display-font:swap;font-family:"HarmoniaSansProCyr";src:url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Black.woff2") format("woff2"), url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Black.woff") format("woff");
+  display-font:swap;font-family:"HarmoniaSansProCyr";src:url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Regular.woff2") format("woff2"), url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Regular.woff") format("woff");font-weight:400;
+}
+
+@font-face {
+  display-font:swap;font-family:"HarmoniaSansProCyr";src:url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Bold.woff2") format("woff2"), url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Bold.woff") format("woff");font-weight:700;
+}
+
+@font-face {
+  display-font:swap;font-family:"HarmoniaSansProCyr";src:url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Italic.woff2") format("woff2"), url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Italic.woff") format("woff");font-weight:400;font-style:italic;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-device-pixel-ratio: 1.5) {

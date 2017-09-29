@@ -27,7 +27,6 @@
   background-color: $main-blue;
   padding-top: 21px;
   padding-bottom: 20px;
-  cursor: pointer;
   margin-bottom: 14px;
 }
 
@@ -38,7 +37,9 @@
   font-family: $font-b-header__trebuchet;
   font-size: 15px;
 }
-
+.b-header__menu-item{
+  color: $white;
+}
 .b-header__menu-item_with-traingle {
   position: relative;
   &:after {
@@ -251,7 +252,6 @@
   width: 140px;
   height: 34px;
   padding-top: 3px;
-  cursor: pointer;
   background-color: $header_pink;
 }
 

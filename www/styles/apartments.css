@@ -1682,7 +1682,15 @@ i,em {
 }
 
 @font-face {
-  display-font:swap;font-family:"HarmoniaSansProCyr";src:url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Black.woff2") format("woff2"), url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Black.woff") format("woff");
+  display-font:swap;font-family:"HarmoniaSansProCyr";src:url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Regular.woff2") format("woff2"), url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Regular.woff") format("woff");font-weight:400;
+}
+
+@font-face {
+  display-font:swap;font-family:"HarmoniaSansProCyr";src:url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Bold.woff2") format("woff2"), url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Bold.woff") format("woff");font-weight:700;
+}
+
+@font-face {
+  display-font:swap;font-family:"HarmoniaSansProCyr";src:url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Italic.woff2") format("woff2"), url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Italic.woff") format("woff");font-weight:400;font-style:italic;
 }
 
 @media only screen and (min-width: 670px) {
