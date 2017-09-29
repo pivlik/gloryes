@@ -1632,7 +1632,7 @@ textarea {
 html {
   font-size: 16px;
   line-height: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 html.font-loaded {
@@ -2456,6 +2456,31 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
 
 .b-header__site-sections_navigations-items .b-header__site-sections_navigations-item-1 {
   color: #576572;
+}
+
+.b-footer__menu {
+  background-color: #5cc5c8;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.b-footer__menu_lists_items_link {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "HarmoniaSansProCyr", sans-serif;
+}
+
+.b-footer__menu_lists_items_link-title {
+  font-weight: 700;
+  font-size: 17px;
+  font-family: "HarmoniaSansProCyr", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  display: block;
 }
 
 .b-nav__item,.b-nav__subitem {

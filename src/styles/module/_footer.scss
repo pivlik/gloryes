@@ -1,0 +1,21 @@
+.b-footer__menu{
+  background-color: $main-blue;
+  display: flex;
+  justify-content: space-between;
+}
+.b-footer__menu_lists_items_link{
+  color: $white;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: $font;
+
+}
+.b-footer__menu_lists_items_link-title{
+  font-weight: 700;
+  font-size: 17px;
+  font-family: $font;
+  color: $white;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  display: block;
+}
