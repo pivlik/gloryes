@@ -1,5 +1,6 @@
 .b-footer{
   background-color: $main-blue;
+  top: 30px;
 }
 .b-footer__hr{
   color: $gray;
@@ -23,6 +24,7 @@
   justify-content: space-between;
   flex-wrap: nowrap;
   margin-top: 35px;
+  margin-bottom: 62px;
 }
 .b-footer__menu_lists_items_link{
   color: $white;
@@ -100,4 +102,19 @@
     padding-top: 2px;
     padding-right: 2px;
   }
+}
+.b-footer__logo{
+  margin-bottom: 70px;
+  .b-icon__SVGs-19{
+    fill: $gray;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.b-footer__logo_text{
+  text-align: center;
+  color: $white;
+  font-size: 12px;
+  font-family: $font-b-header__trebuchet;
 }

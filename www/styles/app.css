@@ -2460,6 +2460,7 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
 
 .b-footer {
   background-color: #5cc5c8;
+  top: 30px;
 }
 
 .b-footer__hr {
@@ -2495,6 +2496,7 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   margin-top: 35px;
+  margin-bottom: 62px;
 }
 
 .b-footer__menu_lists_items_link {
@@ -2591,6 +2593,27 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   font-weight: 700;
   padding-top: 2px;
   padding-right: 2px;
+}
+
+.b-footer__logo {
+  margin-bottom: 70px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.b-footer__logo .b-icon__SVGs-19 {
+  fill: #576572;
+}
+
+.b-footer__logo_text {
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  font-family: "Trebuchet MS", sans-serif;
 }
 
 .b-nav__item,.b-nav__subitem {
