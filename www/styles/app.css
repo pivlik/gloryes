@@ -2458,13 +2458,13 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   color: #576572;
 }
 
-.b-footer {
+.b-footer__wrap {
   background-color: #5cc5c8;
-  top: 30px;
 }
 
 .b-footer__hr {
   color: #576572;
+  margin-bottom: 16px;
 }
 
 .b-footer__nav {

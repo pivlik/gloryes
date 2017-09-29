@@ -1,8 +1,8 @@
 include ../mixins/all-mixins
 
 footer.b-footer.row
-    .b-footer__hr.row.col-36 <hr>
-        .b-footer__nav.row.col-push-9.col-18
+    hr.b-footer__hr.row.col-36
+   .b-footer__nav.row.col-push-9.col-18
             ul.b-footer__nav-list
                li.b-footer__nav-list_element
                    a(href='').b-footer__nav-list_element_link частые вопросы
@@ -14,70 +14,71 @@ footer.b-footer.row
                     a(href='').b-footer__nav-list_element_link контакты
                li.b-footer__nav-list_element
                     a(href='').b-footer__nav-list_element_link где мой заказ?
-    .b-footer__menu.row.col-push-4.col-29
-        ul.b-footer__menu_lists
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link-title о gloryes
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link О нас
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Полезные статьи
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Акции
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Контакты
-        ul.b-footer__menu_lists
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link-title о товарах
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Отзывы
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Частые вопросы
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Видео
-        ul.b-footer__menu_lists
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link-title ваш заказ
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Доставка
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Способы оплаты
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Гарантия и возврат 
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Условия соглашения
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Как сделать заказ? 
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Проверка статуса заказа
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Заказ по телефону
-        ul.b-footer__menu_lists
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link-title сотрудничество
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Бизнес с нами
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Брошюра о товарах
-            li.b-footer__menu_lists_items
-                a(href='').b-footer__menu_lists_items_link Контакты
-        .b-footer__menu_contact.col-push-2.col-5
-            .b-footer__menu_contact_lists_items_link-title Давайте дружить
-            .b-footer__menu_contact_social-buttons.col-6
-                a(href='').b-footer__social-href
-                    +svg('SVGs-14')
-                a(href='').b-footer__social-href
-                    +svg('SVGs-15')
-                a(href='').b-footer__social-href
-                    +svg('SVGs-16')
-                a(href='').b-footer__social-href
-                    +svg('SVGs-17')
-            .b-footer__menu_contact_lists_items_link-title Подпишись
-            form(action='' ).b-footer__menu_contact_search-form.col-7
-                input(type='email').b-footer__menu_contact_search_input
-                button(type='submit').b-footer__menu_contact_search_btn
-                    p OK
-    .b-footer__logo.row.col-36
-        a(href='').b-footer__logo_icon
-            +svg('SVGs-19')
-        p.b-footer__logo_text © 2012- 2017 Gloryes® – многоразовая детская экопродукция. <br>  Все права защищены
+    .b-footer__wrap.row.col-36
+        .b-footer__menu.row.col-push-4.col-29
+            ul.b-footer__menu_lists
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link-title о gloryes
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link О нас
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Полезные статьи
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Акции
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Контакты
+            ul.b-footer__menu_lists
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link-title о товарах
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Отзывы
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Частые вопросы
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Видео
+            ul.b-footer__menu_lists
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link-title ваш заказ
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Доставка
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Способы оплаты
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Гарантия и возврат 
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Условия соглашения
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Как сделать заказ? 
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Проверка статуса заказа
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Заказ по телефону
+            ul.b-footer__menu_lists
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link-title сотрудничество
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Бизнес с нами
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Брошюра о товарах
+                li.b-footer__menu_lists_items
+                    a(href='').b-footer__menu_lists_items_link Контакты
+            .b-footer__menu_contact.col-push-2.col-5
+                .b-footer__menu_contact_lists_items_link-title Давайте дружить
+                .b-footer__menu_contact_social-buttons.col-6
+                    a(href='').b-footer__social-href
+                        +svg('SVGs-14')
+                    a(href='').b-footer__social-href
+                        +svg('SVGs-15')
+                    a(href='').b-footer__social-href
+                        +svg('SVGs-16')
+                    a(href='').b-footer__social-href
+                        +svg('SVGs-17')
+                .b-footer__menu_contact_lists_items_link-title Подпишись
+                form(action='' ).b-footer__menu_contact_search-form.col-7
+                    input(type='email').b-footer__menu_contact_search_input
+                    button(type='submit').b-footer__menu_contact_search_btn
+                        p OK
+        .b-footer__logo.row.col-36
+            a(href='').b-footer__logo_icon
+                +svg('SVGs-19')
+            p.b-footer__logo_text © 2012- 2017 Gloryes® – многоразовая детская экопродукция. <br>  Все права защищены
