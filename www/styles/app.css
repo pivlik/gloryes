@@ -2704,6 +2704,10 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   transform: rotate(-180deg);
 }
 
+h1 {
+  color: red;
+}
+
 @font-face {
   display-font:swap;font-family:"opensans";src:url("/fonts/OpenSans/Regular/OpenSans-Regular.woff2") format("woff2"), url("/fonts/OpenSans/Regular/OpenSans-Regular.woff") format("woff");font-weight:400;
 }
