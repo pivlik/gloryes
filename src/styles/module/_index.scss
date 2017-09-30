@@ -32,7 +32,10 @@
   text-align: center;
   p{
     margin-bottom: 38px;
-    padding: 0px 57px;
+    padding: 0px 47px;
+    line-height: 22px;
+    font-size: 15px;
+    color: $gray;
   }
 }
 .b-index__advantages_background-1{
@@ -96,4 +99,25 @@
 .b-index__advantages-btn_footer-1{
   background-color: $lemon;
   margin-bottom: 60px;
+}
+.b-index__powder{
+  text-align: center;
+  p{
+    color: $gray;
+    margin-bottom: 34px;
+  }
+}
+.b-index__powder-title{
+  font-size: 28px;
+  margin-bottom: 7px;
+}
+.b-index__powder-p{
+  margin-top: 100px;
+  color: $gray;
+}
+.b-index__powder_background{
+  background-image: url('/img/5-layers.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
 }
