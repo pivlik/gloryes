@@ -2704,8 +2704,35 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   transform: rotate(-180deg);
 }
 
-h1 {
-  color: red;
+.b-index__top-slider img {
+  padding-top: 18px;
+  padding-bottom: 30px;
+}
+
+.b-index__recommendation {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.b-index__recommendation_icon {
+  float: left;
+}
+
+.b-index__recommendation_text {
+  font-size: 15px;
+  color: #576572;
+}
+
+.b-index__recommendation_text_title {
+  font-size: 28px;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.b-index__recommendation_link {
+  color: #5cc5c8;
 }
 
 @font-face {
