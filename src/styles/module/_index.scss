@@ -14,16 +14,23 @@
 .b-index__recommendation_text{
   font-size: 15px;
   color: $gray;
+  text-align: center;
 }
 .b-index__recommendation_text_title{
   font-size: 28px;
   font-weight: 400;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: $black;
 }
 .b-index__recommendation_link{
   color: $main-blue;
+  text-align: center;
+}
+.b-index__recommendation-link_left{
+  color: $main-blue;
+  text-align: left;
+  margin: 0;
 }
 .b-index__advantages{
   background-color:  rgba($light-gray, .2);
@@ -102,6 +109,7 @@
 }
 .b-index__powder{
   text-align: center;
+  margin-bottom: 66px;
   p{
     color: $gray;
     margin-bottom: 34px;
@@ -120,4 +128,46 @@
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
+}
+
+.b-index__about{
+  background-color:  rgba($light-gray, .2);
+  margin-bottom: 49px;
+}
+.b-index__about-image{
+  margin: 35px;
+  margin-bottom: 10px;
+}
+.b-index__about-text{
+  text-align: center;
+  padding-right: 20px;
+  padding-top: 34px;
+  color: $gray;
+}
+.b-index__about-text-title{
+  font-size: 28px;
+  margin-bottom: 34px;
+  color: $black;
+}
+.b-index__promotions{
+  margin-bottom: 49px;
+}
+.b-index__promotions-title{
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.b-index__promotions-link{
+  color: $main-blue;
+}
+.b-index__promotions-image{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.b-index__partners{
+  margin-bottom: 40px;
+}
+.b-index__recommendation-text_left{
+  text-align: left;
+  color: $gray;
 }
