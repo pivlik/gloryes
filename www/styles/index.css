@@ -1,0 +1,21 @@
+.b-index__top-slider img {
+  padding-top: 18px;
+}
+
+.b-index__recommendation {
+  text-align: center;
+}
+
+.b-index__recommendation_icon {
+  float: left;
+}
+
+.b-index__recommendation_text_title {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.b-index__recommendation_text {
+  font-size: 15px;
+  font-weight: 400;
+}

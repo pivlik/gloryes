@@ -2731,7 +2731,7 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   font-size: 28px;
   font-weight: 400;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #000;
 }
 
