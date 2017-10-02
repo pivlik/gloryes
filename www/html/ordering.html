@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="cmsmagazine" content="f2d72d3408f63252b7c735ac5b026ced">
+        <link type="text/plain" rel="author" href="/humans.txt">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="/scripts/lib/jquery-selectric/public/selectric.css">
+        <link rel="stylesheet" href="/scripts/lib/magnific-popup/dist/magnific-popup.css">
+        <link rel="stylesheet" href="/scripts/lib/fotorama/fotorama.css">
+        <link rel="stylesheet" href="/styles/app.css">
+        <link rel="stylesheet" href="/styles/print.css" media="print">
+        <script src="/scripts/lib/fontfaceobserver/fontfaceobserver.js"></script>
+        <script>
+            var font = new FontFaceObserver('opensans',
+            {
+                weight: 400
+            });
+            var fontBold = new FontFaceObserver('opensans',
+            {
+                weight: 700
+            });
+            var fontItalic = new FontFaceObserver('opensans',
+            {
+                weight: 400,
+                style: "italic"
+            });
+            Promise.all(
+                [font.load(), fontBold.load(), fontItalic.load()]).then(function()
+            {
+                document.documentElement.className += 'font-loaded';
+            })
+        </script>
+        <title>Оформление заказа</title>
+        <!--[if lte IE 9]>
+    <link rel="stylesheet" href="/styles/ie.css"><![endif]-->
+    </head>
+    <body>
+        <div class="continer">
+            <header class="b-header">
+                <div class="b-header__dellvery row">
+                    <div class="b-header__icon-car">
+                        <svg class="b-icon__SVGs-06 ">
+                            <use xlink:href="#SVGs-06"></use>
+                        </svg>
+                    </div>
+                    <div class="b-header__delivery-description">БЕСПЛАТНАЯ ДОСТАВКА заказов со стиральным ЭКОпорошком ИЛИ заказов от 4000 руб.</div>
+                </div>
+                <nav class="b-header__navigation row">
+                    <ul class="b-header__menu col-push-4 col-11">
+                        <li>
+                            <a href="" class="b-header__menu-item">отзывы</a>
+                        </li>
+                        <li>
+                            <a href="" class="b-header__menu-item">видео</a>
+                        </li>
+                        <li>
+                            <a href="" class="b-header__menu-item">о нас</a>
+                        </li>
+                        <li>
+                            <a href="" class="b-header__menu-item">контакты</a>
+                        </li>
+                        <li>
+                            <a href="" class="b-header__menu-item b-header__menu-item_with-traingle">помощь</a>
+                        </li>
+                    </ul>
+                    <div class="b-header__promo col-7 col-push-1">
+                        <div class="b-header__promo_icon-star">
+                            <svg class="b-icon__SVGs-07 ">
+                                <use xlink:href="#SVGs-07"></use>
+                            </svg>
+                        </div>
+                        <a href="" class="b-header__promo-title">акции</a>
+                    </div>
+                    <div class="b-header__social-buttons col-4">
+                        <a href="" class="b-header__social-href">
+                            <svg class="b-icon__SVGs-14 ">
+                                <use xlink:href="#SVGs-14"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="b-header__social-href">
+                            <svg class="b-icon__SVGs-15 ">
+                                <use xlink:href="#SVGs-15"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="b-header__social-href">
+                            <svg class="b-icon__SVGs-16 ">
+                                <use xlink:href="#SVGs-16"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="b-header__social-href">
+                            <svg class="b-icon__SVGs-17 ">
+                                <use xlink:href="#SVGs-17"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="b-header__login col-push-3 col-5">
+                        <a href="">вход/</a>
+                        <a href="">регистрация</a>
+                    </div>
+                </nav>
+                <div class="b-header__main-info row">
+                    <div class="b-header__main-info_logo col-push-4 col-6">
+                        <a href="">
+                            <svg class="b-icon__SVGs-01 ">
+                                <use xlink:href="#SVGs-01"></use>
+                            </svg>
+                        </a>
+                        <div class="b-header__main-info_logo_tagline">экотовары для малышей</div>
+                    </div>
+                    <div class="b-header__main-info_search col-push-3 col-7">
+                        <form action="" class="b-header_search-form">
+                            <input type="search" class="b-header__main-info_search_input">
+                            <button type="submit" class="b-header__main-info_search_icon">
+                                <svg class="b-icon__SVGs-13 ">
+                                    <use xlink:href="#SVGs-13"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="b-header__main-info_phone col-push-3 col-5">
+                        <p>8 (800) 333-90-32</p>
+                        <p>заказать звонок</p>
+                    </div>
+                    <div class="b-header__main-info_ordering col-push-2 col-4">
+                        <div class="b-header__main-info_ordering_icon">
+                            <svg class="b-icon__SVGs-11 ">
+                                <use xlink:href="#SVGs-11"></use>
+                            </svg>
+                        </div>
+                        <ul class="b-header__main-info_ordering_menu">
+                            <li class="b-header__main-info_ordering_menu-item1">Корзина (3)</li>
+                            <li class="b-header__main-info_ordering_menu-item2">1451 Р</li>
+                        </ul>
+                        <div class="b-header__main-info_ordering_btn">
+                            <a href="">оформить заказ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-header__site-sections col-push-4 col-30">
+                    <ul class="b-header__site-sections_navigations">
+                        <li class="b-header__site-sections_navigations-items">
+                            <a href="" class="b-header__site-sections_navigations-item-1">многоразовые подгузники</a>
+                        </li>
+                        <li class="b-header__site-sections_navigations-items">
+                            <a href="">пленки</a>
+                        </li>
+                        <li class="b-header__site-sections_navigations-items">
+                            <a href="">трусики</a>
+                        </li>
+                        <li class="b-header__site-sections_navigations-items">
+                            <a href="">для мам</a>
+                        </li>
+                        <li class="b-header__site-sections_navigations-items">
+                            <a href="">аксессуары</a>
+                        </li>
+                        <li class="b-header__site-sections_navigations-items">
+                            <a href="">стиральный порошок</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <main class="l-main"> </main>
+            <footer class="b-footer row">
+                <hr class="b-footer__hr row col-36"> </footer>
+            <div class="b-footer__nav row col-push-9 col-18">
+                <ul class="b-footer__nav-list">
+                    <li class="b-footer__nav-list_element">
+                        <a href="" class="b-footer__nav-list_element_link">частые вопросы</a>
+                    </li>
+                    <li class="b-footer__nav-list_element">
+                        <a href="" class="b-footer__nav-list_element_link">доставка</a>
+                    </li>
+                    <li class="b-footer__nav-list_element">
+                        <a href="" class="b-footer__nav-list_element_link">оплата</a>
+                    </li>
+                    <li class="b-footer__nav-list_element">
+                        <a href="" class="b-footer__nav-list_element_link">контакты</a>
+                    </li>
+                    <li class="b-footer__nav-list_element">
+                        <a href="" class="b-footer__nav-list_element_link">где мой заказ?</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="b-footer__wrap row col-36">
+                <div class="b-footer__menu row col-push-4 col-29">
+                    <ul class="b-footer__menu_lists">
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link-title">о gloryes</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">О нас</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Полезные статьи</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Акции</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="b-footer__menu_lists">
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link-title">о товарах</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Отзывы</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Частые вопросы</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Видео</a>
+                        </li>
+                    </ul>
+                    <ul class="b-footer__menu_lists">
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link-title">ваш заказ</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Доставка</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Способы оплаты</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Гарантия и возврат </a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Условия соглашения</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Как сделать заказ? </a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Проверка статуса заказа</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Заказ по телефону</a>
+                        </li>
+                    </ul>
+                    <ul class="b-footer__menu_lists">
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link-title">сотрудничество</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Бизнес с нами</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Брошюра о товарах</a>
+                        </li>
+                        <li class="b-footer__menu_lists_items">
+                            <a href="" class="b-footer__menu_lists_items_link">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="b-footer__menu_contact col-push-2 col-5">
+                        <div class="b-footer__menu_contact_lists_items_link-title">Давайте дружить</div>
+                        <div class="b-footer__menu_contact_social-buttons col-6">
+                            <a href="" class="b-footer__social-href">
+                                <svg class="b-icon__SVGs-14 ">
+                                    <use xlink:href="#SVGs-14"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="b-footer__social-href">
+                                <svg class="b-icon__SVGs-15 ">
+                                    <use xlink:href="#SVGs-15"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="b-footer__social-href">
+                                <svg class="b-icon__SVGs-16 ">
+                                    <use xlink:href="#SVGs-16"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="b-footer__social-href">
+                                <svg class="b-icon__SVGs-17 ">
+                                    <use xlink:href="#SVGs-17"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="b-footer__menu_contact_lists_items_link-title">Подпишись</div>
+                        <form action="" class="b-footer__menu_contact_search-form col-7">
+                            <input type="email" class="b-footer__menu_contact_search_input">
+                            <button type="submit" class="b-footer__menu_contact_search_btn">
+                                <p>OK</p>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="b-footer__logo row col-36">
+                    <a href="" class="b-footer__logo_icon">
+                        <svg class="b-icon__SVGs-19 ">
+                            <use xlink:href="#SVGs-19"></use>
+                        </svg>
+                    </a>
+                    <p class="b-footer__logo_text">© 2012- 2017 Gloryes® — многоразовая детская экопродукция.
+                        <br> Все права защищены</p>
+                </div>
+            </div>
+        </div>
+        <svg class="b-icons__svg" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="SVGs-01" viewBox="0 0 243.3 177" xmlns="http://www.w3.org/2000/svg">
+                <path class="st0" d="M47.7 127.9s.7-10.1-.4-13c-.6-1.6-8-1.8-8.6 1.3-.5 3.1-1.3 39.9-1 48.5.3 8.6-.9 10.9 2.9 11.1 3.8.1 6 .5 6.4-2.9.5-3.6.7-45 .7-45z" />
+                <path class="st1" d="M233.8 143c0 1.4.6 3.7 3.7 4.1 4.2.6 6.5-.3 5.7-5.6-.7-5.2-4.5-16.4-17.5-15.2-12.9 1.2-15.8 13.1-11.7 22.3 4.1 9.3 16.4 9.2 17.6 14 1.3 4.8-2.7 5.6-5.1 5.4-3.3-.3-4.4-2.4-4.7-5.1-.3-2.7-.2-4.7-3.9-4.5-3.7.3-7.7-.5-3.7 10.2 4 10.8 21.1 9.4 24.9 4 3.8-5.4 4.1-14.5-.8-18.7-4.4-3.7-14.3-4.9-15.4-9.2-1.1-4.3 0-10.2 6-9 5.1 1.1 4.9 4.6 4.9 7.3z"
+                />
+                <path class="st2" d="M88.7 70.2s1.2-13.1 6.4-20.9c6-8.9 15-14.3 26.4-14.3 10.8 0 22.1 8 26.6 15 4.9 7.6 5.9 18.7 6.2 19.4.3.7-5.1-4.3-10.8-5.3-6-1.1-8.5 6.8-8.5 6.8s-5.3-7.3-11.3-6.9c-5.2.3-11 5.4-11 5.4s-5.1-4.7-13.4-3.9c-4.7.3-10.6 4.7-10.6 4.7z"
+                />
+                <path class="st2" d="M120.1 62.9c-.1.7-.5 28 .2 33.4.6 4.9 6.2 5.7 8.3 4.1.9-.7 2.3-1.8 3-4.5.5-1.8-2.1-2.9-3.4-.4-.6 1.1-.9 3-3.2 2.3-2.6-.8-2.1-7.7-2-16.8.1-11.3.1-18.6.1-18.6l-3 .5z" />
+                <path class="st0" d="M25.6 139.3c-1 0-3-.6-3.4-3s-1.4-8.5-5.3-7.4c-3.9 1.1-6.1 3.1-6.6 14.9s-.3 20.9 4.3 22.3c4.6 1.4 7.4-3.1 7.1-4.9-.3-1.7-1.3-2.3-2.7-2.2-1.4.1-3.9.3-4.3-1.2-.4-1.5-.9-5.3 2-7 3.1-1.8 10.4-.4 11.5.3 2.2 1.4 3.5 4.7 2.9 10.3-.6 5.4-2.2 15.6-15.2 15.5C1.3 177 1 163.3.4 157.4c-.6-6.1-.9-17.4 1.8-25.3C5 123.7 8.9 117.7 21 119c12.1 1.3 11.6 15.5 10.7 17.6-1.2 2.7-4.2 2.8-6.1 2.7zm81.6 32.8c-.1-3.5-1.8-18.1-2.2-25.8-.3-5.7-2-9.5 5.3-10.4s10.1 1.2 10.9-2.5c.9-3.8-.2-6.7-3.5-6.4-3.2.2-11.4 2-11.7 1.2-.3-.7 0-1.9-1.6-2.3-1.6-.5-8.1-.7-8.6 1.1s-.8 17.9 0 31.7c0 0 0 13.8 2.4 17.2 1.4 2 9.2.9 9-3.8z"
+                />
+                <path class="st1" d="M155 135.8s-3.5 5.3-6.5.8-11.4-18.3-13.7-19.3c-2.2-.9-7.5 1.8-6.5 5 .7 2.3 16.7 21 17.3 27.8.6 6.8-2.6 24.8.4 25.7 3 1 8 1.2 7.9-1.8-.1-3-1-23.5 1.5-25.9 2.5-2.4 18.8-16.6 18.8-20.3 0-2.6-3.4-6.9-6.4-4.7-2.2 1.5-11.9 11.6-12.8 12.7zm38.1-9.4c-13.3-1.1-17.7 7.4-17.4 24.9s3.6 25.8 14.7 25.3 13.9-5.8 13.5-7.5c-.4-1.7-3.2-8.1-6.7-5.7l-3.4 2.4s-6.6 3.7-7.8-.8c-1.2-4.5-2.1-7.2.5-7.9 2.5-.7 17.8 3.6 19.4-.5 1.5-4.1.4-29.1-12.8-30.2zm-4.4 21.8c-4 0-3.5-2.2-3.4-5 0-4.9 2.3-7.8 5.5-8 3.5-.2 6.1 4 6.2 9.2 0 5.1-4.4 3.8-8.3 3.8z"
+                />
+                <path class="st0" d="M85.1 135.4c-.8.2-2.3 1.4-3-.2-.6-1.6-3.9-9.7-13-8.6-9.1 1-12.3 7.3-12.5 22.2-.1 14.9-.2 28.2 12.4 28 12.6-.2 15.8-6.4 16.1-14.6s-.6-13.7.4-15.1c1-1.4 3.7-1.7 3.7-3.8.1-2.6-2.5-8.3-4.1-7.9zm-17.9 3.8c.3-2.1 2.8-5 5.4-2.7 2.6 2.3 2.1 4.8.7 5.1-1.5.3-3.1.4-4.1.3-.8-.1-2.2-.5-2-2.7zm8.8 20.1c-.1 3.5 0 9.8-5.5 9.5-5.5-.3-4.8-8.7-4.8-13.7 0-4.9 1.1-5 3.2-4.7 2.2.3 4.6-.7 6.1-.2 2.1.7 1.2 5.6 1 9.1zM94.4 24.4s-9-10.2-8.2-1.3c.8 8.9 8.5 13.6 10.3 11.2 1.9-2.4-2.1-9.9-2.1-9.9z"
+                />
+                <path class="st1" d="M111.4 4.1s-4-6.3-6.3-3.2 2.2 11 6.2 13.3 4.7-1.7 3.2-4c-1.4-2.4-3.1-6.1-3.1-6.1z" />
+                <path class="st0" d="M135.7 13.2c-.6.1-5.3 3.6-2.1 8.5 3.2 4.9 9.8 5.2 8.8 1.4-1.1-3.9-4.4-10.5-6.7-9.9z" />
+                <path class="st1" d="M162.6 35s-5.4-4.4-6.5.7c-1.1 5 2.1 12.6 7.1 13.1 5 .4 2.5-8.4-.6-13.8z" />
+            </symbol>
+            <symbol id="SVGs-02" viewBox="0 0 69.9 75" xmlns="http://www.w3.org/2000/svg">
+                <path class="st2" d="M18.1 32s-.7-3.7 3.2-5.8c0 0 7.7-4.8 6.5-9.3 0 0 .2-2.4-3.3-7.8 0 0-4.8-9.3-9.4-9 0 0-5.4-.2-12.7 12 0 0-5.6 10.7.4 23.8 0 0 7.8 19.2 29.4 34.1 0 0 12.6 8.5 25.6 3.4 0 0 14.6-7.7 11.8-12.6 0 0-1.2-3.9-6.7-7.8 0 0-8.8-9.1-13.8-3.2 0 0-5.8 6.2-7.4 5.8 0 0-3.9 2.1-12-6.1 0-.1-10.8-10.2-11.6-17.5z"
+                />
+            </symbol>
+            <symbol id="SVGs-03" viewBox="0 0 71.8 44.7" xmlns="http://www.w3.org/2000/svg">
+                <path class="st2" d="M0 5.8v38.9h71.8V5.8L36.1 30.3z" />
+                <path class="st2" d="M0 0h71.8L36.1 25z" />
+            </symbol>
+            <symbol id="SVGs-04" viewBox="0 0 47.1 75" xmlns="http://www.w3.org/2000/svg">
+                <path class="st2" d="M23.5 0S-1.5 0 .1 25.6c0 0 0 20 23.4 49.3 0 0 20.8-27.5 23.5-49.8 0 0 2.1-23.6-23.5-25.1zm.4 32c-6.1 0-11.1-5-11.1-11.1s5-11.1 11.1-11.1S35 14.8 35 20.9C34.9 27 30 32 23.9 32z" />
+            </symbol>
+            <symbol id="SVGs-05" viewBox="0 0 105.1 60" xmlns="http://www.w3.org/2000/svg">
+                <path class="st2" d="M6 12h93.1c3.3 0 6-2.7 6-6s-2.7-6-6-6H6C2.7 0 0 2.7 0 6s2.7 6 6 6zm93.1 12H6c-3.3 0-6 2.7-6 6s2.7 6 6 6h93.1c3.3 0 6-2.7 6-6s-2.7-6-6-6zm0 24H6c-3.3 0-6 2.7-6 6s2.7 6 6 6h93.1c3.3 0 6-2.7 6-6s-2.7-6-6-6z" />
+            </symbol>
+            <symbol id="SVGs-06" viewBox="0 0 105 78.2" xmlns="http://www.w3.org/2000/svg">
+                <path class="st2" d="M104.5 39.5L94.2 21.3c-3.1-5.7-7.5-5.2-7.5-5.2H75.3v-2.7C75.3 6 69.3 0 61.9 0L13.3 3C6 3.8 3 6.7 2.3 15.2L0 50.9c0 7.4 6 13.4 13.4 13.4h.8c1.1-6.8 7.1-12 14.2-12s13.1 5.2 14.2 12H69c1.1-6.8 7.1-12 14.2-12s13.1 5.2 14.2 12h4c1.9 0 3.5-1.6 3.5-3.5V41.3c.1-.7-.1-1.3-.4-1.8zm-29 2.2v-19h9.2s2.5-.2 4.4 3.5l9 15.4H75.5z"
+                />
+                <circle class="st2" cx="28.4" cy="67.4" r="10.7" />
+                <circle class="st2" cx="83.1" cy="67.4" r="10.7" />
+            </symbol>
+            <symbol id="SVGs-07" viewBox="0 0 77.3 73.6" xmlns="http://www.w3.org/2000/svg">
+                <path class="st2" d="M36.5 2.3c1.2-3.1 3.1-3.1 4.2 0L47.4 20c1.2 3.1 4.8 5.7 8.1 5.9l18.8.9c3.3.2 3.9 2 1.3 4L61 42.5c-2.6 2.1-4 6.4-3.1 9.5l5 18.2c.9 3.2-.7 4.3-3.4 2.5L43.7 62.4c-2.8-1.8-7.3-1.8-10 0L17.9 72.8c-2.8 1.8-4.3.7-3.4-2.5l5-18.2c.9-3.2-.5-7.5-3.1-9.5L1.6 30.8c-2.6-2.1-2-3.9 1.3-4l18.8-.9c3.3-.2 6.9-2.8 8.1-5.9l6.7-17.7z"
+                />
+            </symbol>
+            <symbol id="SVGs-08" viewBox="0 0 49 28" xmlns="http://www.w3.org/2000/svg">
+                <path class="st4" d="M24 27.8h2.9s.9-.1 1.3-.6c.4-.4.4-1.3.4-1.3s-.1-3.9 1.8-4.5c1.8-.6 4.1 3.8 6.6 5.5 1.9 1.3 3.3 1 3.3 1l6.5-.1s3.4-.2 1.8-2.9c-.1-.2-.9-2-4.9-5.6-4.1-3.8-3.6-3.2 1.4-9.8 3-4 4.2-6.5 3.8-7.5-.4-1-2.6-.7-2.6-.7h-7.4s-.5-.1-1 .2c-.4.2-.7.8-.7.8s-1 3.1-2.5 5.7c-3.3 5.6-4.6 5.9-5.1 5.5-1.2-.8-.9-3.2-.9-5 0-5.4.8-7.7-1.6-8.2-.9-.1-1.5-.3-3.5-.3-2.6 0-4.9 0-6.1.6C16.6 1 16 2 16.4 2c.5.1 1.6.3 2.2 1.1.8 1 .7 3.3.7 3.3s.4 6.4-1 7.1c-1 .5-2.4-.6-5.3-5.6-1.5-2.6-2.6-5.5-2.6-5.5s-.3-.4-.7-.7c-.4-.4-1.1-.5-1.1-.5h-7s-1.1 0-1.4.5c-.3.4 0 1.2 0 1.2s5.5 12.8 11.7 19.3c5.6 6 12.1 5.6 12.1 5.6z"
+                />
+            </symbol>
+            <symbol id="SVGs-09" viewBox="0 0 46 32.4" xmlns="http://www.w3.org/2000/svg">
+                <path class="st3" d="M6.6 31.9c13.2.7 23.9.6 32.8 0 3.3-.2 5.7-2.8 6.1-6.1.7-6.5.7-12.9 0-19.2-.4-3.3-2.7-5.9-6.1-6.1C28.5-.2 17.5-.2 6.6.5 3.3.7.9 3.3.5 6.6-.2 13-.2 19.4.5 25.8c.4 3.3 2.8 5.9 6.1 6.1zM18.3 9.6L30.6 16l-12.3 6.3V9.6z" />
+            </symbol>
+            <symbol id="SVGs-10" viewBox="0 0 20.6 44.1" xmlns="http://www.w3.org/2000/svg">
+                <path class="st4" d="M4.6 33V22.6c0-.6-.2-.8-.7-.7H.7c-.5.1-.7-.1-.7-.5v-6.5c0-.4.1-.5.5-.5h3.3c.6 0 .8-.2.8-.8V8.7c0-2 .6-3.9 1.8-5.5 1.5-2.1 3.7-3 6.1-3.1C15 0 17.6 0 20.1 0c.4 0 .5.1.5.5V7c0 .4-.1.5-.5.5h-3.7c-1.6 0-2.6.8-2.7 2.5-.1 1.3 0 2.6-.1 3.9 0 .5.3.4.6.4h5.6c.5 0 .7.1.7.7-.2 2.2-.4 4.3-.6 6.5 0 .5-.3.6-.7.6h-4.4c-1.1 0-1-.2-1 .9v20.3c0 .7-.2.9-.9.9H5.3c-.7 0-.8-.2-.8-.9.1-3.5.1-6.9.1-10.3z"
+                />
+            </symbol>
+            <symbol id="SVGs-11" viewBox="0 0 66.9 49.3" xmlns="http://www.w3.org/2000/svg">
+                <path class="st5" d="M57.7 39.8c-2 0-3.7 1.2-4.4 2.9H21.4c-.2-.6-.5-1.1-1-1.5l2.2-6h36.6l7.6-28.7h-51l-1.4-4.9c0-.1-.1-.3-.2-.4C14 .5 13.4 0 12.6 0H1.8C.8 0 0 .8 0 1.8s.8 1.8 1.8 1.8h9.5l2.5 8.7c0 .1.1.1.1.2L19.3 34l-2.1 5.7H17c-2.6 0-4.7 2.1-4.7 4.7s2.1 4.7 4.7 4.7c1.9 0 3.6-1.2 4.3-2.9h32c.7 1.7 2.4 2.9 4.4 2.9 2.6 0 4.7-2.1 4.7-4.7s-2.1-4.6-4.7-4.6z"
+                />
+            </symbol>
+            <symbol id="SVGs-12" viewBox="0 0 25 22.1" xmlns="http://www.w3.org/2000/svg">
+                <path class="st2" d="M24 17.7l-4.1-3.3c.5-1.2.8-2.6.8-4.1C20.8 4.6 16.1 0 10.4 0S0 4.6 0 10.4c0 5.7 4.6 10.4 10.4 10.4 2.5 0 4.8-.9 6.6-2.4l4 3.2c1.1.8 2.6.7 3.5-.4.8-1.1.6-2.6-.5-3.5zm-13.6-1.6c-3.2 0-5.8-2.6-5.8-5.8 0-3.2 2.6-5.8 5.8-5.8s5.8 2.6 5.8 5.8c0 .3 0 .6-.1 1-.3 1.7-1.3 3.2-2.8 4-.9.6-1.9.8-2.9.8z"
+                />
+            </symbol>
+            <symbol id="SVGs-13" viewBox="0 0 25 22.1" xmlns="http://www.w3.org/2000/svg">
+                <path class="st7" d="M24 17.7l-4.1-3.3c.5-1.2.8-2.6.8-4.1C20.8 4.6 16.1 0 10.4 0S0 4.6 0 10.4c0 5.7 4.6 10.4 10.4 10.4 2.5 0 4.8-.9 6.6-2.4l4 3.2c1.1.8 2.6.7 3.5-.4.8-1.1.6-2.6-.5-3.5zm-13.6-1.6c-3.2 0-5.8-2.6-5.8-5.8 0-3.2 2.6-5.8 5.8-5.8s5.8 2.6 5.8 5.8c0 .3 0 .6-.1 1-.3 1.7-1.3 3.2-2.8 4-.9.6-1.9.8-2.9.8z"
+                />
+            </symbol>
+            <symbol id="SVGs-14" viewBox="0 0 34.4 34.4" xmlns="http://www.w3.org/2000/svg">
+                <path class="st2" d="M4.1 34.4h26.2c2.3 0 4.1-1.8 4.1-4.1V4.1c0-2.3-1.8-4.1-4.1-4.1H4.1C1.8 0 0 1.8 0 4.1v26.2c0 2.3 1.8 4.1 4.1 4.1zM23.9 4.9c0-.5.4-1 1-1h4.7c.5 0 1 .4 1 1v4.6c0 .5-.4 1-1 1h-4.7c-.5 0-1-.4-1-1V4.9zm-6.7 5.7c3.7 0 6.6 3 6.6 6.6 0 3.6-3 6.6-6.6 6.6-3.7 0-6.6-3-6.6-6.6 0-3.6 3-6.6 6.6-6.6zM3.9 14.5h3.2c-.2.9-.4 1.8-.4 2.8 0 5.8 4.7 10.4 10.5 10.4S27.7 23 27.7 17.3c0-1-.1-1.9-.4-2.8h3.2v15c0 .5-.4 1-1 1H4.9c-.5 0-1-.4-1-1v-15z"
+                />
+            </symbol>
+            <symbol id="SVGs-15" viewBox="0 0 49 28" xmlns="http://www.w3.org/2000/svg">
+                <path class="st5" d="M24 27.8h2.9s.9-.1 1.3-.6c.4-.4.4-1.3.4-1.3s-.1-3.9 1.8-4.5c1.8-.6 4.1 3.8 6.6 5.5 1.9 1.3 3.3 1 3.3 1l6.5-.1s3.4-.2 1.8-2.9c-.1-.2-.9-2-4.9-5.6-4.1-3.8-3.6-3.2 1.4-9.8 3-4 4.2-6.5 3.8-7.5-.4-1-2.6-.7-2.6-.7h-7.4s-.5-.1-1 .2c-.4.2-.7.8-.7.8s-1 3.1-2.5 5.7c-3.3 5.6-4.6 5.9-5.1 5.5-1.2-.8-.9-3.2-.9-5 0-5.4.8-7.7-1.6-8.2-.9-.1-1.5-.3-3.5-.3-2.6 0-4.9 0-6.1.6C16.6 1 16 2 16.4 2c.5.1 1.6.3 2.2 1.1.8 1 .7 3.3.7 3.3s.4 6.4-1 7.1c-1 .5-2.4-.6-5.3-5.6-1.5-2.6-2.6-5.5-2.6-5.5s-.3-.4-.7-.7c-.4-.4-1.1-.5-1.1-.5h-7s-1.1 0-1.4.5c-.3.4 0 1.2 0 1.2s5.5 12.8 11.7 19.3c5.6 6 12.1 5.6 12.1 5.6z"
+                />
+            </symbol>
+            <symbol id="SVGs-16" viewBox="0 0 46 32.4" xmlns="http://www.w3.org/2000/svg">
+                <path class="st2" d="M6.6 31.9c13.2.7 23.9.6 32.8 0 3.3-.2 5.7-2.8 6.1-6.1.7-6.5.7-12.9 0-19.2-.4-3.3-2.7-5.9-6.1-6.1C28.5-.2 17.5-.2 6.6.5 3.3.7.9 3.3.5 6.6-.2 13-.2 19.4.5 25.8c.4 3.3 2.8 5.9 6.1 6.1zM18.3 9.6L30.6 16l-12.3 6.3V9.6z" />
+            </symbol>
+            <symbol id="SVGs-17" viewBox="0 0 20.6 44.1" xmlns="http://www.w3.org/2000/svg">
+                <path class="st5" d="M4.6 33.2V22.8c0-.6-.2-.8-.7-.7H.7c-.5 0-.7-.1-.7-.6V15c0-.4.1-.5.5-.5h3.3c.6 0 .8-.2.8-.8V8.8c0-2 .6-3.9 1.8-5.5 1.5-2.1 3.7-3 6.1-3.1C15 .1 17.6.1 20.1.1c.4 0 .5.1.5.5v6.5c0 .4-.1.5-.5.5h-3.7c-1.6 0-2.6.8-2.7 2.5-.1 1.3 0 2.6-.1 3.9 0 .5.3.4.6.4h5.6c.5 0 .7.1.7.7-.2 2.2-.4 4.3-.6 6.5 0 .5-.3.6-.7.6h-4.4c-1.1 0-1-.2-1 .9v20.3c0 .7-.2.9-.9.9H5.3c-.7 0-.8-.2-.8-.9.1-3.4.1-6.8.1-10.2z"
+                />
+            </symbol>
+            <symbol id="SVGs-18" viewBox="0 0 20.6 44.1" xmlns="http://www.w3.org/2000/svg">
+                <path class="st5" d="M4.6 33V22.6c0-.6-.2-.8-.7-.7H.7c-.5.1-.7-.1-.7-.5v-6.5c0-.4.1-.5.5-.5h3.3c.6 0 .8-.2.8-.8V8.7c0-2 .6-3.9 1.8-5.5 1.5-2.1 3.7-3 6.1-3.1C15 0 17.6 0 20.1 0c.4 0 .5.1.5.5V7c0 .4-.1.5-.5.5h-3.7c-1.6 0-2.6.8-2.7 2.5-.1 1.3 0 2.6-.1 3.9 0 .5.3.4.6.4h5.6c.5 0 .7.1.7.7-.2 2.2-.4 4.3-.6 6.5 0 .5-.3.6-.7.6h-4.4c-1.1 0-1-.2-1 .9v20.3c0 .7-.2.9-.9.9H5.3c-.7 0-.8-.2-.8-.9.1-3.5.1-6.9.1-10.3z"
+                />
+            </symbol>
+            <symbol id="SVGs-19" viewBox="0 0 167.7 122" xmlns="http://www.w3.org/2000/svg">
+                <path class="st2" d="M32.9 88.2s.5-6.9-.2-8.9c-.4-1.1-5.5-1.2-5.9.9-.4 2.1-.9 27.5-.7 33.4.2 5.9-.6 7.5 2 7.6s4.1.4 4.4-2c.3-2.5.4-31 .4-31zm128.2 10.4c0 .9.4 2.6 2.5 2.8 2.9.4 4.4-.2 4-3.8-.5-3.6-3.1-11.3-12-10.5-8.9.8-10.9 9-8 15.4 2.8 6.4 11.3 6.3 12.1 9.7.9 3.3-1.9 3.9-3.5 3.7-2.3-.2-3-1.7-3.2-3.5-.2-1.8-.2-3.3-2.7-3.1-2.6.2-5.3-.4-2.5 7.1 2.7 7.4 14.6 6.5 17.2 2.8 2.6-3.8 2.8-10-.6-12.9-3-2.6-9.9-3.4-10.6-6.3-.8-3 0-7 4.1-6.2 3.4.5 3.2 2.9 3.2 4.8zM61.2 48.4s.8-9 4.4-14.4c4.1-6.1 10.3-9.9 18.2-9.9 7.4 0 15.2 5.5 18.3 10.3 3.4 5.3 4.1 12.9 4.2 13.3.2.5-3.5-2.9-7.4-3.6-4.1-.7-5.9 4.7-5.9 4.7s-3.7-5-7.8-4.8c-3.6.2-7.6 3.7-7.6 3.7s-3.5-3.2-9.2-2.7c-3.2.3-7.2 3.4-7.2 3.4z"
+                />
+                <path class="st2" d="M82.8 43.3c-.1.5-.3 19.3.2 23 .4 3.4 4.3 3.9 5.7 2.9.6-.5 1.6-1.2 2.1-3.1.3-1.3-1.5-2-2.3-.3-.4.8-.6 2.1-2.2 1.6-1.8-.6-1.4-5.3-1.4-11.6 0-7.8.1-12.8.1-12.8l-2.2.3zM17.6 96c-.7 0-2.1-.4-2.4-2.1-.3-1.7-1-5.8-3.7-5.1S7.4 91 7.1 99.1c-.3 8.1-.2 14.4 2.9 15.4s5.1-2.2 4.9-3.4c-.2-1.2-.9-1.6-1.8-1.5-1 .1-2.7.2-3-.8-.2-1-.6-3.7 1.4-4.8 2.1-1.2 7.1-.3 7.9.2 1.5 1 2.4 3.2 2 7.1C21 115 19.9 122 10.9 122 .9 122 .7 112.6.3 108.5c-.4-4.2-.6-12 1.2-17.4 1.9-5.8 4.6-9.9 13-9 8.4.9 8 10.7 7.4 12.1-.9 1.8-3 1.9-4.3 1.8zm56.3 22.6c-.1-2.4-1.2-12.5-1.5-17.8-.2-3.9-1.4-6.5 3.6-7.2s6.9.9 7.5-1.7c.6-2.6-.2-4.6-2.4-4.4-2.2.2-7.9 1.4-8.1.8-.2-.5 0-1.3-1.1-1.6-1.1-.3-5.6-.5-6 .8-.3 1.3-.6 12.3 0 21.9 0 0 0 9.5 1.6 11.9 1.1 1.3 6.5.6 6.4-2.7zm32.9-25s-2.4 3.7-4.5.6c-2-3.1-7.9-12.6-9.5-13.3-1.5-.6-5.2 1.3-4.5 3.4.5 1.6 11.5 14.5 11.9 19.1.4 4.7-1.8 17.1.3 17.7 2.1.7 5.5.9 5.4-1.2-.1-2.1-.7-16.2 1-17.9 1.7-1.6 12.9-11.5 12.9-14 0-1.8-2.3-4.7-4.4-3.2-1.3 1-7.9 8-8.6 8.8zm26.3-6.5c-9.1-.7-12.2 5.1-12 17.1.2 12.1 2.5 17.8 10.1 17.5 7.6-.4 9.6-4 9.3-5.2-.3-1.2-2.2-5.6-4.6-3.9l-2.4 1.7s-4.6 2.6-5.4-.6c-.8-3.1-1.4-5 .3-5.5 1.8-.5 12.3 2.5 13.3-.4 1.2-2.7.5-19.9-8.6-20.7zm-3.1 15c-2.7 0-2.4-1.5-2.4-3.5 0-3.3 1.6-5.4 3.8-5.5 2.4-.1 4.2 2.8 4.3 6.3 0 3.6-2.9 2.7-5.7 2.7zm-71.3-8.8c-.6.2-1.6.9-2.1-.1-.4-1.1-2.7-6.7-9-6-6.3.7-8.5 5-8.6 15.3-.1 10.3-.2 19.4 8.6 19.3 8.7-.1 10.9-4.4 11.1-10.1.2-5.7-.4-9.4.3-10.4s2.6-1.2 2.6-2.6c0-1.8-1.9-5.7-2.9-5.4zm-12.4 2.6c.2-1.5 1.9-3.5 3.7-1.9 1.8 1.6 1.4 3.3.5 3.5-1 .2-2.2.3-2.8.2-.6 0-1.6-.3-1.4-1.8zm6.1 13.9c-.1 2.4 0 6.8-3.8 6.5-3.8-.2-3.3-6-3.3-9.4 0-3.4.7-3.5 2.2-3.3 1.5.2 3.2-.5 4.2-.2 1.4.6.8 4 .7 6.4zm12.7-93s-6.2-7-5.7-.9c.5 6.2 5.8 9.4 7.1 7.7 1.3-1.6-1.4-6.8-1.4-6.8zm11.7-14S74.1-1.6 72.5.6c-1.6 2.1 1.5 7.6 4.3 9.2C79.5 11.3 80 8.6 79 7c-1.1-1.6-2.2-4.2-2.2-4.2zm16.7 6.3c-.4.1-3.7 2.5-1.5 5.9 2.2 3.4 6.8 3.6 6 1-.7-2.7-2.9-7.3-4.5-6.9zm18.6 15s-3.7-3-4.5.5c-.7 3.5 1.5 8.7 4.9 9 3.4.3 1.7-5.8-.4-9.5z"
+                />
+            </symbol>
+            <symbol id="SVGs-20" viewBox="0 0 105 78.2" xmlns="http://www.w3.org/2000/svg">
+                <path class="st6" d="M104.5 39.5L94.2 21.3c-3.1-5.7-7.5-5.2-7.5-5.2H75.3v-2.7C75.3 6 69.3 0 61.9 0L13.3 3C6 3.8 3 6.7 2.3 15.2L0 50.9c0 7.4 6 13.4 13.4 13.4h.8c1.1-6.8 7.1-12 14.2-12s13.1 5.2 14.2 12H69c1.1-6.8 7.1-12 14.2-12s13.1 5.2 14.2 12h4c1.9 0 3.5-1.6 3.5-3.5V41.3c.1-.7-.1-1.3-.4-1.8zm-29 2.2v-19h9.2s2.5-.2 4.4 3.5l9 15.4H75.5z"
+                />
+                <circle class="st6" cx="28.4" cy="67.4" r="10.7" />
+                <circle class="st6" cx="83.1" cy="67.4" r="10.7" />
+            </symbol>
+            <symbol id="SVGs-21" viewBox="0 0 98.4 92.4" xmlns="http://www.w3.org/2000/svg">
+                <path class="st0" d="M96.6 39.4L76.4 21.9V5.3c0-2.9-2.3-5.2-5.2-5.2C68.3.1 66 2.4 66 5.3v7.6L52.7 1.3C52 .7 51.1.3 50.3.1c-1.6-.4-3.3 0-4.6 1.1L1.8 39.5c-2.2 1.9-2.4 5.2-.5 7.3 1.9 2.2 5.2 2.4 7.3.5L49.1 12l40.6 35.3c2.2 1.9 5.5 1.6 7.3-.5 2-2.2 1.7-5.5-.4-7.4z"
+                />
+                <path class="st0" d="M84.8 48.2L51.1 18.4c-1.7-1.4-3.2 0-3.2 0L13.6 48.2c-.2.2-.3.4-.3.6v42.8c0 .5.4.9.9.9h25.9V64.9h18.3v27.5h25.9c.5 0 .9-.4.9-.9V48.8c-.1-.2-.2-.5-.4-.6z" />
+            </symbol>
+            <symbol id="SVGs-39" viewBox="0 0 34.4 34.4" xmlns="http://www.w3.org/2000/svg">
+                <path class="st3" d="M4.1 34.4h26.2c2.3 0 4.1-1.8 4.1-4.1V4.1c0-2.3-1.8-4.1-4.1-4.1H4.1C1.8 0 0 1.8 0 4.1v26.2c0 2.3 1.8 4.1 4.1 4.1zM23.9 4.9c0-.5.4-1 1-1h4.7c.5 0 1 .4 1 1v4.6c0 .5-.4 1-1 1h-4.7c-.5 0-1-.4-1-1V4.9zm-6.7 5.7c3.7 0 6.6 3 6.6 6.6 0 3.6-3 6.6-6.6 6.6-3.7 0-6.6-3-6.6-6.6 0-3.6 3-6.6 6.6-6.6zM3.9 14.5h3.2c-.2.9-.4 1.8-.4 2.8 0 5.8 4.7 10.4 10.5 10.4S27.7 23 27.7 17.3c0-1-.1-1.9-.4-2.8h3.2v15c0 .5-.4 1-1 1H4.9c-.5 0-1-.4-1-1v-15z"
+                />
+            </symbol>
+        </svg>
+        <script src="/scripts/lib/requirejs/require.min.js" data-main="/scripts/config.js"></script>
+    </body>
+</html>
