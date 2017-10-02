@@ -117,3 +117,23 @@
     padding: 5px;
   }
 }
+.b-ordering__basket-info-price{
+  color: $black;
+  &:before{
+    content: " ";
+    white-space: pre;
+  }
+}
+.b-ordering__basket-info-item{
+  margin-bottom: 20px;
+}
+
+.b-ordering__basket-info-item_relative{
+  position: relative;
+}
+.b-ordering__basket-info-item_relative-delivery{
+  color: $header_pink;
+  font-weight: 700;
+  text-transform: none;
+  top: 5px;
+}
