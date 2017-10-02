@@ -60,6 +60,19 @@
 }
 .b-ordering__basket-order-list-item{
   display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  margin-bottom: 30px;
+  &:after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    background-color: $gray;
+    opacity: 0.2;
+    top: 100px;
+  }
 }
 .b-ordering__basket-order-list-name,.b-ordering__basket-order-list-amount,.b-ordering__basket-order-list-price{
   padding-top: 12px;
@@ -71,7 +84,8 @@
   width: 43px;
   height: 43px;
   border: 1px solid rgba($gray , 0.2);
-  padding-left: 16px;
+  box-shadow: 1px 0 1px rgba($gray, 0.3);
+  padding-left: 18px;
 }
 .b-ordering__basket-order-list-price-value-delete{
   font-size: 12px;
@@ -80,4 +94,26 @@
 .b-ordering__basket-order-list-hr{
   float: inherit;
   opacity: 0.4;
+}
+.b-ordering__basket-order-additionally{
+  display: flex;
+  align-items: center;
+}
+.b-ordering__basket-order-list-name-footer{
+  color: $gray;
+  font-size: 15px;
+}
+.b-ordering__basket-order-additionally-link{
+  color: $main-blue;
+}
+.b-ordering__basket-order-list-additionally-btn{
+  display: block;
+  width: 182px;
+  height: 42px;
+  border: 1px solid $main-blue;
+  color: $main-blue;
+  border-radius: 2px;
+  p{
+    padding: 5px;
+  }
 }
