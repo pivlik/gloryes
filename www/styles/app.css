@@ -2953,6 +2953,65 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
   display: none;
 }
 
+.b-ordering__title {
+  margin-bottom: 16px;
+  font-size: 27px;
+}
+
+.b-ordering__title_second {
+  color: #576572;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.b-ordering__basket-order-col {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin-bottom: 16px;
+}
+
+.b-ordering__basket-order-col-item:first-child {
+  margin-right: auto;
+}
+
+.b-ordering__basket-order-col-item:last-child {
+  margin-left: 18px;
+}
+
+.b-ordering__basket-order-list-item {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.b-ordering__basket-order-list-name,.b-ordering__basket-order-list-amount,.b-ordering__basket-order-list-price {
+  padding-top: 12px;
+}
+
+.b-ordering__basket-order-list-name-second {
+  color: #576572;
+}
+
+.b-ordering__basket-order-list-amount-form-input {
+  width: 43px;
+  height: 43px;
+  border: 1px solid rgba(87, 101, 114, 0.2);
+  padding-left: 16px;
+}
+
+.b-ordering__basket-order-list-price-value-delete {
+  font-size: 12px;
+  color: #5cc5c8;
+}
+
+.b-ordering__basket-order-list-hr {
+  float: inherit;
+  opacity: 0.4;
+}
+
 @font-face {
   display-font:swap;font-family:"opensans";src:url("/fonts/OpenSans/Regular/OpenSans-Regular.woff2") format("woff2"), url("/fonts/OpenSans/Regular/OpenSans-Regular.woff") format("woff");font-weight:400;
 }
