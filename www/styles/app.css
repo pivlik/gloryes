@@ -2429,6 +2429,7 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
 
 .b-header__site-sections_navigations-items {
   position: relative;
+  margin-bottom: 30px;
 }
 
 .b-header__site-sections_navigations-items a {
@@ -2908,6 +2909,48 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
 .b-index__recommendation-text_left {
   text-align: left;
   color: #576572;
+}
+
+.b-ordering__nav-line-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin-bottom: 35px;
+}
+
+.b-ordering__nav-line-list-item-link {
+  color: #576572;
+}
+
+.b-ordering__nav-line-list-item-link-icon .b-icon__SVGs-21 {
+  fill: #5cc5c8;
+  width: 19px;
+  height: 21px;
+}
+
+.b-ordering__nav-line-list-item {
+  position: relative;
+  margin-right: 20px;
+}
+
+.b-ordering__nav-line-list-item:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -11px;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  border-bottom: 1px solid #576572;
+  border-left: 1px solid #576572;
+  -ms-transform: rotate(-130deg);
+  transform: rotate(-130deg);
+}
+
+.b-ordering__nav-line-list-item:last-child:after {
+  display: none;
 }
 
 @font-face {
