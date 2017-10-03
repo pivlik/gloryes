@@ -135,6 +135,7 @@
   color: $header_pink;
   font-weight: 700;
   text-transform: none;
+  font-size: 15px;
   top: 5px;
 }
 .b-ordering__basket-info-item-btn{
@@ -152,14 +153,16 @@
   text-align: center;
   border: 1px solid rgba($gray, .2);
   border-radius: 2px;
-  padding: 14px 17px 12px 17px;
+  padding: 14px 10px 12px 10px;
   font-size: 15px;
   color: $gray;
+  width: 44%;
 }
 .b-ordering__basket-info-item-btn-little-first{
-  margin-right: 34px;
-  padding: 14px 13px 12px 13px;
+  margin-right: 8px;
+  padding: 14px 10px 12px 10px;
   box-shadow: 1px 0 1px rgba($gray, 0.3);
+  width: 45%;
 }
 .b-ordering__basket-info-item-coupon{
   color: $gray;
@@ -167,6 +170,20 @@
 }
 .b-ordering__basket-info{
   background-color: rgba($gray, 0.05);
-  padding: 38px 30px 10px 30px;
+  padding: 35px 30px 10px 30px;
   margin-left: 20px;
+  margin-bottom: 21px;
+}
+.b-ordering__pay-icon{
+  font-size: 12px;
+  text-align: center;
+  img{
+    float: left;
+  }
+}
+.b-ordering__pay-icon-link{
+  color: $header_pink;
+}
+.b-ordering__pay-icon-text{
+  line-height: 10px;
 }
