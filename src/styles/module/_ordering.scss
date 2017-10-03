@@ -137,3 +137,36 @@
   text-transform: none;
   top: 5px;
 }
+.b-ordering__basket-info-item-btn{
+  background-color: $header_pink;
+  color: $white;
+  border-radius: 2px;
+  text-transform: uppercase;
+  padding: 20px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 21px;
+}
+.b-ordering__basket-info-item-btn-little{
+  text-align: center;
+  border: 1px solid rgba($gray, .2);
+  border-radius: 2px;
+  padding: 14px 17px 12px 17px;
+  font-size: 15px;
+  color: $gray;
+}
+.b-ordering__basket-info-item-btn-little-first{
+  margin-right: 34px;
+  padding: 14px 13px 12px 13px;
+  box-shadow: 1px 0 1px rgba($gray, 0.3);
+}
+.b-ordering__basket-info-item-coupon{
+  color: $gray;
+  font-size: 15px;
+}
+.b-ordering__basket-info{
+  background-color: rgba($gray, 0.05);
+  padding: 38px 30px 10px 30px;
+  margin-left: 20px;
+}
