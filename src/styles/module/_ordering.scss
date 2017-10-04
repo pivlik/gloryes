@@ -236,3 +236,49 @@
   font-size: 12px;
   color: $gray;
 }
+.b-ordering__delivery-title{
+  text-transform: uppercase;
+  color: $header_pink;
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+.b-ordering__delivery-methods-pickup-form-input{
+  width: 10px;
+  height: 10px;
+  display: block;
+}
+.b-ordering__delivery-methods{
+  margin-bottom: 20px;
+}
+.b-ordering__delivery-methods-pickup-full-address{
+  font-size: 15px;
+  color: $gray;
+  opacity: 0.7;
+  line-height: 20.83px;
+  margin-bottom: 30px;
+}
+.b-ordering__delivery-form-address{
+  margin-bottom: 10px;
+}
+.b-ordering__buyer-form{
+  input {
+    padding: 18px;
+    margin-bottom: 20px;
+    float: left;
+    border: 1px solid rgba($gray, .2);
+    color: $gray;
+  }
+}
+.b-ordering__buyer-form-last-name,.b-ordering__buyer-form-tel{
+  margin-right: 24px;
+  box-shadow: 1px 0 1px rgba($gray, 0.4);
+}
+.b-ordering__buyer-form-comment{
+  width: 98.5%;
+  padding: 18px;
+  font-family: $font;
+  border: 1px solid rgba($gray, .2);
+}
+.b-ordering__buyer{
+  margin-bottom: 50px;
+}
