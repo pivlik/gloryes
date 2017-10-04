@@ -125,7 +125,7 @@
   }
 }
 .b-ordering__basket-info-item{
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 
 .b-ordering__basket-info-item_relative{
@@ -172,7 +172,7 @@
   background-color: rgba($gray, 0.05);
   padding: 35px 30px 10px 30px;
   margin-left: 20px;
-  margin-bottom: 21px;
+  margin-bottom: 12px;
 }
 .b-ordering__pay-icon{
   font-size: 12px;
@@ -186,4 +186,36 @@
 }
 .b-ordering__pay-icon-text{
   line-height: 10px;
+}
+.b-ordering__often-buy{
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+.b-ordering__often-buy-art{
+  display: flex;
+  flex-direction: column;
+}
+.b-ordering__often-buy-art-btn{
+  background-color: $main-blue;
+  border-radius: 2px;
+  color: $white;
+  text-transform: uppercase;
+  padding: 7px 26px 7px 26px;
+}
+.b-ordering__often-buy-art-title{
+  font-size: 17px;
+}
+.b-ordering__often-buy-art-discr{
+  font-size: 12px;
+  color: $gray;
+  line-height: 13px;
+  margin-bottom: 8px;
+}
+.b-ordering__often-buy-art-icon{
+  margin-bottom: 17px;
+}
+.b-ordering__basket-order-additionally{
+  margin-bottom: 56px;
 }
