@@ -2,7 +2,7 @@ extends _layout
 block title
     title Оформление заказа
 block content
-    .b-ordering
+    form(action='').b-ordering
         .b-ordering__nav-line.row.col-push-4.col-28.col-post-4
             ul.b-ordering__nav-line-list
                 li.b-ordering__nav-line-list-item
@@ -29,7 +29,7 @@ block content
                             .b-ordering__basket-order-list-name-first Пеленка-кокон GlorYes! (0-3,5 мес.)
                             .b-ordering__basket-order-list-name-second треугольники
                         .b-ordering__basket-order-list-amount.col-push-1.col-2
-                            form(action='').b-ordering__basket-order-list-amount-form
+                            .b-ordering__basket-order-list-amount-form
                                 input(name='amount' type='number').b-ordering__basket-order-list-amount-form-input
                         .b-ordering__basket-order-list-price.col-push-1
                             .b-ordering__basket-order-list-price-value 749 Р
@@ -41,7 +41,7 @@ block content
                             .b-ordering__basket-order-list-name-first Пеленка-кокон GlorYes! (0-3,5 мес.)
                             .b-ordering__basket-order-list-name-second треугольники
                         .b-ordering__basket-order-list-amount.col-push-1.col-2
-                            form(action='').b-ordering__basket-order-list-amount-form
+                            .b-ordering__basket-order-list-amount-form
                                 input(name='amount' type='number').b-ordering__basket-order-list-amount-form-input
                         .b-ordering__basket-order-list-price.col-push-1
                             .b-ordering__basket-order-list-price-value 749 Р
@@ -53,7 +53,7 @@ block content
                             .b-ordering__basket-order-list-name-first Пеленка-кокон GlorYes! (0-3,5 мес.)
                             .b-ordering__basket-order-list-name-second треугольники
                         .b-ordering__basket-order-list-amount.col-push-1.col-2
-                            form(action='').b-ordering__basket-order-list-amount-form
+                            .b-ordering__basket-order-list-amount-form
                                 input(name='amount' type='number').b-ordering__basket-order-list-amount-form-input
                         .b-ordering__basket-order-list-price.col-push-1
                             .b-ordering__basket-order-list-price-value 749 Р
@@ -73,8 +73,8 @@ block content
                     .b-ordering__basket-info-item_relative-delivery до бесплатной доставки осталось 250 руб.
                 .b-ordering__basket-info-item.b-ordering__title_second.col-11 итого <span class='b-ordering__basket-info-price'>250 Р</span>
                 .b-ordering__basket-info-item
-                    a(href='').b-ordering__basket-info-item-btn.col-10
-                        |оформить заказ
+                    button(type='submit').b-ordering__basket-info-item-btn.col-10
+                         |оформить заказ
                 .b-ordering__basket-info-item.col-11
                     a(href='').b-ordering__basket-info-item-btn-little.b-ordering__basket-info-item-btn-little-first.col-5
                         |продолжить покупки
@@ -136,19 +136,17 @@ block content
                     | в корзину
         .b-ordering__title.col-push-4.col-15.col-post-17.row доставка
         .b-ordering__delivery-form.col-push-4.col-18
-            form(action='').b-ordering__delivery-form-country.col-18
+            .b-ordering__delivery-form-country.col-18
                 select(name='form-country').b-ordering__delivery-form-country-select
                     option(value="Russia").b-ordering__delivery-form-country-select-option Российская Федерация
-            form(action='' ).b-ordering__delivery-form-city
+            .b-ordering__delivery-form-city
                 input(type='search' name='search city' placeholder='начните набирать ваш город').b-ordering__delivery-form-city-search.col-18
             .b-ordering__delivery-form-city-text способ доставки отобразится после выбора города
         .b-ordering__delivery-title.col-15.col-push-4 доставка компанией СДЭК
         .b-ordering__delivery-methods.col-push-4.col-18
             .b-ordering__delivery-methods-pickup
-                //form(method="post").b-ordering__delivery-methods-pickup-form
-                //    input(type='checkbox' name='methods pickup' id='pickup').b-ordering__delivery-methods-pickup-form-input.col-1
-                //        label(for='pickup') в пункт самовывоза, срок доставки: 1-2 дня
-                form(action='').b-ordering__delivery-form-address.col-12
+
+                .b-ordering__delivery-form-address.col-12
                     select(name='form-address').b-ordering__delivery-form-address-select
                         option(value="Kojuhovsky").b-ordering__delivery-form-address-select-option 6-я Кожуховская, 28 б, под. 3
                 .b-ordering__delivery-methods-pickup-full-address.col-12
@@ -156,16 +154,24 @@ block content
                     |<b>телефон:</b> 812-45-45<br>
                     |<b>режим работы:</b> пн-пт 10:00-20:00, сб 10:00-16:00<br>
         .b-ordering__delivery-title.col-15.col-push-4 доставка курьером
-            //чекбоксы
+        .b-ordering__delivery-checkbox-wrapper.col-15.col-push-4
+            input(type='checkbox' name='courier')#checkbox-courier.b-ordering__delivery-checkbox
+            label(for='checkbox-courier') в пределах МКАД, срок доставки: 1 день
+        .b-ordering__delivery-checkbox-wrapper.col-15.col-push-4
+            input(type='checkbox' name='courier')#checkbox-courier10km.b-ordering__delivery-checkbox
+            label(for='checkbox-courier10km') за МКАД не далее 10 км, срок доставки: 1-2 дня   
+        .b-ordering__delivery-checkbox-wrapper.col-15.col-push-4
+            input(type='checkbox' name='courier')#checkbox-courier30km.b-ordering__delivery-checkbox
+            label(for='checkbox-courier30km') за МКАД от 10 до 30 км, срок доставки: 1-2 дня   
         .b-ordering__delivery-title.col-15.col-push-4 доставка почтой россии
             //чекбоксы
         .b-ordering__title.col-push-4.col-15.col-post-17 о покупателе
         .b-ordering__buyer.col-push-4.col-19
-            form(action='').b-ordering__buyer-form
-                input(type='text' name='last name' placeholder='фамилия').b-ordering__buyer-form-last-name.col-9
-                input(type='text' name='first name' placeholder='имя').b-ordering__buyer-form-name.col-9
-                input(type='tel' name='first name' placeholder='телефон').b-ordering__buyer-form-tel.col-9
-                input(type='email' name='first name' placeholder='Email').b-ordering__buyer-form-mail.col-9
+            .b-ordering__buyer-form
+                input(type='text' name='last-name' placeholder='фамилия').b-ordering__buyer-form-last-name.col-9
+                input(type='text' name='name' placeholder='имя').b-ordering__buyer-form-name.col-9
+                input(type='tel' name='phone' placeholder='телефон').b-ordering__buyer-form-tel.col-9
+                input(type='email' name='mail' placeholder='Email').b-ordering__buyer-form-mail.col-9
                 textarea(rows="7" cols="45" name="comment" placeholder='комментарий к заказу').b-ordering__buyer-form-comment.col-17
         .b-ordering__title.col-push-4.col-15.col-post-17 способ оплаты
         .b-ordering__delivery-title.col-15.col-push-4 оплата при получении

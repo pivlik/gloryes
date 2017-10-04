@@ -229,6 +229,31 @@
 .b-ordering__delivery-form-country{
   margin-bottom: 20px;
 }
+
+.selectric {
+  background-color: $white;
+
+  > .label {
+    background-color: $white;
+  }
+
+  .selectric-scroll {
+    li {
+      background-color: $white;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 3px;
+    width: 1px;
+    background-color: $light-gray;
+    height: 85%;
+  }
+}
 .b-ordering__delivery-form-city-search{
   padding: 12px;
 }
@@ -281,4 +306,65 @@
 }
 .b-ordering__buyer{
   margin-bottom: 50px;
+}
+.b-ordering__delivery-checkbox-wrapper{
+  bottom: 10px;
+  position: relative;
+  margin-bottom: 2px;
+}
+.b-ordering__delivery-checkbox{
+  vertical-align: top;
+  width: 10px;
+  height: 10px;
+  display: none;
+
+  & + label {
+    cursor: pointer;
+    top: 10px;
+  }
+
+  &:not(checked) {
+    position: absolute;
+    opacity: 0;
+
+    & + label {
+      position: relative;
+      padding: 0 0 0 20px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        background: $white;
+        border: 1px solid rgba($gray, .5);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 2px;
+        width: 9px;
+        height: 6px;
+        border: 0;
+        transform: rotate(-45deg);
+        transition: all .2s;
+      }
+    }
+  }
+  &:checked {
+    & + label {
+      &:after {
+        border-left: 1px solid $black;
+        border-bottom: 1px solid $black;
+      }
+    }
+  }
+}
+.b-ordering__basket-info-item-btn{
+  border: none;
+  cursor: pointer;
 }

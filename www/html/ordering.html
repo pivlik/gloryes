@@ -162,7 +162,7 @@
                 </div>
             </header>
             <main class="l-main">
-                <div class="b-ordering">
+                <form action="" class="b-ordering">
                     <div class="b-ordering__nav-line row col-push-4 col-28 col-post-4">
                         <ul class="b-ordering__nav-line-list">
                             <li class="b-ordering__nav-line-list-item">
@@ -201,8 +201,8 @@
                                         <div class="b-ordering__basket-order-list-name-second">треугольники</div>
                                     </div>
                                     <div class="b-ordering__basket-order-list-amount col-push-1 col-2">
-                                        <form action="" class="b-ordering__basket-order-list-amount-form">
-                                            <input name="amount" type="number" class="b-ordering__basket-order-list-amount-form-input"> </form>
+                                        <div class="b-ordering__basket-order-list-amount-form">
+                                            <input name="amount" type="number" class="b-ordering__basket-order-list-amount-form-input"> </div>
                                     </div>
                                     <div class="b-ordering__basket-order-list-price col-push-1">
                                         <div class="b-ordering__basket-order-list-price-value">749 Р</div>
@@ -218,8 +218,8 @@
                                         <div class="b-ordering__basket-order-list-name-second">треугольники</div>
                                     </div>
                                     <div class="b-ordering__basket-order-list-amount col-push-1 col-2">
-                                        <form action="" class="b-ordering__basket-order-list-amount-form">
-                                            <input name="amount" type="number" class="b-ordering__basket-order-list-amount-form-input"> </form>
+                                        <div class="b-ordering__basket-order-list-amount-form">
+                                            <input name="amount" type="number" class="b-ordering__basket-order-list-amount-form-input"> </div>
                                     </div>
                                     <div class="b-ordering__basket-order-list-price col-push-1">
                                         <div class="b-ordering__basket-order-list-price-value">749 Р</div>
@@ -235,8 +235,8 @@
                                         <div class="b-ordering__basket-order-list-name-second">треугольники</div>
                                     </div>
                                     <div class="b-ordering__basket-order-list-amount col-push-1 col-2">
-                                        <form action="" class="b-ordering__basket-order-list-amount-form">
-                                            <input name="amount" type="number" class="b-ordering__basket-order-list-amount-form-input"> </form>
+                                        <div class="b-ordering__basket-order-list-amount-form">
+                                            <input name="amount" type="number" class="b-ordering__basket-order-list-amount-form-input"> </div>
                                     </div>
                                     <div class="b-ordering__basket-order-list-price col-push-1">
                                         <div class="b-ordering__basket-order-list-price-value">749 Р</div>
@@ -270,7 +270,7 @@
                                 <span class='b-ordering__basket-info-price'>250 Р</span>
                             </div>
                             <div class="b-ordering__basket-info-item">
-                                <a href="" class="b-ordering__basket-info-item-btn col-10">оформить заказ</a>
+                                <button type="submit" class="b-ordering__basket-info-item-btn col-10">оформить заказ</button>
                             </div>
                             <div class="b-ordering__basket-info-item col-11">
                                 <a href="" class="b-ordering__basket-info-item-btn-little b-ordering__basket-info-item-btn-little-first col-5">продолжить покупки</a>
@@ -336,26 +336,23 @@
                     </div>
                     <div class="b-ordering__title col-push-4 col-15 col-post-17 row">доставка</div>
                     <div class="b-ordering__delivery-form col-push-4 col-18">
-                        <form action="" class="b-ordering__delivery-form-country col-18">
+                        <div class="b-ordering__delivery-form-country col-18">
                             <select name="form-country" class="b-ordering__delivery-form-country-select">
                                 <option value="Russia" class="b-ordering__delivery-form-country-select-option">Российская Федерация</option>
                             </select>
-                        </form>
-                        <form action="" class="b-ordering__delivery-form-city">
-                            <input type="search" name="search city" placeholder="начните набирать ваш город" class="b-ordering__delivery-form-city-search col-18"> </form>
+                        </div>
+                        <div class="b-ordering__delivery-form-city">
+                            <input type="search" name="search city" placeholder="начните набирать ваш город" class="b-ordering__delivery-form-city-search col-18"> </div>
                         <div class="b-ordering__delivery-form-city-text">способ доставки отобразится после выбора города</div>
                     </div>
                     <div class="b-ordering__delivery-title col-15 col-push-4">доставка компанией СДЭК</div>
                     <div class="b-ordering__delivery-methods col-push-4 col-18">
                         <div class="b-ordering__delivery-methods-pickup">
-                            <!--form(method="post").b-ordering__delivery-methods-pickup-form-->
-                            <!--    input(type='checkbox' name='methods pickup' id='pickup').b-ordering__delivery-methods-pickup-form-input.col-1-->
-                            <!--        label(for='pickup') в пункт самовывоза, срок доставки: 1-2 дня-->
-                            <form action="" class="b-ordering__delivery-form-address col-12">
+                            <div class="b-ordering__delivery-form-address col-12">
                                 <select name="form-address" class="b-ordering__delivery-form-address-select">
                                     <option value="Kojuhovsky" class="b-ordering__delivery-form-address-select-option">6-я Кожуховская, 28 б, под. 3</option>
                                 </select>
-                            </form>
+                            </div>
                             <div class="b-ordering__delivery-methods-pickup-full-address col-12">
                                 <b>адрес:</b> г. Москва, 6-я Кожуховская, 28 б, под. 3
                                 <br>
@@ -365,21 +362,31 @@
                                 <br> </div>
                         </div>
                     </div>
-                    <div class="b-ordering__delivery-title col-15 col-push-4">доставка курьером
-                        <!--чекбоксы-->
+                    <div class="b-ordering__delivery-title col-15 col-push-4">доставка курьером</div>
+                    <div class="b-ordering__delivery-checkbox-wrapper col-15 col-push-4">
+                        <input type="checkbox" name="courier" id="checkbox-courier" class="b-ordering__delivery-checkbox">
+                        <label for="checkbox-courier">в пределах МКАД, срок доставки: 1 день</label>
+                    </div>
+                    <div class="b-ordering__delivery-checkbox-wrapper col-15 col-push-4">
+                        <input type="checkbox" name="courier" id="checkbox-courier10km" class="b-ordering__delivery-checkbox">
+                        <label for="checkbox-courier10km">за МКАД не далее 10 км, срок доставки: 1-2 дня </label>
+                    </div>
+                    <div class="b-ordering__delivery-checkbox-wrapper col-15 col-push-4">
+                        <input type="checkbox" name="courier" id="checkbox-courier30km" class="b-ordering__delivery-checkbox">
+                        <label for="checkbox-courier30km">за МКАД от 10 до 30 км, срок доставки: 1-2 дня </label>
                     </div>
                     <div class="b-ordering__delivery-title col-15 col-push-4">доставка почтой россии
                         <!--чекбоксы-->
                     </div>
                     <div class="b-ordering__title col-push-4 col-15 col-post-17">о покупателе</div>
                     <div class="b-ordering__buyer col-push-4 col-19">
-                        <form action="" class="b-ordering__buyer-form">
-                            <input type="text" name="last name" placeholder="фамилия" class="b-ordering__buyer-form-last-name col-9">
-                            <input type="text" name="first name" placeholder="имя" class="b-ordering__buyer-form-name col-9">
-                            <input type="tel" name="first name" placeholder="телефон" class="b-ordering__buyer-form-tel col-9">
-                            <input type="email" name="first name" placeholder="Email" class="b-ordering__buyer-form-mail col-9">
+                        <div class="b-ordering__buyer-form">
+                            <input type="text" name="last-name" placeholder="фамилия" class="b-ordering__buyer-form-last-name col-9">
+                            <input type="text" name="name" placeholder="имя" class="b-ordering__buyer-form-name col-9">
+                            <input type="tel" name="phone" placeholder="телефон" class="b-ordering__buyer-form-tel col-9">
+                            <input type="email" name="mail" placeholder="Email" class="b-ordering__buyer-form-mail col-9">
                             <textarea rows="7" cols="45" name="comment" placeholder="комментарий к заказу" class="b-ordering__buyer-form-comment col-17"></textarea>
-                        </form>
+                        </div>
                     </div>
                     <div class="b-ordering__title col-push-4 col-15 col-post-17">способ оплаты</div>
                     <div class="b-ordering__delivery-title col-15 col-push-4">оплата при получении
@@ -388,7 +395,7 @@
                     <div class="b-ordering__delivery-title col-15 col-push-4">предварительная оплата
                         <!--чекбоксы-->
                     </div>
-                </div>
+                </form>
             </main>
             <footer class="b-footer row">
                 <hr class="b-footer__hr row col-36"> </footer>
