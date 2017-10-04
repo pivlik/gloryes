@@ -134,8 +134,12 @@ block content
                     img(src='/img/orders/img-5723.png')
                 .b-ordering__often-buy-art-btn.col-4.col-push-1
                     | в корзину
-
-
-
-
+        .b-ordering__title.col-push-4.col-15.col-post-17.row доставка
+        .b-ordering__delivery-form.col-push-4.col-18
+            form(action='').b-ordering__delivery-form-country.col-18
+                select(name='form-country').b-ordering__delivery-form-country-select
+                    option(value="Russia").b-ordering__delivery-form-country-select-option Российская Федерация
+            form(action='' ).b-ordering__delivery-form-city
+                input(type='search' name='search city' placeholder='начните набирать ваш город').b-ordering__delivery-form-city-search.col-18
+            .b-ordering__delivery-form-city-text способ доставки отобразится после выбора города
 
