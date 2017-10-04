@@ -280,7 +280,7 @@
   color: $gray;
   opacity: 0.7;
   line-height: 20.83px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .b-ordering__delivery-form-address{
   margin-bottom: 10px;
@@ -310,14 +310,13 @@
 .b-ordering__delivery-checkbox-wrapper{
   bottom: 10px;
   position: relative;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 .b-ordering__delivery-checkbox{
   vertical-align: top;
   width: 10px;
   height: 10px;
   display: none;
-
   & + label {
     cursor: pointer;
     top: 10px;
@@ -364,7 +363,77 @@
     }
   }
 }
+.b-ordering__delivery-checkbox-wrapper-courier30km{
+  margin-bottom: 30px;
+}
 .b-ordering__basket-info-item-btn{
   border: none;
   cursor: pointer;
+}
+.b-ordering__delivery-checkbox-wrapper-mail{
+  margin-bottom: 30px;
+}
+.b-ordering__delivery-checkbox-pay3{
+  margin-top: 10px;
+  font-size: 12px;
+  color: $gray;
+}
+.b-ordering__pay-system-link{
+  color: $main-blue;
+  font-size: 12px;
+}
+.b-ordering__confirm{
+  background-color: $main-blue;
+  border-radius: 2px;
+  border: none;
+  color: $white;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 19px 20px 17px 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.b-ordering__delivery-checkbox_blue{
+  &:not(checked) {
+    & + label {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        background: $main-blue;
+        border: 1px solid rgba($gray, .5);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 2px;
+        width: 9px;
+        height: 6px;
+        border: 0;
+        transform: rotate(-45deg);
+        transition: all .2s;
+        color: $white;
+      }
+    }
+  }
+  &:checked {
+    & + label {
+      &:after {
+        border-left: 1px solid $white;
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+}
+.b-ordering__delivery-wrapper_blue{
+  label {
+  font-size: 12px;
+    color: $light-gray;
+  }
 }

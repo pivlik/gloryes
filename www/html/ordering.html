@@ -295,7 +295,7 @@
                             <div class="b-ordering__often-buy-art-icon">
                                 <img src="/img/orders/img-5723.png">
                             </div>
-                            <div class="b-ordering__often-buy-art-btn col-4 col-push-1">в корзину</div>
+                            <a href="" class="b-ordering__often-buy-art-btn col-4 col-push-1">в корзину</a>
                         </div>
                         <div class="b-ordering__often-buy-art col-6">
                             <div class="b-ordering__often-buy-art-title">Африка</div>
@@ -304,7 +304,7 @@
                             <div class="b-ordering__often-buy-art-icon">
                                 <img src="/img/orders/img-5723.png">
                             </div>
-                            <div class="b-ordering__often-buy-art-btn col-4 col-push-1">в корзину</div>
+                            <a href="" class="b-ordering__often-buy-art-btn col-4 col-push-1">в корзину</a>
                         </div>
                         <div class="b-ordering__often-buy-art col-6">
                             <div class="b-ordering__often-buy-art-title">Африка</div>
@@ -313,7 +313,7 @@
                             <div class="b-ordering__often-buy-art-icon">
                                 <img src="/img/orders/img-5723.png">
                             </div>
-                            <div class="b-ordering__often-buy-art-btn col-4 col-push-1">в корзину</div>
+                            <a href="" class="b-ordering__often-buy-art-btn col-4 col-push-1">в корзину</a>
                         </div>
                         <div class="b-ordering__often-buy-art col-6">
                             <div class="b-ordering__often-buy-art-title">Африка</div>
@@ -322,7 +322,7 @@
                             <div class="b-ordering__often-buy-art-icon">
                                 <img src="/img/orders/img-5723.png">
                             </div>
-                            <div class="b-ordering__often-buy-art-btn col-4 col-push-1">в корзину</div>
+                            <a href="" class="b-ordering__often-buy-art-btn col-4 col-push-1">в корзину</a>
                         </div>
                         <div class="b-ordering__often-buy-art col-6">
                             <div class="b-ordering__often-buy-art-title">Африка</div>
@@ -331,7 +331,7 @@
                             <div class="b-ordering__often-buy-art-icon">
                                 <img src="/img/orders/img-5723.png">
                             </div>
-                            <div class="b-ordering__often-buy-art-btn col-4 col-push-1">в корзину</div>
+                            <a href="" class="b-ordering__often-buy-art-btn col-4 col-push-1">в корзину</a>
                         </div>
                     </div>
                     <div class="b-ordering__title col-push-4 col-15 col-post-17 row">доставка</div>
@@ -348,13 +348,17 @@
                     <div class="b-ordering__delivery-title col-15 col-push-4">доставка компанией СДЭК</div>
                     <div class="b-ordering__delivery-methods col-push-4 col-18">
                         <div class="b-ordering__delivery-methods-pickup">
+                            <div class="b-ordering__delivery-checkbox-wrapper col-15">
+                                <input type="checkbox" name="courier" id="checkbox-pickup" class="b-ordering__delivery-checkbox">
+                                <label for="checkbox-pickup">в пункт самовывоза, срок доставки: 1-2 дня</label>
+                            </div>
                             <div class="b-ordering__delivery-form-address col-12">
                                 <select name="form-address" class="b-ordering__delivery-form-address-select">
                                     <option value="Kojuhovsky" class="b-ordering__delivery-form-address-select-option">6-я Кожуховская, 28 б, под. 3</option>
                                 </select>
                             </div>
                             <div class="b-ordering__delivery-methods-pickup-full-address col-12">
-                                <b>адрес:</b> г. Москва, 6-я Кожуховская, 28 б, под. 3
+                                <b>адрес:</b> г. Москва, 6-я Кожуковская, 28 б, под. 3
                                 <br>
                                 <b>телефон:</b> 812-45-45
                                 <br>
@@ -367,17 +371,23 @@
                         <input type="checkbox" name="courier" id="checkbox-courier" class="b-ordering__delivery-checkbox">
                         <label for="checkbox-courier">в пределах МКАД, срок доставки: 1 день</label>
                     </div>
+                    <div class="b-ordering__basket-order-list-price-value col-2 col-push-2">330 Р</div>
                     <div class="b-ordering__delivery-checkbox-wrapper col-15 col-push-4">
                         <input type="checkbox" name="courier" id="checkbox-courier10km" class="b-ordering__delivery-checkbox">
                         <label for="checkbox-courier10km">за МКАД не далее 10 км, срок доставки: 1-2 дня </label>
                     </div>
-                    <div class="b-ordering__delivery-checkbox-wrapper col-15 col-push-4">
+                    <div class="b-ordering__basket-order-list-price-value col-2 col-push-2">480 Р</div>
+                    <div class="b-ordering__delivery-checkbox-wrapper b-ordering__delivery-checkbox-wrapper-courier30km col-15 col-push-4">
                         <input type="checkbox" name="courier" id="checkbox-courier30km" class="b-ordering__delivery-checkbox">
-                        <label for="checkbox-courier30km">за МКАД от 10 до 30 км, срок доставки: 1-2 дня </label>
+                        <label for="checkbox-courier30km">за МКАД от 10 до 30 км, срок доставки: 1-2 дня</label>
                     </div>
-                    <div class="b-ordering__delivery-title col-15 col-push-4">доставка почтой россии
-                        <!--чекбоксы-->
+                    <div class="b-ordering__basket-order-list-price-value col-2 col-push-2">680 Р </div>
+                    <div class="b-ordering__delivery-title col-15 col-push-4 col-post-4">доставка почтой россии</div>
+                    <div class="b-ordering__delivery-checkbox-wrapper b-ordering__delivery-checkbox-wrapper-mail col-15 col-push-4">
+                        <input type="checkbox" name="courier" id="checkbox-mail" class="b-ordering__delivery-checkbox">
+                        <label for="checkbox-mail">почтовая посылка, срок доставки 7-14 дней (0.71 кг)</label>
                     </div>
+                    <div class="b-ordering__basket-order-list-price-value col-2 col-push-2">299 Р </div>
                     <div class="b-ordering__title col-push-4 col-15 col-post-17">о покупателе</div>
                     <div class="b-ordering__buyer col-push-4 col-19">
                         <div class="b-ordering__buyer-form">
@@ -389,11 +399,45 @@
                         </div>
                     </div>
                     <div class="b-ordering__title col-push-4 col-15 col-post-17">способ оплаты</div>
-                    <div class="b-ordering__delivery-title col-15 col-push-4">оплата при получении
-                        <!--чекбоксы-->
+                    <div class="b-ordering__delivery-title col-15 col-push-4">оплата при получении</div>
+                    <div class="b-ordering__delivery-checkbox-wrapper col-15 col-push-4">
+                        <input type="checkbox" name="courier" id="checkbox-pay1" class="b-ordering__delivery-checkbox">
+                        <label for="checkbox-pay1">курьер, самовывоз</label>
                     </div>
-                    <div class="b-ordering__delivery-title col-15 col-push-4">предварительная оплата
-                        <!--чекбоксы-->
+                    <div class="b-ordering__delivery-checkbox-wrapper b-ordering__delivery-checkbox-wrapper-mail col-15 col-push-4">
+                        <input type="checkbox" name="courier" id="checkbox-pay2" class="b-ordering__delivery-checkbox">
+                        <label for="checkbox-pay2">на почте</label>
+                    </div>
+                    <div class="b-ordering__delivery-title col-15 col-push-4">предварительная оплата</div>
+                    <div class="b-ordering__delivery-checkbox-wrapper col-15 col-push-4">
+                        <input type="checkbox" name="courier" id="checkbox-pay3" class="b-ordering__delivery-checkbox">
+                        <label for="checkbox-pay3">Единая Касса</label>
+                        <p class="b-ordering__delivery-checkbox-pay3 col-16"> Единая касса принимает к оплате наличные, безналичные и электронные деньги. Обслуживание платежей Единой кассе доверили такие известные сервисы, как: «Slando», «Из Рук в Руки», «Biglton», «Фотострана» и др. </p>
+                    </div>
+                    <div class="b-ordering__pay-system-icon col-15 col-push-4">
+                        <img src="/img/orders/pay-system.png">
+                    </div>
+                    <a href="" class="b-ordering__pay-system-link col-15 col-push-4">все способы оплаты через Единую Кассу</a>
+                    <div class="b-ordering__delivery-checkbox-wrapper col-15 col-push-4">
+                        <input type="checkbox" name="courier" id="checkbox-sber" class="b-ordering__delivery-checkbox">
+                        <label for="checkbox-sber">оплата с карты Сбербанка</label>
+                    </div>
+                    <div class="b-ordering__delivery-checkbox-wrapper col-15 col-push-4">
+                        <input type="checkbox" name="courier" id="checkbox-bank" class="b-ordering__delivery-checkbox">
+                        <label for="checkbox-bank">предварительная оплата через банк (по квитанции)</label>
+                    </div>
+                    <div class="b-ordering__delivery-checkbox-wrapper col-15 col-push-4">
+                        <input type="checkbox" name="courier" id="checkbox-yandex" class="b-ordering__delivery-checkbox">
+                        <label for="checkbox-yandex">Яндекс.Деньги</label>
+                    </div>
+                    <div class="b-ordering__delivery-checkbox-wrapper col-32 col-push-4">
+                        <input type="checkbox" name="courier" id="checkbox-qiwi" class="b-ordering__delivery-checkbox">
+                        <label for="checkbox-qiwi">QIWI Кошелек</label>
+                    </div>
+                    <button type="submit" class="b-ordering__confirm col-7 col-push-4 row col-post-25">подтвердить заказ</button>
+                    <div class="b-ordering__delivery-checkbox-wrapper b-ordering__delivery-wrapper_blue col-15 col-push-4">
+                        <input checked="" type="checkbox" name="courier" id="checkbox-agreement" class="b-ordering__delivery-checkbox b-ordering__delivery-checkbox_blue">
+                        <label for="checkbox-agreement">Я принимаю условия соглашения</label>
                     </div>
                 </form>
             </main>
