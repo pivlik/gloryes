@@ -1,0 +1,95 @@
+.b-product__nav-line-list-item-link_light-gray{
+  color: $light-gray;
+}
+.b-product__info-images{
+  float: left;
+}
+.b-product__info-images-little{
+  ma-bottom: 15px;
+}
+.b-product__info-images-big-zoom{
+  color: $light-gray;
+  text-align: center;
+  .b-icon__SVGs-13{
+    fill: $light-gray;
+    width: 13px;
+    height: 11px;
+    margin-right: 5px;
+  }
+}
+.b-product__title{
+  font-size: 28px;
+}
+.b-product__subtitle{
+  font-size: 18px;
+  color: $gray;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+.b-product__vendor-code{
+  color: $light-gray;
+  margin-bottom: 18px;
+}
+
+.b-product__info-text{
+  margin-left: 20px;
+}
+.b-product__price{
+  font-size: 28px;
+}
+.b-product__price_pink{
+  float: left;
+  color: $header_pink;
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    width: 83%;
+    bottom: 15px;
+    display: block;
+    background-color: transparent;
+    border-bottom: 1px solid $header_pink;
+  }
+}
+.b-product__price{
+  margin-bottom: 18px;
+}
+.b-product__basket-order-list-amount-form{
+  input{
+    height: 39px;
+  }
+}
+.b-ordering__product-availability{
+  margin-left: 18px;
+  display: block;
+  padding-top: 5px;
+  margin-bottom: 35px;
+}
+.b-product__info-text-p{
+  font-size: 15px;
+  color: $gray;
+  line-height: 22px;
+}
+.b-product__dellvery{
+  color: $gray;
+  position: relative;
+  text-transform: uppercase;
+}
+.b-product__dellvery{
+  &:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 70px;
+    background-color: transparent;
+    border-bottom: 1px solid $gray;
+  }
+}
+.b-product__info-text-links-ul{
+  display: flex;
+  justify-content: space-between;
+}
+.b-product__info-text-links-ul-li-link{
+  color: $main-blue;
+  font-weight: 700;
+}

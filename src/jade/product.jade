@@ -2,4 +2,57 @@ extends _layout
 block title
     title Оформление заказа
 block content
-    h1 4f34f
+    form(action='').b-product
+        .b-ordering__nav-line.row.col-push-4.col-28.col-post-4
+            ul.b-ordering__nav-line-list
+                li.b-ordering__nav-line-list-item
+                    a(href='').b-ordering__nav-line-list-item-link
+                        .b-ordering__nav-line-list-item-link-icon
+                            +svg('SVGs-21')
+                li.b-ordering__nav-line-list-item
+                    a(href='').b-ordering__nav-line-list-item-link Многоразовые подгузники
+                li.b-ordering__nav-line-list-item
+                    a(href='').b-ordering__nav-line-list-item-link Классические Classic
+                li.b-ordering__nav-line-list-item
+                    a(href='').b-ordering__nav-line-list-item-link.b-product__nav-line-list-item-link_light-gray Котята (3-18 кг + два вкладыша)
+        .b-product__info.row.col-push-4
+            .b-product__info-images
+                .b-product__info-images-little.col-3
+                    img(src='/img/product/little-image.png')
+                .b-product__info-images-big.col-13
+                    img(src='/img/product/layer-29.png')
+                    .b-product__info-images-big-zoom.col-13
+                        +svg('SVGs-13')
+                        | нажмите, чтобы увеличить
+            .b-product__info-text.col-14
+                .b-product__title Пеленка-кокон GlorYes! (0-3,5 мес.)
+                .b-product__subtitle Треугольники
+                .b-product__vendor-code Арт: Sle-Min2-4
+                .b-product__price
+                    .b-product__price_pink 799 ₽ &nbsp
+                    |749 ₽
+                a(href='').b-ordering__often-buy-art-btn.col-4
+                    | в корзину
+                .b-ordering__basket-order-list-amount-form.b-product__basket-order-list-amount-form
+                    input(name='amount' type='number').b-ordering__basket-order-list-amount-form-input.col-push-1
+                .b-ordering__product-availability.col-3.col-post-2 В наличии: <span style="color: #5cc5c8;"> 13 </span>
+                .b-product__info-text-p
+                    p Обеспечьте спокойный сон вашему малышу с рождения до 3,5 месяцев с помощью комфортного, тянущегося
+                        |спального мешка в виде кокона на замочке. Он облегает тело малыша, словно мамины руки, успокаивает
+                        |его и сдерживает вздрагивания и движения ручек, при этом не препятствуя движениям ножек. Пеленка-кокон
+                        |понравится и папам как простой и быстрый способ свободного пеленания! Безопасность сна: малыш не
+                        | запутается и не перегреется в мешке. 
+                .b-header__dellvery.b-product__dellvery
+                    .b-header__icon-car.b-product__icon-car
+                        +svg('SVGs-06')
+                    .b-header__delivery-description.b-product__delivery-description
+                        | <b>БЕСПЛАТНАЯ ДОСТАВКА</b> заказов от 4000 руб. <br> и заказов со стиральны экопорошком gloryes
+                .b-product__info-text-links.col-12
+                    ul.b-product__info-text-links-ul
+                        li.b-product__info-text-links-ul-li
+                            a(href='').b-product__info-text-links-ul-li-link о доставке
+                        li.b-product__info-text-links-ul-li
+                            a(href='').b-product__info-text-links-ul-li-link cпособы оплаты
+                        li.b-product__info-text-links-ul-li
+                            a(href='').b-product__info-text-links-ul-li-link как сделать заказ? 
+
