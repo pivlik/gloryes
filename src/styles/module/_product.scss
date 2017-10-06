@@ -182,8 +182,32 @@
 }
 .b-product_how-to-care{
   font-size: 15px;
+  margin-bottom: 64px;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 440px;
+    background-color: transparent;
+    border-bottom: 1px solid $gray;
+    opacity: 0.7;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: -25px;
+    display: block;
+    background-color: transparent;
+    border-bottom: 1px solid $gray;
+    opacity: 0.7;
+  }
   a{
     color: $main-blue;
     font-weight: 700;
   }
+}
+.b-product__title_margin-b30{
+  margin-bottom: 30px;
 }
