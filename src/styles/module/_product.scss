@@ -101,4 +101,67 @@
 }
 .b-product__about{
   margin-top: 40px;
+  margin-bottom: 27px;
+}
+.b-product__advantages{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 56px;
+  align-items: flex-start;
+}
+.b-product__advantages-svg{
+  .b-icon__SVGs-40{
+    fill: $gray;
+    opacity: 0.5;
+    width: 108px;
+    height: 88px;
+  }
+  .b-icon__SVGs-41{
+    fill: $gray;
+    opacity: 0.5;
+    width: 84px;
+    height: 109px;
+  }
+  .b-icon__SVGs-42{
+    fill: $gray;
+    opacity: 0.5;
+    width: 87px;
+    height: 91px;
+  }
+  .b-icon__SVGs-43{
+    fill: $gray;
+    opacity: 0.5;
+    width: 125px;
+    height: 110px;
+  }
+  .b-icon__SVGs-44{
+    fill: $gray;
+    opacity: 0.5;
+    width: 120px;
+    height: 106px;
+  }
+  .b-icon__SVGs-45{
+    fill: $gray;
+    opacity: 0.5;
+    width: 119px;
+    height: 107px;
+  }
+}
+.b-product__how-work-image{
+  margin-top: 32px;
+  margin-bottom: 56px;
+}
+.b-product__review-title{
+  color: $main-blue;
+  font-weight: 700;
+}
+.b-product__reviews{
+  overflow: scroll;
+  height: 389px;
+}
+.b-product__review-text{
+  color: $gray;
+  line-height: 24px;
+  margin-bottom: 50px;
+  font-size: 15px;
 }
