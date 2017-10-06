@@ -155,13 +155,35 @@
   color: $main-blue;
   font-weight: 700;
 }
-.b-product__reviews{
+.b-product__review-wrapper{
   overflow: scroll;
   height: 389px;
+  margin-bottom: 30px;
 }
 .b-product__review-text{
   color: $gray;
   line-height: 24px;
   margin-bottom: 50px;
   font-size: 15px;
+}
+.b-product__review-btn{
+  text-transform: uppercase;
+  width: 187px;
+  height: 51px;
+  border-radius: 2px;
+  background-color: #dbd93d;
+  text-align: center;
+  color: $white;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 15px;
+  margin-bottom: 85px;
+  display: block;
+}
+.b-product_how-to-care{
+  font-size: 15px;
+  a{
+    color: $main-blue;
+    font-weight: 700;
+  }
 }
