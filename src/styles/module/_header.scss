@@ -5,9 +5,12 @@
 .b-header__dellvery {
   padding-top: 15px;
   padding-bottom: 14px;
-  display: flex;
   justify-content: center;
   flex-flow: row nowrap;
+  display: none;
+  @media #{$medium-up} {
+    display: flex;
+  }
 }
 
 .b-header__icon-car {
@@ -21,6 +24,12 @@
 
 .b-header__delivery-description {
   font-color: $gray;
+  @media #{$big-up} {
+    font-size: 15px;
+  }
+  @media #{$medium-up} {
+    font-size: 12px;
+  }
 }
 
 .b-header__navigation {
