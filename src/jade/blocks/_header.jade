@@ -5,7 +5,7 @@ header.b-header
             +svg('SVGs-06')
         .b-header__delivery-description
             | БЕСПЛАТНАЯ ДОСТАВКА заказов со стиральным ЭКОпорошком ИЛИ заказов от 4000 руб.
-    nav.b-header__navigation.row
+    nav.b-header__navigation.j-navigation.row
         ul.b-header__menu.col-push-4.col-11
             li
                 a(href='').b-header__menu-item отзывы
@@ -34,8 +34,10 @@ header.b-header
             a(href='') вход/
             a(href='') регистрация
     .b-header__main-info.row
-        .b-header__main-info_logo.col-push-4.col-6
-            a(href='')
+        button.b-header__hamburger.j-hamburger.col-push-3.col-3.col-post-6
+            span
+        a(href='').b-header__main-info_logo.col-md-push-4.col-md-6.col-12
+            .b-header__main-info_logo-wrapper
                 +svg('SVGs-01')
             .b-header__main-info_logo_tagline экотовары для малышей
         .b-header__main-info_search.col-push-3.col-7
@@ -46,14 +48,14 @@ header.b-header
         .b-header__main-info_phone.col-push-3.col-5
             p 8 (800) 333-90-32
             p заказать звонок
-        .b-header__main-info_ordering.col-push-2.col-4
+        a(href='').b-header__main-info_ordering.col-md-push-2.col-md-4.col-md-post-0.col-push-5.col-4.col-post-3
             .b-header__main-info_ordering_icon
                 +svg('SVGs-11')
-            ul.b-header__main-info_ordering_menu
-                li.b-header__main-info_ordering_menu-item1 Корзина(3)
-                li.b-header__main-info_ordering_menu-item2 1451 Р
-            .b-header__main-info_ordering_btn
-                a(href='') оформить заказ
+            .b-header__main-info_ordering_menu
+                .b-header__main-info_ordering_menu-item1 Корзина
+                i.b-header__main-info_ordering_menu-item-count (3)
+                .b-header__main-info_ordering_menu-item2 1451 Р
+            .b-header__main-info_ordering_btn оформить заказ
     .b-header__site-sections.col-push-4.col-30
         ul.b-header__site-sections_navigations
             li.b-header__site-sections_navigations-items

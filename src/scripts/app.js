@@ -1,31 +1,6 @@
 define('app', ['jquery'], function($) {
     'use strict';
 
-    (function($substrate) {
-        if (!$substrate.length) {
-            return;
-        }
-
-        $(function() {
-            require(['apartments/app'], function(app) {
-                app.run(window.location.pathname);
-            });
-        });
-    })($('#substrate'));
-
-    (function($forms) {
-        if (!$forms.length) {
-            return;
-        }
-
-        var initForms = function initForms(Form) {
-            $forms.each(function() {
-                var form = new Form($(this));
-                form.init();
-            });
-        };
-        require(['app/form'], initForms);
-    })($('form').filter(':not([data-noinit])'));
 
     //Подключение попапа
     //Так как кнопки с попапом иногда создаются динамически, вешаем на document.click
@@ -47,18 +22,14 @@ define('app', ['jquery'], function($) {
         });
     });
 
-    // Подключение галерей
-    (function($gallerys) {
-        if (!$gallerys.length) {
-            return;
-        }
 
-        require(['app/gallery'], function(Gallery) {
-            $gallerys.each(function() {
-                return new Gallery($(this));
-            });
+    (function ($toggler) {
+        $($toggler).on('click', function () {
+            $(this).toggleClass('active');
+            $('.j-navigation').toggleClass('active');
         });
-    })($('.j-gallery'));
+
+    })('.j-hamburger');
 
     // Подключение галерей со сликом
     (function($gallerysSlick) {
@@ -103,113 +74,6 @@ define('app', ['jquery'], function($) {
             });
         });
     })($('select'));
-
-    // Табы
-    (function($tabContainers) {
-        if (!$tabContainers.length) {
-            return;
-        }
-
-        require(['app/tabs'], function(Tabs) {
-            $tabContainers.each(function() {
-                return new Tabs($(this));
-            });
-        });
-    })($('.j-tabs'));
-
-    //Инициализация карты
-    (function($maps) {
-        if (!$maps.length) {
-            return;
-        }
-
-        require(['app/map'], function(Map) {
-            $maps.each(function() {
-                return new Map($(this));
-            });
-        });
-    })($('.j-map'));
-
-    // Ход строительства
-    (function($constructionProgress) {
-        if (!$constructionProgress.length) {
-            return;
-        }
-
-        require(['app/construction-progress'], function(ConstructionsProgress) {
-            return new ConstructionsProgress($constructionProgress);
-        });
-    })($('.j-construction-progress'));
-
-    // Range slider
-    (function($sliders) {
-        if (!$sliders.length) {
-            return;
-        }
-
-        require(['app/range-slider'], function(RangeSlider) {
-            $sliders.each(function() {
-                return new RangeSlider($(this));
-            });
-        });
-    })($('.j-range-sliders'));
-
-    // Страница поиска
-    (function($search) {
-        if (!$search.length) {
-            return;
-        }
-
-        require(['app/search-filter'], function(SearchFilter) {
-            return new SearchFilter($search);
-        });
-    })($('.j-search-filter'));
-
-    // Результаты поиска
-    (function($searchResult) {
-        if (!$searchResult.length) {
-            return;
-        }
-
-        require(['app/search-result'], function(SearchResult) {
-            return new SearchResult($searchResult);
-        });
-    })($('.j-search-result'));
-
-    // Ипотека
-    (function($mortgage) {
-        if (!$mortgage.length) {
-            return;
-        }
-
-        require(['app/mortgage'], function(Mortgage) {
-            return new Mortgage($mortgage);
-        });
-    })($('.j-mortgage'));
-
-    // Таблицы в WYSIWYG
-    (function($table) {
-        if (!$table.length) {
-            return;
-        }
-
-        if (!$table.hasClass('b-table')) {
-            $table.each(function() {
-                $(this).wrap('<div class="b-table__content"></div>')
-            })
-        }
-    })($('.b-typo-reset table'));
-
-    // Избранное
-    (function($favorite) {
-        if (!$favorite.length) {
-            return;
-        }
-
-        require(['app/favorite'], function(Favorite) {
-            return new Favorite();
-        });
-    })($('.j-favorite'));
 
     (function($showBtnUp) {
         if (!$showBtnUp.length) {

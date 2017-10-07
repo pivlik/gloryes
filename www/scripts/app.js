@@ -1,2 +1,155 @@
-"use strict";define("app",["jquery"],function(n){return function(e){e.length&&n(function(){require(["apartments/app"],function(n){n.run(window.location.pathname)})})}(n("#substrate")),function(e){if(e.length){var t=function(t){e.each(function(){new t(n(this)).init()})};require(["app/form"],t)}}(n("form").filter(":not([data-noinit])")),n(document).on("click",".j-popup",function(e){var t=n(e.target);t.length&&require(["app/popup"],function(n){var e=window.location.hash,i=new n(t);i.initPopup(),t.attr("href")===e&&i.showPopup(t)})}),function(e){e.length&&require(["app/gallery"],function(t){e.each(function(){return new t(n(this))})})}(n(".j-gallery")),function(e){e.length&&require(["app/gallery-slick"],function(t){e.each(function(){new t(n(this)).initGallery()})})}(n(".j-gallery-slick")),function(e){e.length&&require(["app/animated-label"],function(t){e.each(function(){new t(n(this)).init()})})}(n(".j-anim-label")),function(e){e.length&&require(["select"],function(){e.each(function(){n(this).selectric({disableOnMobile:!1})})})}(n("select")),function(e){e.length&&require(["app/tabs"],function(t){e.each(function(){return new t(n(this))})})}(n(".j-tabs")),function(e){e.length&&require(["app/map"],function(t){e.each(function(){return new t(n(this))})})}(n(".j-map")),function(n){n.length&&require(["app/construction-progress"],function(e){return new e(n)})}(n(".j-construction-progress")),function(e){e.length&&require(["app/range-slider"],function(t){e.each(function(){return new t(n(this))})})}(n(".j-range-sliders")),function(n){n.length&&require(["app/search-filter"],function(e){return new e(n)})}(n(".j-search-filter")),function(n){n.length&&require(["app/search-result"],function(e){return new e(n)})}(n(".j-search-result")),function(n){n.length&&require(["app/mortgage"],function(e){return new e(n)})}(n(".j-mortgage")),function(e){e.length&&(e.hasClass("b-table")||e.each(function(){n(this).wrap('<div class="b-table__content"></div>')}))}(n(".b-typo-reset table")),function(n){n.length&&require(["app/favorite"],function(n){return new n})}(n(".j-favorite")),function(e){function t(){var t=n(window).scrollTop();Math.abs(r-t)<=o||(t+n(window).height()+a>=n(document).height()?e.addClass(u):t>r||t<a?e.removeClass(u):t+n(window).height()<n(document).height()&&e.addClass(u),r=t)}if(e.length){var i,r=0,o=10,a=60,u="is-nav-up";e.click(function(){n("body, html").animate({scrollTop:0},"slow")}),n(window).scroll(function(){i=!0}),setInterval(function(){i&&(t(),i=!1)},150),n("body").is(":visible")&&n(this).parent().parent().addClass("is-active").parent().parent().addClass("is-active")}}(n(".j-show-up")),require(["app/disable-hover"]),function(e){function t(){var n=window.innerWidth>document.documentElement.clientWidth;e[n?"removeClass":"addClass"]("no-scrollbar")}t(),require(["app/utils"],function(){n(window).on("resize",n.debounce(300,function(){t()}))})}(n("body")),{}});
-//# sourceMappingURL=sourcemaps/app.js.map
+'use strict';
+
+define('app', ['jquery'], function ($) {
+    'use strict';
+
+    //Подключение попапа
+    //Так как кнопки с попапом иногда создаются динамически, вешаем на document.click
+
+    $(document).on('click', '.j-popup', function (e) {
+        var $popupLink = $(e.target);
+
+        if (!$popupLink.length) {
+            return;
+        }
+
+        require(['app/popup'], function (Popup) {
+            var hash = window.location.hash;
+            var popup = new Popup($popupLink);
+            popup.initPopup();
+
+            if ($popupLink.attr('href') === hash) {
+                popup.showPopup($popupLink);
+            }
+        });
+    });
+
+    (function ($toggler) {
+        $($toggler).on('click', function () {
+            $(this).toggleClass('active');
+            $('.j-navigation').toggleClass('active');
+        });
+    })('.j-hamburger');
+
+    // Подключение галерей со сликом
+    (function ($gallerysSlick) {
+        if (!$gallerysSlick.length) {
+            return;
+        }
+
+        require(['app/gallery-slick'], function (GallerySlick) {
+            $gallerysSlick.each(function () {
+                var gallery = new GallerySlick($(this));
+                gallery.initGallery();
+            });
+        });
+    })($('.j-gallery-slick'));
+
+    //Анимированный label
+    (function ($animLabels) {
+        if (!$animLabels.length) {
+            return;
+        }
+
+        require(['app/animated-label'], function (AnimatedLabel) {
+            $animLabels.each(function () {
+                var label = new AnimatedLabel($(this));
+                label.init();
+            });
+        });
+    })($('.j-anim-label'));
+
+    // Стилизация селекта
+    (function ($selects) {
+        if (!$selects.length) {
+            return;
+        }
+
+        require(['select'], function () {
+            $selects.each(function () {
+                var $select = $(this);
+                $select.selectric({
+                    disableOnMobile: false
+                });
+            });
+        });
+    })($('select'));
+
+    (function ($showBtnUp) {
+        if (!$showBtnUp.length) {
+            return;
+        }
+
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 10; // Когда скролл не считается
+        var showPos = 60; // when btn is show. offset of top window
+        var scrollUp = 'is-nav-up';
+
+        $showBtnUp.click(function () {
+            $('body, html').animate({ scrollTop: 0 }, 'slow');
+        });
+
+        $(window).scroll(function () {
+            // jshint ignore:line
+            didScroll = true;
+        });
+
+        function hasScrolled() {
+            var curPos = $(window).scrollTop();
+            if (Math.abs(lastScrollTop - curPos) <= delta) {
+                return; // Return the absolute value of a number
+            }
+            // если упирается вниз, то появляется кнопка
+            if (curPos + $(window).height() + showPos >= $(document).height()) {
+                $showBtnUp.addClass(scrollUp);
+            } else if (curPos > lastScrollTop || curPos < showPos) {
+                // Скролл вниз
+                $showBtnUp.removeClass(scrollUp);
+            } else {
+                //Скролл вверх
+                if (curPos + $(window).height() < $(document).height()) {
+                    $showBtnUp.addClass(scrollUp);
+                }
+            }
+            lastScrollTop = curPos;
+        }
+
+        // Функция проверки скроллинга каждые 250ms, уменьшает
+        // нагрузку, как если бы при проверки каждого пикселя.
+        setInterval(function () {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 150);
+
+        if ($('body').is(':visible')) {
+            $(this).parent().parent().addClass('is-active').parent().parent().addClass('is-active');
+            return false;
+        }
+    })($('.j-show-up'));
+
+    // Убираем ховер у всех элементов во время скролла
+    require(['app/disable-hover']);
+
+    // Определяем есть ли скролл для фикса сетки
+    (function ($scrollbar) {
+        function scrollbarCheck() {
+            var hasScrollbar = window.innerWidth > document.documentElement.clientWidth;
+            var method = !hasScrollbar ? 'addClass' : 'removeClass';
+
+            $scrollbar[method]('no-scrollbar');
+        }
+
+        scrollbarCheck();
+
+        require(['app/utils'], function () {
+            $(window).on('resize', $.debounce(300, function () {
+                scrollbarCheck();
+            }));
+        });
+    })($('body'));
+
+    return {};
+});
