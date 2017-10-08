@@ -1693,7 +1693,7 @@ i,em {
   display-font:swap;font-family:"HarmoniaSansProCyr";src:url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Italic.woff2") format("woff2"), url("/fonts/HarmoniaSansProCyr/HarmoniaSansProCyr-Italic.woff") format("woff");font-weight:400;font-style:italic;
 }
 
-@media only screen and (min-width: 670px) {
+@media only screen and (min-width: 720px) {
   .col-md-0 {
     width: calc(0vw - 0px);
   }
