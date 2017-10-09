@@ -20,7 +20,30 @@
   color: $black;
   display: block;
   margin-bottom: 16px;
+  padding-top: 16px;
+  @media #{$medium-up} {
+    padding-top: 0;
+  }
 }
+.b-footer__nav-list_element{
+  position: relative;
+  display: block;
+  &:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    border-bottom: 1px solid rgba($gray, .5);
+  }
+  @media #{$medium-up} {
+    display: flex;
+    &:before{
+      content: '';
+      display: none;
+    }
+  }
+}
+
 .b-footer__nav-list{
   display: block;
   text-align: center;
