@@ -6,8 +6,12 @@
   background-size: contain;
 }
 .b-footer__hr{
-  color: $gray;
-  margin-bottom: 16px;
+  display: none;
+  @media #{$medium-up} {
+    color: $gray;
+    margin-bottom: 16px;
+    display: block;
+  }
 }
 .b-footer__nav{
   background-color: $white;
@@ -18,10 +22,16 @@
   margin-bottom: 16px;
 }
 .b-footer__nav-list{
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  display: block;
+  text-align: center;
+  float: left;
+  @media #{$medium-up} {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-content: center;
+  }
+
 }
 .b-footer__menu{
   display: flex;
