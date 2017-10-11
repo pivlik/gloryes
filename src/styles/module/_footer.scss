@@ -57,11 +57,17 @@
 
 }
 .b-footer__menu{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  margin-top: 35px;
-  margin-bottom: 62px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 35px;
+    margin-bottom: 62px;
+}
+.b-footer__menu_lists{
+  display: none;
+  @media #{$medium-up} {
+      display: block;
+  }
 }
 .b-footer__menu_lists_items_link{
   color: $white;
@@ -111,7 +117,12 @@
 }
 .b-footer__menu_contact_lists_items_link-title{
   @include link-title();
-  margin-bottom: 10px;
+  font-size: 12px;
+  margin-bottom: 5px;
+  @media #{$medium-up} {
+    @include link-title();
+    margin-bottom: 10px;
+  }
 }
 .b-footer__menu_contact_search-form{
   display: flex;
@@ -141,17 +152,30 @@
   }
 }
 .b-footer__logo{
-  margin-bottom: 70px;
-  .b-icon__SVGs-19{
-    fill: $gray;
+  display: none;
+  @media #{$medium-up} {
+    display: block;
+    margin-bottom: 70px;
+    .b-icon__SVGs-19{
+      fill: $gray;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  }
+
 .b-footer__logo_text{
   text-align: center;
   color: $white;
   font-size: 12px;
   font-family: $font-b-header__trebuchet;
+}
+.b-footer__logo_text_gray{
+  color: $gray;
+}
+.b-footer__nav-list_element_link_gray{
+  .b-icon__SVGs-19{
+    fill: $gray;
+  }
 }
