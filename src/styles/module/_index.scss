@@ -10,19 +10,48 @@
 }
 .b-index__recommendation_icon{
   float: left;
+  margin-top: 14px;
+  @media #{$medium-up} {
+      margin-top: 0;
+  }
 }
 .b-index__recommendation_text{
-  font-size: 15px;
+  font-size: 12px;
+  text-align: left;
+  line-height: 13px;
   color: $gray;
-  text-align: center;
+  @media #{$medium-up} {
+    font-size: 12px;
+    line-height: 13px;
+    color: $gray;
+    text-align: center;
+  }
+  @media #{$large-up} {
+    font-size: 15px;
+    line-height: 19px;
+  }
 
 }
+.b-index__recommendation_text_title-mobi{
+  font-size: 20px;
+  margin-bottom: 9px;
+  @media #{$medium-up} {
+      display: none;
+  }
+}
 .b-index__recommendation_text_title{
-  font-size: 28px;
-  font-weight: 400;
-  display: block;
-  margin-bottom: 10px;
-  color: $black;
+  display: none;
+  @media #{$medium-up} {
+    display: block;
+    font-size: 22px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 10px;
+    color: $black;
+  }
+  @media #{$large-up} {
+    font-size: 28px;
+  }
 }
 .b-index__recommendation_link{
   color: $main-blue;
