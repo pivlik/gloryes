@@ -136,22 +136,25 @@
   margin: auto;
   width: 150px;
   height: 40px;
-  padding-top: 12px;
+  padding-top: 8px;
   margin-bottom: 30px;
+  font-size: 12px;
+  border-radius: 2px;
   a{
     color: $white;
-
   }
   @media #{$medium-up} {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700;
     border-radius: 2px;
     width: 150px;
     height: 45px;
-    padding-top: 12px;
+    padding-top: 10px;
     margin-bottom: 0;
   }
   @media #{$large-up} {
+    font-size: 15px;
+    padding-top: 12px;
     width: 185px;
     height: 49px;
   }
@@ -174,24 +177,46 @@
   }
 }
 .b-index__advantages-footer-blok-title{
-  font-size: 28px;
+  font-size: 20px;
+  @media #{$medium-up} {
+    font-size: 22px;
+  }
+  @media #{$large-up} {
+    font-size: 28px;
+  }
 }
 .b-index__advantages-footer{
   text-align: center;
-  margin-top: 28px;
   p{
     margin-top: 7px;
-    margin-bottom: 34px;
+    margin-bottom: 20px;
     color: $gray;
+    @media #{$medium-up} {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    @media #{$large-up} {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
   }
   img{
     width: 98%;
-    margin-bottom: 38px;
+    margin-bottom: 16px;
+    @media #{$large-up} {
+      margin-bottom: 38px;
+    }
+  }
+  @media #{$medium-up} {
+    margin-top: 28px;
   }
 }
 .b-index__advantages-btn_footer-1{
   background-color: $lemon;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+  @media #{$medium-up} {
+    margin-bottom: 60px;
+  }
 }
 .b-index__powder{
   text-align: center;
