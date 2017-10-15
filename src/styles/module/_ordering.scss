@@ -57,10 +57,18 @@
      font-size: 17px;
   }
 }
+.b-ordering__basket-order-col-item-mobi{
+  font-size: 13px;
+}
 .b-ordering__basket-order{
   display: none;
   @media #{$medium-up} {
       display: block;
+  }
+}
+.b-ordering__basket-mobi{
+  @media #{$medium-up} {
+      display: none;
   }
 }
 .b-ordering__basket-order-col{
@@ -93,18 +101,38 @@
     top: 100px;
   }
 }
+.b-ordering__basket-order-list-name{
+  font-size: 15px;
+  @media #{$large-up} {
+    font-size: 18px;
+  }
+}
 .b-ordering__basket-order-list-name,.b-ordering__basket-order-list-amount,.b-ordering__basket-order-list-price{
   padding-top: 12px;
 }
 .b-ordering__basket-order-list-name-second{
   color: $gray;
+  font-size: 15px;
+  @media #{$large-up} {
+     font-size: 18px;
+  }
 }
 .b-ordering__basket-order-list-amount-form-input{
-  width: 43px;
-  height: 43px;
+  width: 34px;
+  height: 35px;
   border: 1px solid rgba($gray , 0.2);
-  box-shadow: 1px 0 1px rgba($gray, 0.3);
   padding-left: 18px;
+  margin-top: 5px;
+  @media #{$medium-up} {
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+    box-shadow: 1px 0 1px rgba($gray, 0.3);
+  }
+  @media #{$large-up} {
+    width: 43px;
+    height: 43px;
+  }
 }
 .b-ordering__basket-order-list-price-value-delete{
   font-size: 12px;
@@ -120,20 +148,37 @@
 }
 .b-ordering__basket-order-list-name-footer{
   color: $gray;
-  font-size: 15px;
+  font-size: 12px;
+  @media #{$large-up} {
+    font-size: 15px;
+  }
+
 }
 .b-ordering__basket-order-additionally-link{
   color: $main-blue;
 }
 .b-ordering__basket-order-list-additionally-btn{
   display: block;
-  width: 182px;
-  height: 42px;
+  width: 87px;
+  height: 31px;
   border: 1px solid $main-blue;
   color: $main-blue;
   border-radius: 2px;
+  @media #{$large-up} {
+    width: 104px;
+    height: 12px;
+  }
+  @media #{$large-up} {
+    width: 182px;
+    height: 42px;
+  }
   p{
-    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    @media #{$large-up} {
+      font-size: 15px;
+      padding: 5px;
+    }
   }
 }
 .b-ordering__basket-info-price{
@@ -208,6 +253,9 @@
   @media #{$large-up} {
     margin-left: 20px;
   }
+}
+.b-ordering__basket-mobi{
+  margin-top: 45px;
 }
 .b-ordering__pay-icon{
   font-size: 12px;
