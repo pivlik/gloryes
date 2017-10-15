@@ -127,11 +127,11 @@
     width: 40px;
     height: 40px;
     margin-top: 0;
-    box-shadow: 1px 0 1px rgba($gray, 0.3);
   }
   @media #{$large-up} {
     width: 43px;
     height: 43px;
+    box-shadow: 1px 0 1px rgba($gray, 0.3);
   }
 }
 .b-ordering__basket-order-list-price-value-delete{
@@ -201,6 +201,12 @@
   text-transform: none;
   font-size: 15px;
   top: 5px;
+  @media #{$medium-up} {
+    font-size: 12px;
+  }
+  @media #{$large-up} {
+    font-size: 15px;
+  }
 }
 .b-ordering__basket-info-item-btn{
   background-color: $header_pink;
@@ -213,10 +219,11 @@
   font-weight: 700;
   margin-bottom: 21px;
   @media #{$medium-up} {
-    padding: 20px;
+    padding: 13px;
   }
   @media #{$large-up} {
     font-size: 17px;
+    padding: 20px;
   }
 }
 .b-ordering__basket-info-item-btn-little{
@@ -226,20 +233,29 @@
   padding: 9px 10px 9px 10px;
   font-size: 12px;
   color: $gray;
-  width: 44%;
+  @media #{$medium-up} {
+    padding: 0;
+    font-size: 11px;
+  }
   @media #{$large-up} {
     font-size: 15px;
     padding: 14px 10px 12px 10px;
+    width: 46%;
   }
 }
 .b-ordering__basket-info-item-btn-little-first{
   margin-right: 11px;
   padding: 9px 10px 9px 10px;
   box-shadow: 1px 0 1px rgba($gray, 0.3);
-  width: 45%;
+
+  @media #{$medium-up} {
+    margin-right: 8px;
+    box-shadow: none;
+  }
   @media #{$large-up} {
     margin-right: 8px;
     padding: 14px 10px 12px 10px;
+    width: 45%;
   }
 }
 .b-ordering__basket-info-item-coupon{
@@ -248,10 +264,18 @@
 }
 .b-ordering__basket-info{
   background-color: rgba($gray, 0.05);
-  padding: 35px 30px 10px 30px;
   margin-bottom: 12px;
+  padding-left: 28px;
+  padding-top: 24px;
+  @media #{$medium-up} {
+  margin-top: 45px;
+    padding-left: 13px;
+    padding-top: 29px;
+  }
   @media #{$large-up} {
     margin-left: 20px;
+    padding: 35px 30px 10px 30px;
+    margin-top: 0;
   }
 }
 .b-ordering__basket-mobi{
@@ -262,13 +286,41 @@
   text-align: center;
   img{
     float: left;
+    @media #{$medium-up} {
+      width: 96px;
+      height: 27px;
+      opacity: 0.9;
+      margin-top: 10px;
+    }
+    @media #{$large-up} {
+      width: 137px;
+      height: 39px;
+      opacity: 0.9;
+      margin-top: 0;
+    }
   }
 }
+
 .b-ordering__pay-icon-link{
   color: $header_pink;
 }
 .b-ordering__pay-icon-text{
   line-height: 10px;
+  @media #{$medium-up} {
+      display: none;
+  }
+  @media #{$large-up} {
+    display: block;
+  }
+}
+.b-ordering__pay-icon-text-tablet{
+  display: none;
+  @media #{$medium-up} {
+    display: inline;
+  }
+  @media #{$large-up} {
+    display: none;
+  }
 }
 .b-ordering__often-buy{
   display: flex;
