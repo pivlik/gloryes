@@ -1,7 +1,10 @@
 .b-ordering__nav-line-list{
   display: flex;
   flex-wrap: nowrap;
-  margin-bottom: 35px;
+  @media #{$medium-up} {
+    margin-bottom: 35px;
+  }
+  margin-bottom: 17px;
 }
 .b-ordering__nav-line-list-item-link{
   color: $gray;
@@ -16,6 +19,10 @@
 .b-ordering__nav-line-list-item{
   position: relative;
   margin-right: 20px;
+  font-size: 10px;
+  @media #{$large-up} {
+     font-size: 15px;
+  }
   &:after {
     content: '';
     display: block;
@@ -41,8 +48,20 @@
 }
 .b-ordering__title_second{
   color: $gray;
-  font-size: 17px;
+  font-size: 15px;
   text-transform: uppercase;
+  @media #{$medium-up} {
+    font-size: 13px;
+  }
+  @media #{$large-up} {
+     font-size: 17px;
+  }
+}
+.b-ordering__basket-order{
+  display: none;
+  @media #{$medium-up} {
+      display: block;
+  }
 }
 .b-ordering__basket-order-col{
   display: flex;
@@ -143,26 +162,40 @@
   color: $white;
   border-radius: 2px;
   text-transform: uppercase;
-  padding: 20px;
+  padding: 13px;
   text-align: center;
-  font-size: 17px;
+  font-size: 13px;
   font-weight: 700;
   margin-bottom: 21px;
+  @media #{$medium-up} {
+    padding: 20px;
+  }
+  @media #{$large-up} {
+    font-size: 17px;
+  }
 }
 .b-ordering__basket-info-item-btn-little{
   text-align: center;
   border: 1px solid rgba($gray, .2);
   border-radius: 2px;
-  padding: 14px 10px 12px 10px;
-  font-size: 15px;
+  padding: 9px 10px 9px 10px;
+  font-size: 12px;
   color: $gray;
   width: 44%;
+  @media #{$large-up} {
+    font-size: 15px;
+    padding: 14px 10px 12px 10px;
+  }
 }
 .b-ordering__basket-info-item-btn-little-first{
-  margin-right: 8px;
-  padding: 14px 10px 12px 10px;
+  margin-right: 11px;
+  padding: 9px 10px 9px 10px;
   box-shadow: 1px 0 1px rgba($gray, 0.3);
   width: 45%;
+  @media #{$large-up} {
+    margin-right: 8px;
+    padding: 14px 10px 12px 10px;
+  }
 }
 .b-ordering__basket-info-item-coupon{
   color: $gray;
@@ -171,8 +204,10 @@
 .b-ordering__basket-info{
   background-color: rgba($gray, 0.05);
   padding: 35px 30px 10px 30px;
-  margin-left: 20px;
   margin-bottom: 12px;
+  @media #{$large-up} {
+    margin-left: 20px;
+  }
 }
 .b-ordering__pay-icon{
   font-size: 12px;
