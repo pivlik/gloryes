@@ -44,7 +44,15 @@
 }
 .b-ordering__title{
   margin-bottom: 16px;
-  font-size: 27px;
+  font-size: 20px;
+  text-align: center;
+  @media #{$medium-up} {
+      font-size: 22px;
+  }
+  @media #{$large-up} {
+    font-size: 28px;
+    text-align: left;
+  }
 }
 .b-ordering__title_second{
   color: $gray;
@@ -132,6 +140,12 @@
     width: 43px;
     height: 43px;
     box-shadow: 1px 0 1px rgba($gray, 0.3);
+  }
+}
+.b-ordering__basket-order-list-price-value{
+  font-size: 15px;
+  @media #{$large-up} {
+     font-size: 18px;
   }
 }
 .b-ordering__basket-order-list-price-value-delete{
@@ -230,7 +244,6 @@
   text-align: center;
   border: 1px solid rgba($gray, .2);
   border-radius: 2px;
-  padding: 9px 10px 9px 10px;
   font-size: 12px;
   color: $gray;
   @media #{$medium-up} {
@@ -240,12 +253,11 @@
   @media #{$large-up} {
     font-size: 15px;
     padding: 14px 10px 12px 10px;
-    width: 46%;
+    width: 48%;
   }
 }
 .b-ordering__basket-info-item-btn-little-first{
   margin-right: 11px;
-  padding: 9px 10px 9px 10px;
   box-shadow: 1px 0 1px rgba($gray, 0.3);
 
   @media #{$medium-up} {
@@ -253,9 +265,9 @@
     box-shadow: none;
   }
   @media #{$large-up} {
-    margin-right: 8px;
+    margin-right: 13px;
     padding: 14px 10px 12px 10px;
-    width: 45%;
+    box-shadow: 1px 0 1px rgba($gray, 0.3);
   }
 }
 .b-ordering__basket-info-item-coupon{
@@ -340,25 +352,37 @@
   padding: 7px 26px 7px 26px;
 }
 .b-ordering__often-buy-art-title{
-  font-size: 17px;
+  font-size: 15px;
+  @media #{$large-up} {
+    font-size: 17px;
+  }
 }
 .b-ordering__often-buy-art-discr{
-  font-size: 12px;
+  font-size: 10px;
   color: $gray;
   opacity: 0.9;
   line-height: 13px;
   margin-bottom: 8px;
+  @media #{$large-up} {
+    font-size: 12px;
+  }
 }
 .b-ordering__often-buy-art-icon{
   margin-bottom: 17px;
 }
 .b-ordering__basket-order-additionally{
-  margin-bottom: 56px;
+  margin-bottom: 22px;
+  @media #{$medium-up} {
+    margin-bottom: 56px;
+  }
 }
 .b-ordering__delivery-form{
-  margin-bottom: 56px;
+  margin-bottom: 19px;
   input{
     border: 1px solid rgba($gray, .2);
+  }
+  @media #{$large-up} {
+    margin-bottom: 56px;
   }
 }
 .b-ordering__delivery-form-country{
@@ -399,8 +423,11 @@
 .b-ordering__delivery-title{
   text-transform: uppercase;
   color: $header_pink;
-  font-size: 17px;
+  font-size: 13px;
   margin-bottom: 16px;
+  @media #{$large-up} {
+     font-size: 17px;
+  }
 }
 .b-ordering__delivery-methods-pickup-form-input{
   width: 10px;
@@ -411,14 +438,19 @@
   margin-bottom: 20px;
 }
 .b-ordering__delivery-methods-pickup-full-address{
-  font-size: 15px;
+  font-size: 12px;
   color: $gray;
   opacity: 0.7;
   line-height: 20.83px;
-  margin-bottom: 20px;
+  @media #{$medium-up} {
+    margin-bottom: 20px;
+  }
+  @media #{$large-up} {
+    font-size: 15px;
+  }
 }
 .b-ordering__delivery-form-address{
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 .b-ordering__buyer-form{
   input {
@@ -446,6 +478,10 @@
   bottom: 10px;
   position: relative;
   margin-bottom: 4px;
+  font-size: 12px;
+  @media #{$large-up} {
+     font-size: 18px;
+  }
 }
 .b-ordering__delivery-checkbox{
   vertical-align: top;
@@ -468,12 +504,15 @@
       &:before {
         content: '';
         position: absolute;
-        top: 4px;
+        top: 1px;
         left: 0;
         width: 14px;
         height: 14px;
         background: $white;
         border: 1px solid rgba($gray, .5);
+        @media #{$large-up} {
+          top: 4px;
+        }
       }
 
       &:after {
@@ -570,5 +609,18 @@
   label {
   font-size: 12px;
     color: $light-gray;
+  }
+}
+
+.b-ordering__mobi-hidden{
+  display: none;
+  @media #{$large-up} {
+     display: block;
+  }
+}
+.b-ordering__tablet-show{
+  display: none;
+  @media #{$medium-up} {
+    display: block;
   }
 }
