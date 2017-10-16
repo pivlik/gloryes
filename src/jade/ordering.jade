@@ -242,38 +242,38 @@ block content
                 input(type='tel' name='phone' placeholder='телефон').b-ordering__buyer-form-tel.col-lg-9.col-md-9.col-34
                 input(type='email' name='mail' placeholder='Email').b-ordering__buyer-form-mail.col-lg-9.col-md-9.col-34
                 textarea(rows="7" cols="45" name="comment" placeholder='комментарий к заказу').b-ordering__buyer-form-comment.col-lg-17.col-md-17.col-34
-        .b-ordering__title.col-push-4.col-15.col-post-17 способ оплаты
-        .b-ordering__delivery-title.col-15.col-push-4 оплата при получении
-        .b-ordering__delivery-checkbox-wrapper.col-15.col-push-4
+        .b-ordering__title.col-lg-push-4.col-md-push-4.col-15.col-post-15 способ оплаты
+        .b-ordering__delivery-title.col-lg-push-4.col-md-push-4.col-push-1.col-lg-15.col-md-15.col-25 оплата при получении
+        .b-ordering__delivery-checkbox-wrapper.col-md-push-4.col-lg-push-4.col-lg-15.col-md-15.col-push-1.col-25
             input(type='checkbox' name='courier')#checkbox-pay1.b-ordering__delivery-checkbox
             label(for='checkbox-pay1') курьер, самовывоз
-        .b-ordering__delivery-checkbox-wrapper.b-ordering__delivery-checkbox-wrapper-mail.col-15.col-push-4
+        .b-ordering__delivery-checkbox-wrapper.b-ordering__delivery-checkbox-wrapper-mail.col-md-push-4.col-lg-push-4.col-lg-15.col-md-15.col-push-1.col-25
             input(type='checkbox' name='courier')#checkbox-pay2.b-ordering__delivery-checkbox
             label(for='checkbox-pay2') на почте
-        .b-ordering__delivery-title.col-15.col-push-4 предварительная оплата
-        .b-ordering__delivery-checkbox-wrapper.col-15.col-push-4
+        .b-ordering__delivery-title.col-lg-push-4.col-md-push-4.col-push-1.col-lg-15.col-md-15.col-25 предварительная оплата
+        .b-ordering__delivery-checkbox-wrapper.col-md-push-4.col-lg-push-4.col-lg-15.col-md-15.col-push-1.col-25
             input(type='checkbox' name='courier')#checkbox-pay3.b-ordering__delivery-checkbox
             label(for='checkbox-pay3') Единая Касса
-            p.b-ordering__delivery-checkbox-pay3.col-16 Единая касса принимает к оплате наличные, безналичные и электронные деньги. Обслуживание платежей Единой
+            p.b-ordering__delivery-checkbox-pay3.col-lg-16.col-md-16.col-34 Единая касса принимает к оплате наличные, безналичные и электронные деньги. Обслуживание платежей Единой
                 |кассе доверили такие известные сервисы, как: "Slando", "Из Рук в Руки", "Biglton", "Фотострана" и др.
-        .b-ordering__pay-system-icon.col-15.col-push-4
+        .b-ordering__pay-system-icon.col-lg-push-4.col-md-push-4.col-lg-15.col-md-15.col-35
             img(src='/img/orders/pay-system.png')
-        a(href='').b-ordering__pay-system-link.col-15.col-push-4
+        a(href='').b-ordering__pay-system-link.col-lg-push-4.col-md-push-4.col-lg-15.col-md-15.col-35.col-push-1
             |все способы оплаты через Единую Кассу
-        .b-ordering__delivery-checkbox-wrapper.col-15.col-push-4
+        .b-ordering__delivery-checkbox-wrapper.col-md-push-4.col-lg-push-4.col-lg-15.col-md-15.col-push-1.col-25
             input(type='checkbox' name='courier')#checkbox-sber.b-ordering__delivery-checkbox
             label(for='checkbox-sber') оплата с карты Сбербанка
-        .b-ordering__delivery-checkbox-wrapper.col-15.col-push-4
+        .b-ordering__delivery-checkbox-wrapper.col-md-push-4.col-lg-push-4.col-lg-15.col-md-15.col-push-1.col-30
             input(type='checkbox' name='courier')#checkbox-bank.b-ordering__delivery-checkbox
             label(for='checkbox-bank') предварительная оплата через банк (по квитанции)
-        .b-ordering__delivery-checkbox-wrapper.col-15.col-push-4
+        .b-ordering__delivery-checkbox-wrapper.col-md-push-4.col-lg-push-4.col-lg-15.col-md-15.col-push-1.col-25
             input(type='checkbox' name='courier')#checkbox-yandex.b-ordering__delivery-checkbox
             label(for='checkbox-yandex') Яндекс.Деньги
-        .b-ordering__delivery-checkbox-wrapper.col-32.col-push-4
+        .b-ordering__delivery-checkbox-wrapper.col-md-push-4.col-lg-push-4.col-lg-15.col-md-15.col-push-1.col-25
             input(type='checkbox' name='courier')#checkbox-qiwi.b-ordering__delivery-checkbox
             label(for='checkbox-qiwi') QIWI Кошелек
-        button(type='submit').b-ordering__confirm.col-7.col-push-4.row.col-post-25
+        button(type='submit').b-ordering__confirm.row.col-lg-push-4.col-md-push-4.col-push-3.col-lg-post-25.col-md-post-25.col-lg-7.col-md-7.col-30
             | подтвердить заказ
-        .b-ordering__delivery-checkbox-wrapper.b-ordering__delivery-wrapper_blue.col-15.col-push-4
+        .b-ordering__delivery-checkbox-wrapper.b-ordering__delivery-wrapper_blue.col-lg-push-4.col-md-push-4.col-push-3.col-lg-15.col-md-15.col-25
             input(checked='' type='checkbox' name='courier')#checkbox-agreement.b-ordering__delivery-checkbox.b-ordering__delivery-checkbox_blue
             label(for='checkbox-agreement') Я принимаю условия соглашения
