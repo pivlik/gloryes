@@ -1,4 +1,4 @@
-define('app', ['jquery'], function($) {
+define('app', ['jquery', 'slick-carousel' ], function($) {
     'use strict';
 
 
@@ -22,42 +22,60 @@ define('app', ['jquery'], function($) {
         });
     });
 
-
-    (function ($toggler) {
+/// ПАША ДЕЛАЙ ПО АНАЛОГИИ
+    (function ($toggler) {  // ТУТ МЫ ИНИЦИАЛИЗИРУЕМ ПЕРЕ
+        if (!($toggler.length)) {
+            return;
+        }
         $($toggler).on('click', function () {
             $(this).toggleClass('active');
             $('.j-navigation').toggleClass('active');
         });
-
     })('.j-hamburger');
 
-    // Подключение галерей со сликом
-    (function($gallerysSlick) {
-        if (!$gallerysSlick.length) {
+
+
+    (function ($mygallery) {  // ТУТ МЫ ИНИЦИАЛИЗИРУЕМ ПЕРЕ
+        if (!($mygallery.length)) {
             return;
         }
+        $($mygallery).slick();
+    })('.j-slick');
 
-        require(['app/gallery-slick'], function(GallerySlick) {
-            $gallerysSlick.each(function() {
-                let gallery = new GallerySlick($(this));
-                gallery.initGallery();
-            });
-        });
-    })($('.j-gallery-slick'));
 
-    //Анимированный label
-    (function($animLabels) {
-        if (!$animLabels.length) {
-            return;
-        }
 
-        require(['app/animated-label'], function(AnimatedLabel) {
-            $animLabels.each(function() {
-                var label = new AnimatedLabel($(this));
-                label.init();
-            });
-        });
-    })($('.j-anim-label'));
+    (function (a) {
+        a = a +2
+        return a;
+    })(2);
+
+    // // Подключение галерей со сликом
+    // (function($gallerysSlick) {
+    //     if (!$gallerysSlick.length) {
+    //         return;
+    //     }
+    //
+    //     require(['app/gallery-slick'], function(GallerySlick) {
+    //         $gallerysSlick.each(function() {
+    //             let gallery = new GallerySlick($(this));
+    //             gallery.initGallery();
+    //         });
+    //     });
+    // })($('.j-gallery-slick'));
+
+    // //Анимированный label
+    // (function($animLabels) {
+    //     if (!$animLabels.length) {
+    //         return;
+    //     }
+    //
+    //     require(['app/animated-label'], function(AnimatedLabel) {
+    //         $animLabels.each(function() {
+    //             var label = new AnimatedLabel($(this));
+    //             label.init();
+    //         });
+    //     });
+    // })($('.j-anim-label'));
 
     // Стилизация селекта
     (function($selects) {

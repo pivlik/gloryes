@@ -1,0 +1,91 @@
+extends _layout
+block title
+    title Главная страница
+block content
+    hr
+    h2 Простой случай с заданной шириной и высотой и сохранением размеров картинок
+    hr
+    .b-gallery__wr.b-form__v
+        .b-gallery__w
+        .b-gallery-slick.j-gallery-slick
+            .b-gallery-slick__base(
+            data-autoplay="true"
+            data-autoplayspeed = "1000"
+            data-arrows="true"
+            data-loop="true"
+            data-keyboard="true"
+            )
+                img(src="http://stuki-druki.com/aforizms/Avril-Lavigne-01.jpg")
+                img(src="http://stuki-druki.com/aforizms/Avril-Lavigne-01.jpg")
+                img(src="http://stuki-druki.com/aforizms/Avril-Lavigne-01.jpg")
+                img(src="http://stuki-druki.com/aforizms/Avril-Lavigne-01.jpg")
+                img(src="http://stuki-druki.com/aforizms/Avril-Lavigne-01.jpg")
+
+
+            a(href="javascript:;").j-gallery__prev.b-gallery__arrow.b-gallery__arrow_show_prev Показать предыдущий слайд
+            a(href="javascript:;").j-gallery__next.b-gallery__arrow.b-gallery__arrow_show_next Показать следущий слайд
+        .b-gallery__w
+    hr
+    h2 Зажатый контейнером, растягивает картинку
+    hr
+    //Зажатый контейнером, растягивает картинку
+    .b-gallery__wr
+        .b-gallery__w
+        .b-gallery-slick.b-gallery-slick__img-full-height.j-gallery-slick
+            .b-gallery-slick__base(
+            data-autoplay="true"
+            data-arrows="true"
+            data-loop="true"
+            data-keyboard="true"
+            )
+                img(src="https://www.placecage.com/260/400")
+                img(src="https://www.placecage.com/600/800")
+                img(src="https://www.placecage.com/800/400")
+                img(src="https://www.placecage.com/600/800")
+                img(src="https://www.placecage.com/360/400")
+
+
+            a(href="javascript:;").j-gallery__prev.b-gallery__arrow.b-gallery__arrow_show_prev Показать предыдущий слайд
+            a(href="javascript:;").j-gallery__next.b-gallery__arrow.b-gallery__arrow_show_next Показать следущий слайд
+        .b-gallery__w
+    hr
+    h2 Случай Жени, где картинка должна центирроваться и обрезаться края
+    hr
+    //Случай Жени, где картинка должна центирроваться и обрезаться края
+    .b-gallery__wr
+        .b-gallery-slick__full-size.b-gallery-slick__img-full-height.j-gallery-slick
+            .b-gallery-slick__base(
+            data-autoplayspeed = "2000"
+            data-autoplay="true"
+            data-arrows="true"
+            data-loop="false"
+            data-keyboard="true"
+            )
+                .b-gallery-slide__pic
+                .b-gallery-slide__pic
+                .b-gallery-slide__pic
+                .b-gallery-slide__pic
+
+            a(href="javascript:;").j-gallery__prev.b-gallery__arrow.b-gallery__arrow_show_prev Показать предыдущий слайд
+            a(href="javascript:;").j-gallery__next.b-gallery__arrow.b-gallery__arrow_show_next Показать следущий слайд
+    hr
+    h2 Точки
+    hr
+    .b-gallery__wr
+        .b-gallery__w
+        .b-gallery-slick.j-gallery-slick
+            .b-gallery-slick__base(
+            data-autoplay="true"
+            data-arrows="true"
+            data-loop="false"
+            data-keyboard="true"
+            data-dots= "true"
+            data-dotsclass = "b-gallery-slick__dots"
+            )
+                img(src="https://www.placecage.com/260/400")
+                img(src="https://www.placecage.com/600/800")
+                img(src="https://www.placecage.com/800/400")
+                img(src="https://www.placecage.com/300/1200")
+                img(src="https://www.placecage.com/360/400")
+
+        .b-gallery__w
