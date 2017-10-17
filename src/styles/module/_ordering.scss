@@ -561,12 +561,15 @@
   border-radius: 2px;
   border: none;
   color: $white;
-  font-size: 17px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   padding: 19px 20px 17px 22px;
   margin-top: 10px;
   margin-bottom: 10px;
+  @media #{$large-up} {
+    font-size: 17px;
+  }
 }
 .b-ordering__delivery-checkbox_blue{
   &:not(checked) {
