@@ -464,6 +464,12 @@
 .b-ordering__buyer-form-last-name,.b-ordering__buyer-form-tel{
   margin-right: 24px;
   box-shadow: 1px 0 1px rgba($gray, 0.4);
+  @media #{$medium-up} {
+      margin-right: 0;
+  }
+  @media #{$large-up} {
+    margin-right: 37px;
+  }
 }
 .b-ordering__buyer-form-comment{
   width: 98.5%;
@@ -472,7 +478,14 @@
   border: 1px solid rgba($gray, .2);
 }
 .b-ordering__buyer{
-  margin-bottom: 50px;
+  margin-bottom: 34px;
+  @media #{$medium-up} {
+
+  }
+  @media #{$large-up} {
+    margin-bottom: 50px;
+  }
+
 }
 .b-ordering__delivery-checkbox-wrapper{
   bottom: 10px;
@@ -561,12 +574,15 @@
   border-radius: 2px;
   border: none;
   color: $white;
-  font-size: 17px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   padding: 19px 20px 17px 22px;
   margin-top: 10px;
   margin-bottom: 10px;
+  @media #{$large-up} {
+    font-size: 17px;
+  }
 }
 .b-ordering__delivery-checkbox_blue{
   &:not(checked) {
