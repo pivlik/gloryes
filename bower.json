@@ -8,11 +8,10 @@
   ],
   "private": true,
   "dependencies": {
-    "fotorama": "~4.6.4",
     "handlebars": "~3.0.0",
     "jquery": "~2.1.4",
     "jquery.maskedinput": "~1.4.1",
-    "magnific-popup": "~1.1.0",
+    "magnific-popup": "^1.1.0",
     "modernizr": "~2.8.3",
     "requirejs": "latest",
     "webshim": "^1.15.10",
