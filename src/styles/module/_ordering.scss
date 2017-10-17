@@ -464,6 +464,9 @@
 .b-ordering__buyer-form-last-name,.b-ordering__buyer-form-tel{
   margin-right: 24px;
   box-shadow: 1px 0 1px rgba($gray, 0.4);
+  @media #{$large-up} {
+    margin-right: 2px;
+  }
 }
 .b-ordering__buyer-form-comment{
   width: 98.5%;
