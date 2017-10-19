@@ -54,6 +54,9 @@
     text-align: left;
   }
 }
+.b-ordering__title__align-left{
+  text-align: l;
+}
 .b-ordering__title_second{
   color: $gray;
   font-size: 15px;
@@ -462,10 +465,9 @@
   }
 }
 .b-ordering__buyer-form-last-name,.b-ordering__buyer-form-tel{
-  margin-right: 24px;
   box-shadow: 1px 0 1px rgba($gray, 0.4);
   @media #{$medium-up} {
-      margin-right: 0;
+    margin-right: 24px;
   }
   @media #{$large-up} {
     margin-right: 37px;
@@ -494,6 +496,7 @@
   font-size: 12px;
   @media #{$large-up} {
      font-size: 18px;
+     bottom: 13px;
   }
 }
 .b-ordering__delivery-checkbox{
@@ -523,18 +526,24 @@
         height: 14px;
         background: $white;
         border: 1px solid rgba($gray, .5);
+        @media #{$large-up} {
+          top: 5px;
+        }
       }
 
       &:after {
         content: '';
         position: absolute;
-        top: 5px;
+        top: 2px;
         left: 2px;
         width: 9px;
         height: 6px;
         border: 0;
         transform: rotate(-45deg);
         transition: all .2s;
+        @media #{$large-up} {
+          top: 7px;
+        }
       }
     }
   }
