@@ -1,6 +1,18 @@
 .b-product__nav-line-list-item-link_light-gray{
   color: $light-gray;
 }
+.b-product__info_display-none{
+  display: none;
+  @media #{$medium-up} {
+      display: block;
+  }
+}
+.b-product__info-mibi{
+  display: block;
+  @media #{$medium-up} {
+      display: none;
+  }
+}
 .b-product__info-images{
   float: left;
 }
@@ -18,24 +30,45 @@
   }
 }
 .b-product__title{
-  font-size: 28px;
+  font-size: 20px;
+  @media #{$medium-up} {
+      font-size: 22px;
+  }
+  @media #{$large-up} {
+    font-size: 28px;
+  }
 }
 .b-product__subtitle{
-  font-size: 18px;
+  font-size: 15px;
   color: $gray;
   opacity: 0.9;
-  margin-bottom: 16px;
+  @media #{$medium-up} {
+    margin-bottom: 16px;
+  }
+  @media #{$large-up} {
+     font-size: 18px;
+  }
 }
 .b-product__vendor-code{
   color: $light-gray;
   margin-bottom: 18px;
+  font-size: 12px;
+  @media #{$large-up} {
+     font-size: 15px;
+  }
 }
 
 .b-product__info-text{
   margin-left: 20px;
 }
 .b-product__price{
-  font-size: 28px;
+  font-size: 20px;
+  @media #{$large-up} {
+     font-size: 22px;
+  }
+  @media #{$large-up} {
+    font-size: 28px;
+  }
 }
 .b-product__price_pink{
   float: left;
@@ -102,6 +135,14 @@
 }
 .b-ordering__often-buy-art-btn{
   padding-left: 32px;
+  font-size: 12px;
+  margin: 20px 0px;
+  @media #{$medium-up} {
+      margin: 0;
+  }
+  @media #{$large-up} {
+     font-size: 15px;
+  }
 }
 .b-product__about{
   margin-top: 40px;
