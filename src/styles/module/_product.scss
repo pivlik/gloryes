@@ -93,15 +93,27 @@
   }
 }
 .b-ordering__product-availability{
-  margin-left: 18px;
+  margin-left: 15px;
   display: block;
-  padding-top: 5px;
+  padding-top: 10px;
   margin-bottom: 35px;
+  font-size: 12px;
+  color: $gray;
+  @media #{$medium-up} {
+    padding-top: 5px;
+    margin-left: 18px;
+  }
+  @media #{$large-up} {
+    font-size: 15px;
+  }
 }
 .b-product__info-text-p{
-  font-size: 15px;
+  font-size: 12px;
   color: $gray;
   line-height: 22px;
+  @media #{$large-up} {
+     font-size: 15px;
+  }
 }
 .b-product__dellvery{
   color: $gray;
