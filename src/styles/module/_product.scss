@@ -162,6 +162,16 @@
 }
 .b-product__about-text{
   color: gray;
+  font-size: 12px;
+  margin-top: 14px;
+  text-align: center;
+  @media #{$medium-up} {
+      margin-top: 0;
+    text-align: left;
+  }
+  @media #{$large-up} {
+     font-size: 15px;
+  }
 }
 .b-ordering__often-buy-art-btn{
   padding-left: 32px;
