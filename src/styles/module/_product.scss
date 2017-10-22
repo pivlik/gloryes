@@ -119,13 +119,27 @@
   color: $gray;
   position: relative;
   text-transform: uppercase;
-  &:before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    bottom: 70px;
-    background-color: transparent;
-    border-bottom: 1px solid $gray;
+    &:before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      bottom: 70px;
+      background-color: transparent;
+      border-bottom: 1px solid $gray;
+    }
+}
+.b-product__dellvery_tablet{
+  display: block;
+  position: relative;
+  right: 60px;
+  @media #{$large-up} {
+     display: none;
+  }
+}
+.b-product__delivery-description{
+  font-size: 12px;
+  @media #{$large-up} {
+    font-size: 15px;
   }
 }
 .b-product__info-text-links-ul{
@@ -135,6 +149,10 @@
 .b-product__info-text-links-ul-li-link{
   color: $main-blue;
   font-weight: 700;
+  font-size: 12px;
+  @media #{$large-up} {
+     font-size: 15px;
+  }
 }
 .b-product__title{
   text-align: center;
@@ -148,10 +166,7 @@
 .b-ordering__often-buy-art-btn{
   padding-left: 32px;
   font-size: 12px;
-  margin: 20px 0px;
-  @media #{$medium-up} {
-      margin: 0;
-  }
+  margin: 17px 0px;
   @media #{$large-up} {
      font-size: 15px;
   }
@@ -267,4 +282,33 @@
 }
 .b-product__title_margin-b30{
   margin-bottom: 30px;
+}
+.b-product__dellvery_hidden{
+  display: none;
+  @media #{$large-up} {
+     display: block;
+  }
+}
+.b-product__dellvery_hidden_flex{
+  display: none;
+  &:before{
+    display: none;
+    @media #{$large-up} {
+      display: block;
+    }
+  @media #{$large-up} {
+     display: flex;
+  }
+ }
+}
+.b-ordering__often-buy_mobi-show{
+  display: flex;
+  margin-top: -55px;
+  margin-bottom: 20px;
+  @media #{$medium-up} {
+      display: none;
+  }
+}
+.b-ordering__often-buy-art-title2{
+  color: $gray;
 }

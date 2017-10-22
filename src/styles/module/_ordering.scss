@@ -46,6 +46,7 @@
   margin-bottom: 16px;
   font-size: 20px;
   text-align: center;
+  display: block;
   @media #{$medium-up} {
       font-size: 22px;
   }
@@ -369,9 +370,6 @@
   @media #{$large-up} {
     font-size: 12px;
   }
-}
-.b-ordering__often-buy-art-icon{
-  margin-bottom: 17px;
 }
 .b-ordering__basket-order-additionally{
   margin-bottom: 22px;

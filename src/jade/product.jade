@@ -3,7 +3,7 @@ block title
     title Оформление заказа
 block content
     form(action='').b-product
-        .b-ordering__nav-line.row.col-lg-push-4.col-md-push-4.col-lg-28.col-md-28.col-lg-post-4.col-md-post-4.col-push-2
+        .b-ordering__nav-line.row.col-lg-push-4.col-md-push-1.col-lg-28.col-md-28.col-lg-post-4.col-md-post-4.col-push-2
             ul.b-ordering__nav-line-list
                 li.b-ordering__nav-line-list-item
                     a(href='').b-ordering__nav-line-list-item-link
@@ -15,7 +15,7 @@ block content
                     a(href='').b-ordering__nav-line-list-item-link Классические Classic
                 li.b-ordering__nav-line-list-item
                     a(href='').b-ordering__nav-line-list-item-link.b-product__nav-line-list-item-link_light-gray Котята (3-18 кг + два вкладыша)
-        .b-product__info.row.col-push-4.b-product__info_display-none
+        .b-product__info.row.col-lg-push-4.col-md-push-1.b-product__info_display-none
             .b-product__info-images
                 .b-product__info-images-little.col-3
                     img(src='/img/product/little-image.png')
@@ -24,6 +24,19 @@ block content
                     .b-product__info-images-big-zoom.col-13
                         +svg('SVGs-13')
                         | нажмите, чтобы увеличить
+                    .b-header__dellvery.b-product__dellvery.b-product__dellvery_tablet.col-16
+                        .b-header__icon-car.b-product__icon-car
+                            +svg('SVGs-06')
+                        .b-header__delivery-description.b-product__delivery-description
+                            | <b>БЕСПЛАТНАЯ ДОСТАВКА</b> заказов от 4000 руб. <br> и заказов со стиральны экопорошком
+                    .b-product__info-text-links.b-product__dellvery_tablet.col-16
+                        ul.b-product__info-text-links-ul
+                            li.b-product__info-text-links-ul-li
+                                a(href='').b-product__info-text-links-ul-li-link о доставке
+                            li.b-product__info-text-links-ul-li
+                                a(href='').b-product__info-text-links-ul-li-link cпособы оплаты
+                            li.b-product__info-text-links-ul-li
+                                a(href='').b-product__info-text-links-ul-li-link как сделать заказ? 
             .b-product__info-text.col-14
                 .b-product__title.b-product__title_align-left Пеленка-кокон GlorYes! (0-3,5 мес.)
                 .b-product__subtitle Треугольники
@@ -31,23 +44,23 @@ block content
                 .b-product__price
                     .b-product__price_pink 799 ₽ &nbsp
                     |749 ₽
-                a(href='').b-ordering__often-buy-art-btn.col-4
+                a(href='').b-ordering__often-buy-art-btn.col-lg-4
                     | в корзину
                 .b-ordering__basket-order-list-amount-form.b-product__basket-order-list-amount-form
                     input(name='amount' type='number').b-ordering__basket-order-list-amount-form-input.col-push-1
-                .b-ordering__product-availability.col-3.col-post-4 В наличии: <span style="color: #5cc5c8;"> 13 </span>
+                .b-ordering__product-availability.col-lg-3.col-lg-post-4 В наличии: <span style="color: #5cc5c8;"> 13 </span>
                 .b-product__info-text-p
                     p Обеспечьте спокойный сон вашему малышу с рождения до 3,5 месяцев с помощью комфортного, тянущегося
                         |спального мешка в виде кокона на замочке. Он облегает тело малыша, словно мамины руки, успокаивает
                         |его и сдерживает вздрагивания и движения ручек, при этом не препятствуя движениям ножек. Пеленка-кокон
                         |понравится и папам как простой и быстрый способ свободного пеленания! Безопасность сна: малыш не
                         | запутается и не перегреется в мешке. 
-                .b-header__dellvery.b-product__dellvery
-                    .b-header__icon-car.b-product__icon-car
+                .b-header__dellvery.b-product__dellvery.b-product__dellvery_hidden_flex
+                    .b-header__icon-car.b-product__icon-car.b-product__dellvery_hidden
                         +svg('SVGs-06')
-                    .b-header__delivery-description.b-product__delivery-description.col-13
+                    .b-header__delivery-description.b-product__delivery-description.col-13.b-product__dellvery_hidden
                         | <b>БЕСПЛАТНАЯ ДОСТАВКА</b> заказов от 4000 руб. <br> и заказов со стиральны экопорошком gloryes
-                .b-product__info-text-links.col-11
+                .b-product__info-text-links.col-11.b-product__dellvery_hidden
                     ul.b-product__info-text-links-ul
                         li.b-product__info-text-links-ul-li
                             a(href='').b-product__info-text-links-ul-li-link о доставке
@@ -80,52 +93,57 @@ block content
                     | понравится и папам как простой и быстрый способ свободного пеленания! Безопасность сна: малыш не
                     | запутается и не перегреется в мешке. 
 
-        .b-ordering__title.b-product__title.b-product__title_margin-b30.col-lg-push-4.col-lg-30  выберите расцветки
-        .b-ordering__often-buy.col-push-4.row.col-31
-            .b-ordering__often-buy-art.col-6
-                .b-ordering__often-buy-art-title
-                    | Африка
-                .b-ordering__often-buy-art-discr
-                    | Многоразовый подгузник GlorYes!<br> CLASSIC 3-15 кг +один вкладыш
+        .b-ordering__title.col-lg-push-4.col-lg-30.col-36.row выберите расцветки
+        .b-ordering__often-buy.col-lg-push-4.col-md-push-1.row.col-lg-31.col-35
+            .b-ordering__often-buy-art.col-6.b-ordering__mobi-hidden
+                .b-ordering__often-buy-art-title2
+                    | Сафари
                 .b-ordering__often-buy-art-icon
                     img(src='/img/orders/img-5723.png')
-                a(href='').b-ordering__often-buy-art-btn.col-4.col-push-1
+                a(href='').b-ordering__often-buy-art-btn.col-4.col-push-1.col-lg-push-1
                     | в корзину
-            .b-ordering__often-buy-art.col-6
-                .b-ordering__often-buy-art-title
-                    | Африка
-                .b-ordering__often-buy-art-discr
-                    | Многоразовый подгузник GlorYes!<br> CLASSIC 3-15 кг +один вкладыш
+            .b-ordering__often-buy-art.col-lg-6.b-ordering__mobi-hidden.b-ordering__tablet-show.col-md-8
+                .b-ordering__often-buy-art-title2
+                    | Сафари
                 .b-ordering__often-buy-art-icon
                     img(src='/img/orders/img-5723.png')
-                a(href='').b-ordering__often-buy-art-btn.col-4.col-push-1
+                a(href='').b-ordering__often-buy-art-btn.col-lg-4.col-push-1.col-15.col-md-6.col-lg-push-1
                     | в корзину
-            .b-ordering__often-buy-art.col-6
-                .b-ordering__often-buy-art-title
-                    | Африка
-                .b-ordering__often-buy-art-discr
-                    | Многоразовый подгузник GlorYes!<br> CLASSIC 3-15 кг +один вкладыш
+            .b-ordering__often-buy-art.col-lg-6.b-ordering__mobi-hidden.b-ordering__tablet-show.col-md-8
+                .b-ordering__often-buy-art-title2
+                    | Сафари
                 .b-ordering__often-buy-art-icon
                     img(src='/img/orders/img-5723.png')
-                a(href='').b-ordering__often-buy-art-btn.col-4.col-push-1
+                a(href='').b-ordering__often-buy-art-btn.col-lg-4.col-push-1.col-15.col-md-6.col-lg-push-1
                     | в корзину
-            .b-ordering__often-buy-art.col-6
-                .b-ordering__often-buy-art-title
-                    | Африка
-                .b-ordering__often-buy-art-discr
-                    | Многоразовый подгузник GlorYes!<br> CLASSIC 3-15 кг +один вкладыш
+            .b-ordering__often-buy-art.col-17.col-push-1.col-lg-6.col-md-6.col-lg-push-0.col-md-push-0.col-md-8
+                .b-ordering__often-buy-art-title2
+                    | Сафари
                 .b-ordering__often-buy-art-icon
                     img(src='/img/orders/img-5723.png')
-                a(href='').b-ordering__often-buy-art-btn.col-4.col-push-1
+                a(href='').b-ordering__often-buy-art-btn.col-lg-4.col-push-1.col-15.col-md-6.col-lg-push-1
                     | в корзину
-            .b-ordering__often-buy-art.col-6
-                .b-ordering__often-buy-art-title
-                    | Африка
-                .b-ordering__often-buy-art-discr
-                    | Многоразовый подгузник GlorYes!<br> CLASSIC 3-15 кг +один вкладыш
+            .b-ordering__often-buy-art.col-17.col-push-1.col-lg-6.col-lg-push-0.col-md-push-0.col-md-8
+                .b-ordering__often-buy-art-title2
+                    | Сафари
                 .b-ordering__often-buy-art-icon
                     img(src='/img/orders/img-5723.png')
-                a(href='').b-ordering__often-buy-art-btn.col-4.col-push-1
+                a(href='').b-ordering__often-buy-art-btn.col-lg-4.col-push-1.col-15.col-md-6.col-lg-push-1
+                    | в корзину
+        .b-ordering__often-buy.col-lg-push-4.col-md-push-1.row.col-lg-31.col-35.b-ordering__often-buy_mobi-show
+            .b-ordering__often-buy-art.col-17.col-push-1.col-lg-6.col-md-6.col-lg-push-0.col-md-push-0.col-md-8
+                .b-ordering__often-buy-art-title2
+                    | Сафари
+                .b-ordering__often-buy-art-icon
+                    img(src='/img/orders/img-5723.png')
+                a(href='').b-ordering__often-buy-art-btn.col-lg-4.col-push-1.col-15.col-md-6
+                    | в корзину
+            .b-ordering__often-buy-art.col-17.col-push-1.col-lg-6.col-lg-push-0.col-md-push-0.col-md-8
+                .b-ordering__often-buy-art-title2
+                    | Сафари
+                .b-ordering__often-buy-art-icon
+                    img(src='/img/orders/img-5723.png')
+                a(href='').b-ordering__often-buy-art-btn.col-lg-4.col-push-1.col-15.col-md-6
                     | в корзину
         .b-product__title информация о продукте
         .b-product__about.row
