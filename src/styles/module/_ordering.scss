@@ -342,7 +342,10 @@
   display: flex;
   text-align: center;
   justify-content: space-between;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
+  @media #{$large-up} {
+    margin-bottom: 56px;
+  }
 }
 .b-ordering__often-buy-art{
   display: flex;

@@ -303,12 +303,54 @@
 }
 .b-ordering__often-buy_mobi-show{
   display: flex;
-  margin-top: -55px;
-  margin-bottom: 20px;
+  margin-top: -33px;
+  margin-bottom: 10px;
   @media #{$medium-up} {
       display: none;
   }
 }
+.b-product__often-buy_mobi-show{
+  @media #{$medium-up} {
+    display: none;
+  }
+}
+.b-product__tablet-show{
+  display: none;
+  margin-top: -33px;
+  @media #{$medium-up} {
+      display: block;
+  }
+}
 .b-ordering__often-buy-art-title2{
   color: $gray;
+}
+.b-product__all-colors{
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+  @media #{$large-up} {
+     font-size: 15px;
+  }
+}
+.b-product__all-colors-link{
+  color: $main-blue;
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -11px;
+    top: 6px;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    border-bottom: 1px solid $main-blue;
+    border-left: 1px solid $main-blue;
+    transform: rotate(-45deg);
+  }
+  @media #{$large-up} {
+    font-size: 15px;
+  }
 }
