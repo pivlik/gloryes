@@ -287,17 +287,28 @@
 }
 .b-product__review-btn{
   text-transform: uppercase;
-  width: 187px;
-  height: 51px;
+  width: 138px;
+  height: 40px;
   border-radius: 2px;
   background-color: #dbd93d;
   text-align: center;
   color: $white;
-  font-size: 17px;
+  font-size: 13px;
   font-weight: 700;
-  padding: 15px;
+  padding: 7px;
   margin-bottom: 85px;
   display: block;
+  @media #{$medium-up} {
+    width: 154px;
+    height: 45px;
+    padding: 3px;
+  }
+  @media #{$medium-up} {
+    width: 187px;
+    height: 51px;
+    font-size: 17px;
+    padding: 15px;
+  }
 }
 .b-product_how-to-care{
   font-size: 15px;
@@ -423,5 +434,11 @@
   display: block;
   @media #{$medium-up} {
       display: none;
+  }
+}
+.b_mobi-show_flex{
+  display: flex;
+  @media #{$medium-up} {
+    display: none;
   }
 }
