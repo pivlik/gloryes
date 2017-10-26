@@ -342,7 +342,11 @@
   display: flex;
   text-align: center;
   justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  @media #{$large-up} {
+    margin-bottom: 32px;
+  }
   @media #{$large-up} {
     margin-bottom: 56px;
   }
