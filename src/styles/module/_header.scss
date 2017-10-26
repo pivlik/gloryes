@@ -47,7 +47,6 @@
   height: 100%;
   top: 0;
   left: 0;
-
   &.active {
     width: 100%;
     z-index: 1;
@@ -298,7 +297,9 @@
 }
 .b-header__main-info_logo-wrapper{
   .b-icon__SVGs-01{
+    margin-top: 10px;
   @media #{$medium-up} {
+    margin-top: 0;
     width: 116px;
     height: 85px;
   }
