@@ -398,14 +398,14 @@
 }
 
 // СЛАЙДЕРЫ //////////////////////////
-.b-index__top-slider-item-img{
-  position: absolute;
+.b-index__top-slider-item{
+  position: relative;
 }
 .b-index__top-slider-item-btn {
   position: absolute;
-  margin-left: 581px;
-  margin-top: 423px;
   z-index: 3;
+  left: 583px;
+  top: 423px;
   text-align: center;
   width: 185px;
   height: 49px;
@@ -415,4 +415,17 @@
   text-transform: uppercase;
   color: $white;
   font-size: 17px;
+}
+.b-index__top-slider-item-title{
+  position: absolute;
+  z-index: 3;
+  top: 78px;
+  left: 793px;
+  color: $white;
+  width: 346px;
+  height: 111px;
+  font-size: 38px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 41.5px;
 }
