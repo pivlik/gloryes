@@ -157,7 +157,7 @@
   margin: auto;
   width: 150px;
   height: 40px;
-  padding-top: 8px;
+  padding-top: 12px;
   margin-bottom: 30px;
   font-size: 12px;
   border-radius: 2px;
@@ -170,12 +170,12 @@
     border-radius: 2px;
     width: 150px;
     height: 45px;
-    padding-top: 10px;
+    padding-top: 13px;
     margin-bottom: 0;
   }
   @media #{$large-up} {
     font-size: 15px;
-    padding-top: 12px;
+    padding-top: 16px;
     width: 185px;
     height: 49px;
   }
@@ -386,4 +386,33 @@
     font-size: 15px;
     line-height: 22px;
   }
+}
+.b-index__padding-8{
+  padding-top: 8px;
+  @media #{$medium-up} {
+    padding-top: 10px;
+  }
+  @media #{$large-up} {
+    padding-top: 13px;
+  }
+}
+
+// СЛАЙДЕРЫ //////////////////////////
+.b-index__top-slider-item-img{
+  position: absolute;
+}
+.b-index__top-slider-item-btn {
+  position: absolute;
+  margin-left: 581px;
+  margin-top: 423px;
+  z-index: 3;
+  text-align: center;
+  width: 185px;
+  height: 49px;
+  border-radius: 2px;
+  background-color: $lemon;
+  padding: 10px;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 17px;
 }
