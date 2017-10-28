@@ -42,10 +42,10 @@ define('app', ['jquery', 'slick-carousel'], function ($) {
             return;
         }
         $($mygallery).slick({
-            //autoplay: true,
+            autoplay: true,
             autoplaySpeed: 2000,
             dots: true,
-            arrows: false
+            arrows: true
         });
     })('.j-slick');
 
