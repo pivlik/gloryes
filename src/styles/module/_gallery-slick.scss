@@ -203,3 +203,40 @@
     bottom: 312px;
     right: 31px;
 }
+.b-index__recommendation-slider{
+    .slick-arrow{
+        border-bottom: 5px solid $gray;
+        border-left: 5px solid $gray;
+        opacity: 0.5;
+    }
+    .slick-prev{
+        transform: rotate(45deg);
+        top: 81px;
+        left: -69px;
+    }
+    .slick-next{
+        bottom: 105px;
+        right: -20px;
+    }
+    .slick-dots{
+        button{
+            display: none;
+        }
+    }
+}
+.b-index__partners-slider{
+    .slick-arrow{
+        border-bottom: 5px solid $gray;
+        border-left: 5px solid $gray;
+        opacity: 0.5;
+    }
+    .slick-prev{
+        transform: rotate(45deg);
+        top: 45px;
+        left: -70px;
+    }
+    .slick-next{
+        bottom: 35px;
+        right: -36px;
+    }
+}

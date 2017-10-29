@@ -48,6 +48,20 @@ define('app', ['jquery', 'slick-carousel'], function ($) {
             arrows: true
         });
     })('.j-slick');
+    (function ($partners) {
+        // ТУТ МЫ ИНИЦИАЛИЗИРУЕМ ПЕРЕ
+        if (!$partners.length) {
+            return;
+        }
+        $($partners).slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            infinite: true,
+            slidesToShow: 6,
+            slidesToScroll: 2
+        });
+    })('.j-slick-partners');
 
     // Подключение галерей со сликом
     (function($gallerysSlick) {

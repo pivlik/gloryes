@@ -429,3 +429,12 @@
   text-align: center;
   line-height: 41.5px;
 }
+.b-index__partners-slider{
+  .slick-track{
+    display: flex;
+    align-items: center;
+  }
+}
+.b-index__partners-image{
+  margin-right: 50px;
+}
