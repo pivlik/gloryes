@@ -14,6 +14,8 @@
   }
 }
 .b-product__info-images{
+  position: relative;
+  top: 10px;
   float: left;
 }
 .b-product__info-images-little{
@@ -57,7 +59,9 @@
      font-size: 15px;
   }
 }
-
+.b-product__info{
+  margin-bottom: 30px;
+}
 .b-product__info-text{
   margin-left: 20px;
 }
@@ -452,4 +456,12 @@
   @media #{$medium-up} {
     display: none;
   }
+}
+.j-nav-little-slick{
+  .slick-list{
+    padding-top: 0 !important;
+  }
+}
+.j-nav-main-slick{
+  margin-left: 20px;
 }
