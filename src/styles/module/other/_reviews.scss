@@ -1,0 +1,28 @@
+.b-reviews__text-explanation{
+  color: $gray;
+  margin-bottom: 30px;
+}
+.b-reviews__text-explanation-bold{
+  color: $main-blue;
+  font-weight: 700;
+}
+.tabs-li{
+  float: left;
+  margin-right: 40px;
+  margin-bottom: 30px;
+  a{
+    color: $gray;
+    display: block;
+    height: 26px;
+    width: 10%;
+    opacity: 0.5;
+    padding-bottom: 10px;
+    &:hover, &.active {
+      color: $black;
+      opacity: 1;
+      border-bottom: 2px solid #dbd93d;
+      transition: 0.3s;
+      width: 100%;
+    }
+  }
+}

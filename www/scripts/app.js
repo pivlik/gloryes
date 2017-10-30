@@ -41,96 +41,55 @@ define('app', ['jquery', 'slick-carousel'], function ($) {
         if (!$mygallery.length) {
             return;
         }
-        $($mygallery).slick({
-            autoplay: true,
-            autoplaySpeed: 2000,
-            dots: true,
-            arrows: true
-        });
+        $($mygallery).slick();
     })('.j-slick');
-    (function ($partners) {
-        // ТУТ МЫ ИНИЦИАЛИЗИРУЕМ ПЕРЕ
-        if (!$partners.length) {
+
+    (function ($ReviewsTabs) {
+        if (!$ReviewsTabs.length) {
             return;
         }
-        $($partners).slick({
-            autoplay: true,
-            autoplaySpeed: 2000,
-            arrows: true,
-            infinite: true,
-            slidesToShow: 6,
-            slidesToScroll: 2
+        $('.tabgroup > div').hide();
+        $('.tabgroup > div:first-of-type').show();
+        $('.tabs a').click(function (e) {
+            e.preventDefault();
+            var $this = $(this),
+                tabgroup = '#' + $this.parents('.tabs').data('tabgroup'),
+                others = $this.closest('li').siblings().children('a'),
+                target = $this.attr('href');
+            others.removeClass('active');
+            $this.addClass('active');
+            $(tabgroup).children('div').hide();
+            $(target).show();
         });
-    })('.j-slick-partners');
+    })('.b-reviews__tabs')
 
-    // Подключение галерей со сликом
-    (function($gallerysSlick) {
-        if (!$gallerysSlick.length) {
-            return;
-        }
+    // // Подключение галерей со сликом
+    // (function($gallerysSlick) {
+    //     if (!$gallerysSlick.length) {
+    //         return;
+    //     }
+    //
+    //     require(['app/gallery-slick'], function(GallerySlick) {
+    //         $gallerysSlick.each(function() {
+    //             let gallery = new GallerySlick($(this));
+    //             gallery.initGallery();
+    //         });
+    //     });
+    // })($('.j-gallery-slick'));
 
-        require(['app/gallery-slick'], function(GallerySlick) {
-            $gallerysSlick.each(function() {
-                let gallery = new GallerySlick($(this));
-                gallery.initGallery();
-            });
-        });
-    })($('.j-gallery-slick'));
-
-//СЛАЙДЕР С НАВИГАЦИЕЙ,,,,,,,,,,,,,,,,,,,
-
-    (function($NavSlick) {
-        if (!$NavSlick.length) {
-            return;
-        }
-
-        require(['app/gallery-slick'], function(NavSlick) {
-            $NavSlick.each(function() {
-                let gallery = new NavSlick($(this));
-                gallery.initGallery();
-            });
-        });
-    })($('.j-nav-slick'));
-
-    //ИНИЦИАЛИЗАЦИЯ...........................
-    // let LittleImg  = '.j-nav-little-slick';
-    // let MainImg = '.j-nav-main-slick';
-    (function ($NavSlick) {
-        if (!$NavSlick.length) {
-            return;
-        }
-        $('.j-nav-main-slick').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.j-nav-little-slick'
-        });
-        $('.j-nav-little-slick').slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            asNavFor: '.j-nav-main-slick',
-            dots: false,
-            arrows: false,
-            centerMode: true,
-            focusOnSelect: true,
-            vertical: true
-        });
-    })('.j-nav-slick');
-
-    //Анимированный label
-    (function($animLabels) {
-        if (!$animLabels.length) {
-            return;
-        }
-
-        require(['app/animated-label'], function(AnimatedLabel) {
-            $animLabels.each(function() {
-                var label = new AnimatedLabel($(this));
-                label.init();
-            });
-        });
-    })($('.j-anim-label'));
+    // //Анимированный label
+    // (function($animLabels) {
+    //     if (!$animLabels.length) {
+    //         return;
+    //     }
+    //
+    //     require(['app/animated-label'], function(AnimatedLabel) {
+    //         $animLabels.each(function() {
+    //             var label = new AnimatedLabel($(this));
+    //             label.init();
+    //         });
+    //     });
+    // })($('.j-anim-label'));
 
     // Стилизация селекта
     (function ($selects) {
