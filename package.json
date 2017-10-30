@@ -48,5 +48,8 @@
     "stylelint-selector-bem-pattern": "^1.1.1",
     "tiny-lr": "~1.0.3",
     "yargs": "^6.4.0"
+  },
+  "dependencies": {
+    "magnific-popup": "^1.1.0"
   }
 }
