@@ -35,13 +35,58 @@ define('app', ['jquery', 'slick-carousel' ], function($) {
 
 
 
-    (function ($mygallery) {  // ТУТ МЫ ИНИЦИАЛИЗИРУЕМ ПЕРЕ
-        if (!($mygallery.length)) {
+    (function ($mygallery) {
+        // ТУТ МЫ ИНИЦИАЛИЗИРУЕМ ПЕРЕ
+        if (!$mygallery.length) {
             return;
         }
-        $($mygallery).slick();
+        $($mygallery).slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dots: true,
+            arrows: true
+        });
     })('.j-slick');
+    (function ($partners) {
+        // ТУТ МЫ ИНИЦИАЛИЗИРУЕМ ПЕРЕ
+        if (!$partners.length) {
+            return;
+        }
+        $($partners).slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            infinite: true,
+            slidesToShow: 6,
+            slidesToScroll: 2
+        });
+    })('.j-slick-partners');
 
+    //ИНИЦИАЛИЗАЦИЯ...........................
+    // let LittleImg  = '.j-nav-little-slick';
+    // let MainImg = '.j-nav-main-slick';
+    (function ($NavSlick) {
+        if (!$NavSlick.length) {
+            return;
+        }
+        $('.j-nav-main-slick').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.j-nav-little-slick'
+        });
+        $('.j-nav-little-slick').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.j-nav-main-slick',
+            dots: false,
+            arrows: false,
+            centerMode: true,
+            focusOnSelect: true,
+            vertical: true
+        });
+    })('.j-nav-slick');
 
     (function ($ReviewsTabs) {
         if (!($ReviewsTabs.length)) {
