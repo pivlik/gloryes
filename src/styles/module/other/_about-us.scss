@@ -1,3 +1,32 @@
 .b-about-us__article-text{
   color: $gray;
+  margin-bottom: 32px;
+}
+.b-about-us__achievements-title{
+  font-size: 17px;
+  font-weight: 700;
+}
+.b-about-us__achievements-title{
+  border-top: 1px solid rgba($gray, .5);
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.b-about-us__achievements-text{
+  color: $gray;
+  margin-bottom: 30px;
+}
+.b-about-us__achievements-red{
+  color: $header_pink;
+  font-weight: 700;
+}
+.b-about-us__certificates-title{
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.b-about-us__certificates-image{
+  ul{
+    display: flex;
+    justify-content: space-between;
+  }
 }

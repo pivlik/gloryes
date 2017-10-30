@@ -1,26 +1,6 @@
-define('app', ['jquery', 'slick-carousel' ], function($) {
+define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
     'use strict';
 
-
-    //Подключение попапа
-    //Так как кнопки с попапом иногда создаются динамически, вешаем на document.click
-    $(document).on('click', '.j-popup', function(e) {
-        let $popupLink = $(e.target);
-
-        if (!$popupLink.length) {
-            return;
-        }
-
-        require(['app/popup'], function(Popup) {
-            let hash = window.location.hash;
-            let popup = new Popup($popupLink);
-            popup.initPopup();
-
-            if ($popupLink.attr('href') === hash) {
-                popup.showPopup($popupLink);
-            }
-        });
-    });
 
 /// ПАША ДЕЛАЙ ПО АНАЛОГИИ
     (function ($toggler) {  // ТУТ МЫ ИНИЦИАЛИЗИРУЕМ ПЕРЕ
@@ -106,7 +86,7 @@ define('app', ['jquery', 'slick-carousel' ], function($) {
             $(target).show();
 
         })
-    })('.b-reviews__tabs')
+    })('.b-reviews__tabs');
 
 
     // // Подключение галерей со сликом
@@ -136,6 +116,23 @@ define('app', ['jquery', 'slick-carousel' ], function($) {
     //         });
     //     });
     // })($('.j-anim-label'));
+
+
+
+    //Увеличение выбранной картинки...............................
+    (function ($ImageZoom) {
+        if (!($ImageZoom.length)) {
+            return;
+        }
+        $($ImageZoom).magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            image: {
+                verticalFit: false
+            }
+        });
+    })('.image-popup-fit-width');
+
 
     // Стилизация селекта
     (function($selects) {

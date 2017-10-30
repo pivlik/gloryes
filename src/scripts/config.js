@@ -1,6 +1,3 @@
-/* jshint ignore:start */
-// Ключ для карт
-var googleMapKey = 'AIzaSyB1k18NIGKRnRJxpUY5eGadjW286_-CkFQ'; // *.kelnik.pro
 
 require.config({
     baseUrl: '/scripts/lib',
@@ -23,7 +20,6 @@ require.config({
         select          : 'jquery-selectric/public/jquery.selectric.min',
         rangeSlider     : 'ion.rangeSlider/js/ion.rangeSlider.min',
 
-        'google-maps'  : 'async!https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry&key=' + googleMapKey,
         infobox        : 'google-infobox/google-infobox',
         async          : 'requirejs-plugins/src/async',
         markerClusterer: 'js-marker-clusterer/src/markerclusterer_compiled',
