@@ -1,0 +1,40 @@
+include ../mixins/all-mixins
+form(action='').b-login.col-lg-push-4.col-md-push-1.col-push-2
+    .b-ordering__nav-line.row.col-lg-28.col-md-28.col-lg-post-4.col-md-post-4
+        ul.b-ordering__nav-line-list
+            li.b-ordering__nav-line-list-item
+                a(href='').b-ordering__nav-line-list-item-link
+                    .b-ordering__nav-line-list-item-link-icon
+                        +svg('SVGs-21')
+            li.b-ordering__nav-line-list-item
+                a(href='').b-ordering__nav-line-list-item-link Вход и регистрация
+
+    .b-login__left-side.col-12
+        .b-ordering__title.b-ordering__title__align-left Вход
+        p.b-login-p Войдите, если у вас уже есть учетная запись 
+        .b-ordering__buyer.col-lg-10.col-md-26.col-34
+            .b-ordering__buyer-form
+                input(type='email' name='mail' placeholder='Email').b-ordering__buyer-form-mail.col-lg-9.col-md-12.col-34
+                input(type='password' name='name' placeholder='Пароль').b-ordering__buyer-form-name.col-lg-9.col-md-12.col-34
+                a(href='').b-login-forgot забыли пароль?
+            button(type='submit').b-ordering__confirm.row.col-md-post-25.col-lg-4.col-md-10.col-30.b-contacts__form-btn
+                | Войти
+
+    .b-login__right-side.col-16
+        .b-ordering__title.b-ordering__title__align-left Регистрация
+        p.b-login-p С созданием учетной записи вы сможете отслеживать статус заказа на сайте 
+        .b-ordering__buyer.col-lg-10.col-md-26.col-34.col-post-6
+            .b-ordering__buyer-form
+                input(type='text' name='name' placeholder='имя').b-ordering__buyer-form-name.col-lg-9.col-md-12.col-34
+                input(type='text' name='name' placeholder='Фамилия').b-ordering__buyer-form-name.col-lg-9.col-md-12.col-34
+                input(type='tel' name='phone' placeholder='телефон').b-ordering__buyer-form-tel.col-lg-9.col-md-12.col-34.b-contacts__form-shadow_none
+                input(type='email' name='mail' placeholder='Email').b-ordering__buyer-form-mail.col-lg-9.col-md-12.col-34
+                input(type='password' name='name' placeholder='Пароль').b-ordering__buyer-form-name.col-lg-9.col-md-12.col-34
+                .b-ordering__delivery-checkbox-wrapper.b-ordering__delivery-wrapper_blue.col-lg-15.col-md-15.col-25
+                    input(checked='' type='checkbox' name='courier')#checkbox-agreement.b-ordering__delivery-checkbox.b-ordering__delivery-checkbox_blue.b-contacts__checkbox-input
+                    label(for='checkbox-agreement') Подписка на рассылку с новостями, акциями и скидками 
+            button(type='submit').b-ordering__confirm.row.col-md-post-25.col-lg-7.col-md-10.col-30.b-contacts__form-btn.b-login__form-btn
+                | ЗАРЕГИСТРИРОВАТЬСЯ
+        p.col-9.b-login-p.b-login__position-p  Создавая новую учетную запись, вы подтверждаете согласие с <a href='' class="b-main-blue">условиями соглашения</a>. 
+
+
