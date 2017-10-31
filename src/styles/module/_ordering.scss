@@ -598,7 +598,7 @@
   }
 }
 .b-ordering__delivery-checkbox_blue{
-  &:not(checked) {
+  &:not(checked){
     & + label {
       &:before {
         content: '';

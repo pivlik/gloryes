@@ -1,0 +1,32 @@
+include ../mixins/all-mixins
+form(action='').b-contacts.col-lg-push-4.col-md-push-1.col-push-2
+    .b-ordering__nav-line.row.col-lg-28.col-md-28.col-lg-post-4.col-md-post-4
+        ul.b-ordering__nav-line-list
+            li.b-ordering__nav-line-list-item
+                a(href='').b-ordering__nav-line-list-item-link
+                    .b-ordering__nav-line-list-item-link-icon
+                        +svg('SVGs-21')
+            li.b-ordering__nav-line-list-item
+                a(href='').b-ordering__nav-line-list-item-link Контакты
+    .b-ordering__title.b-ordering__title__align-left свяжитесь с нами
+    .b-reviews__text-explanation.col-22.col-post-10
+        p Мы будем рады вашему письму или звонку! Вы также можете задать вопрос консультанту внизу экрана. Ответы на часто
+            |задаваемые вопросы можно найти <a href=''><span class="b-reviews__text-explanation-bold">здесь</span></a>.
+            |Время работы: 9:00-18:00 (МСК), пн-пт, прием заказов на сайте - круглосуточно. 
+    .b-ordering__buyer.col-lg-10.col-md-26.col-34
+        .b-ordering__buyer-form
+            input(type='text' name='name' placeholder='имя').b-ordering__buyer-form-name.col-lg-10.col-md-12.col-34
+            input(type='email' name='mail' placeholder='Email').b-ordering__buyer-form-mail.col-lg-10.col-md-12.col-34
+            input(type='tel' name='phone' placeholder='телефон').b-ordering__buyer-form-tel.col-lg-10.col-md-12.col-34.b-contacts__form-shadow_none
+            .b-ordering__delivery-checkbox-wrapper.b-ordering__delivery-wrapper_blue.col-lg-15.col-md-15.col-25
+                input(checked='' type='checkbox' name='courier')#checkbox-agreement.b-ordering__delivery-checkbox.b-ordering__delivery-checkbox_blue.b-contacts__checkbox-input
+                label(for='checkbox-agreement') связаться по Email
+            .b-ordering__delivery-checkbox-wrapper.col-lg-15.col-md-25.col-30
+                input(type='checkbox' name='courier')#checkbox-bank.b-ordering__delivery-checkbox.b-contacts__checkbox-input
+                label.b-contacts__checkbox-label(for='checkbox-bank') связаться по телефону
+            input(type='text' name='theme' placeholder='тема').b-ordering__buyer-form-last-name.col-lg-10.col-md-12.col-34.b-contacts__form-shadow_none
+            textarea(rows="7" cols="45" name="comment" placeholder='сообщение').b-ordering__buyer-form-comment.col-lg-10.col-md-25.col-34
+            button(type='submit').b-ordering__confirm.row.col-md-post-25.col-lg-4.col-md-10.col-30.b-contacts__form-btn
+                | Отправить
+    .b-contacts__list.col-push-2
+        h1 erfw
