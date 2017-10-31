@@ -18,3 +18,48 @@
   padding: 15px;
   margin-top: 30px;
 }
+.b-contacts__list-link{
+  color: $main-blue;
+  font-weight: 700;
+  .b-icon__SVGs-02,.b-icon__SVGs-03,.b-icon__SVGs-04{
+    float: left;
+    fill: $gray;
+    width: 16px;
+    height: 18px;
+  }
+  .b-icon__SVGs-03{
+    width: 18px;
+    height: 13px;
+    top: 4px;
+    position: relative;
+  }
+  .b-icon__SVGs-04{
+    width: 12px;
+    height: 18px;
+  }
+}
+.b-contacts__list{
+  color: $gray;
+  margin-top: 30px;
+  li{
+    margin-bottom: 35px;
+    &:last-child{
+      margin-top: 20px;
+    }
+  }
+}
+.b-contacts__list-text{
+  margin-left: 10px;
+}
+.b-contacts__list-text-wrap{
+  float: right;
+  position: relative;
+  right: 5px;
+}
+.b-contacts__list-text__margin-left{
+  margin-left: 134px;
+  display: block;
+}
+.b-contacts-requisites{
+  color: $gray;
+}

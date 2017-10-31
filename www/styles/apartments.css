@@ -1635,7 +1635,7 @@ a {
 .b-typo-reset ol li:before {
   counter-increment: list;
   content: counter(list) ".";
-  color: #576572;
+  color: #747474;
   padding-right: 5px;
   position: absolute;
   top: 0;
@@ -1645,7 +1645,7 @@ a {
 .b-typo-reset ul li:before {
   content: '•';
   padding-right: 5px;
-  color: #576572;
+  color: #747474;
   position: absolute;
   top: 0;
   left: 0;
