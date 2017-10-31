@@ -1,0 +1,40 @@
+include ../mixins/all-mixins
+.b-personal-area.col-lg-push-4.col-md-push-1.col-push-2
+    .b-ordering__nav-line.row.col-lg-28.col-md-28.col-lg-post-4.col-md-post-4
+        ul.b-ordering__nav-line-list
+            li.b-ordering__nav-line-list-item
+                a(href='').b-ordering__nav-line-list-item-link
+                    .b-ordering__nav-line-list-item-link-icon
+                        +svg('SVGs-21')
+            li.b-ordering__nav-line-list-item
+                a(href='').b-ordering__nav-line-list-item-link Личный кабинет
+            li.b-ordering__nav-line-list-item
+                a(href='').b-ordering__nav-line-list-item-link Личные данные
+    .b-reviews__tabs
+        ul.tabs.clearfix(data-tabgroup='second-tab-group').col-30
+            li.tabs-li.b-personal-area__tabs-li
+                a.active(href='#tab6') ЛИЧНЫЕ ДАННЫЕ
+            li.tabs-li.b-personal-area__tabs-li
+                a(href='#tab7') КОРЗИНА
+            li.tabs-li.b-personal-area__tabs-li
+                a(href='#tab8') ИСТОРИЯ ЗАКАЗОВ
+
+        section#second-tab-group.tabgroup.col-16
+            #tab6
+                .b-ordering__buyer-form.b-personal-area__input
+                    input(type='text' name='name' placeholder='Ульяна').b-ordering__buyer-form-name.col-lg-9.col-md-12.col-34
+                    input(type='text' name='name' placeholder='Жибарюк').b-ordering__buyer-form-name.col-lg-9.col-md-12.col-34
+                    input(type='tel' name='phone' placeholder='+7(999)204-16-86').b-ordering__buyer-form-tel.col-lg-9.col-md-12.col-34.b-contacts__form-shadow_none
+                    input(type='email' name='mail' placeholder='olyosha@gmail.com').b-ordering__buyer-form-mail.col-lg-9.col-md-12.col-34
+                    input(type='password' name='name' placeholder='Новый пароль').b-ordering__buyer-form-name.col-lg-9.col-md-12.col-34
+                    input(type='password' name='name' placeholder='подтвердить пароль ').b-ordering__buyer-form-name.col-lg-9.col-md-12.col-34
+                    button(type='submit').b-ordering__confirm.row.col-md-post-25.col-lg-4.col-md-10.col-30.b-contacts__form-btn.b-login__form-btn
+                        | СОХРАНИТЬ
+            #tab7
+                .b-ordering__title.b-ordering__title__align-left в вашей корзине пока очень пусто... 
+                button(type='submit').b-ordering__confirm.row.col-md-post-25.col-lg-7.col-md-10.col-30.b-contacts__form-btn.b-login__form-btn
+                    | НАЧАТЬ ПОКУПКИ
+            #tab8
+                h2 Heading 3
+                p
+                    | Atque ratione soluta laboriosam illo inventore amet ipsum aliquam assumenda harum provident nam accusantium neque debitis obcaecati maxime officia saepe ad ducimus in quam libero vero quasi. Saepe sit nisi?

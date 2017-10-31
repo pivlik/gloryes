@@ -1,0 +1,13 @@
+.b-personal-area__tabs-li{
+  a{
+    width: 100%;
+  }
+}
+.b-personal-area__input{
+  ::placeholder {
+    opacity: 0.7;
+  }
+  input{
+    font-size: 15px;
+  }
+}

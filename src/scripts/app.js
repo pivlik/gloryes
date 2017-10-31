@@ -88,7 +88,6 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
         })
     })('.b-reviews__tabs');
 
-
     // // Подключение галерей со сликом
     // (function($gallerysSlick) {
     //     if (!$gallerysSlick.length) {
