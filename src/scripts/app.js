@@ -88,6 +88,16 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
         })
     })('.b-reviews__tabs');
 
+    // МЕНЮ выпадающее.............................................
+    (function ($DropMenu) {
+        if (!($DropMenu.length)) {
+            return;
+        }
+        $('.j-drop-menu ').click(function() {
+            $( ".b-show-element" ).slideToggle( "duration: 200" );
+        })
+    })('.b-delivery__tab-main-title');
+
     // // Подключение галерей со сликом
     // (function($gallerysSlick) {
     //     if (!$gallerysSlick.length) {

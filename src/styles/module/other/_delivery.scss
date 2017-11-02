@@ -1,0 +1,33 @@
+.b-delivery__text{
+  margin-bottom: 35px;
+  position: relative;
+}
+.b-delivery__tab-main-title{
+  text-transform: uppercase;
+  cursor: pointer;
+  color: $main-blue;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 108px;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border-bottom: 1px solid $main-blue;
+    border-left: 1px solid $main-blue;
+    transform: rotate(-45deg);
+  }
+  &:active{
+    &:after{
+      top: 8px;
+      transform: rotate(135deg);
+      transition: 0.2s;
+    }
+  }
+}
+.b-show-element{
+  display: none;
+  cursor: pointer;
+}
