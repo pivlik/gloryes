@@ -69,6 +69,7 @@
   }
 }
 .b-delivery__tab-rus-title{
+  position: relative;
   &:after {
     left: 87px;
   }
@@ -79,4 +80,15 @@
 }
 .b-show-msk-element, .b-show-spb-element, .b-show-rus-element, .b-kz-show-element, .b-world-show-element{
   display: none;
+}
+.b-delivery-pink-title {
+  color: $header_pink;
+  margin-top: 20px;
+}
+.b-color-light-gray{
+  color: $light-gray;
+}
+.b-vertil-border{
+  border-top: 1px solid $light-gray;
+  padding-top: 20px;
 }
