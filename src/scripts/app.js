@@ -88,6 +88,66 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
         })
     })('.b-reviews__tabs');
 
+    // МЕНЮ выпадающее.............................................
+    (function ($DropMenu) {
+        if (!($DropMenu.length)) {
+            return;
+        }
+        $('.j-drop-menu').click(function() {
+            $( ".b-show-element" ).slideToggle( "duration: 200" );
+            $( ".b-show-msk-element" ).slideUp( "duration: 200" );
+            $( ".b-show-spb-element" ).slideUp( "duration: 200" );
+            $( ".b-show-rus-element" ).slideUp( "duration: 200" );
+            $(this).toggleClass("active");
+        })
+    })('.b-delivery__tab-main-title');
+    (function ($DropMenuKz) {
+        if (!($DropMenuKz.length)) {
+            return;
+        }
+        $('.j-kz-drop-menu').click(function() {
+            $( ".b-kz-show-element" ).slideToggle( "duration: 200" );
+            $(this).toggleClass("active");
+        })
+    })('.b-delivery__tab-kz-title');
+    (function ($DropMenuWorld) {
+        if (!($DropMenuWorld.length)) {
+            return;
+        }
+        $('.j-world-drop-menu').click(function() {
+            $( ".b-world-show-element" ).slideToggle( "duration: 200" );
+            $(this).toggleClass("active");
+        })
+    })('.b-delivery__tab-world-title');
+    (function ($DropMenuX) {
+        if (!($DropMenuX.length)) {
+            return;
+        }
+        $('.j-drop-msk-menu').click(function() {
+            $( ".b-show-msk-element" ).slideToggle( "duration: 200" );
+            $(this).toggleClass("active");
+        })
+    })('.b-delivery__tab-msk-title');
+    (function ($DropMenuSp) {
+        if (!($DropMenuSp.length)) {
+            return;
+        }
+        $('.j-drop-spb-menu').click(function() {
+            $( ".b-show-spb-element" ).slideToggle( "duration: 200" );
+            $(this).toggleClass("active");
+        })
+    })('.b-delivery__tab-spb-title');
+    (function ($DropMenuRus) {
+        if (!($DropMenuRus.length)) {
+            return;
+        }
+        $('.j-drop-rus-menu').click(function() {
+            $( ".b-show-rus-element" ).slideToggle( "duration: 200" );
+            $(this).toggleClass("active");
+        })
+    })('.b-delivery__tab-rus-title');
+
+
     // // Подключение галерей со сликом
     // (function($gallerysSlick) {
     //     if (!$gallerysSlick.length) {
