@@ -7,23 +7,20 @@
   cursor: pointer;
   color: $main-blue;
   &:after {
-    content: '';
-    display: block;
+    content: "";
+    width: 0;
+    height: 0;
     position: absolute;
-    left: 108px;
-    top: 7px;
-    width: 7px;
-    height: 7px;
-    background-color: transparent;
-    border-bottom: 1px solid $main-blue;
-    border-left: 1px solid $main-blue;
-    transform: rotate(-45deg);
-    transition: all 0.2s;
+    margin-top: 5px;
+    margin-left: 9px;
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent $main-blue;
+    transform: rotate(90deg);
   }
   &.active{
     &:after{
-      top: 10px;
-      transform: rotate(135deg);
+      transform: rotate(270deg);
     }
   }
 }
@@ -40,38 +37,24 @@
   }
 }
 .b-delivery__tab-msk-title, .b-delivery__tab-spb-title, .b-delivery__tab-rus-title{
-  cursor: pointer;
   position: relative;
+  cursor: pointer;
   &:after {
-    content: '';
-    display: block;
+    content: "";
+    width: 0;
+    height: 0;
     position: absolute;
-    left: 208px;
-    top: 7px;
-    width: 7px;
-    height: 7px;
-    background-color: transparent;
-    border-bottom: 1px solid $black;
-    border-left: 1px solid $black;
-    transform: rotate(-45deg);
-    transition: all 0.2s;
+    margin-top: 8px;
+    margin-left: 7px;
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent $black;
+    transform: rotate(90deg);
   }
   &.active{
     &:after{
-      top: 11px;
-      transform: rotate(135deg);
+      transform: rotate(270deg);
     }
-  }
-}
-.b-delivery__tab-spb-title{
-  &:after {
-    left: 308px;
-  }
-}
-.b-delivery__tab-rus-title{
-  position: relative;
-  &:after {
-    left: 87px;
   }
 }
 .b-show-element{
