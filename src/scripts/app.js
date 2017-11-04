@@ -146,6 +146,15 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
             $(this).toggleClass("active");
         })
     })('.b-delivery__tab-rus-title');
+    (function ($DropMenuFAQ) {
+        if (!($DropMenuFAQ.length)) {
+            return;
+        }
+        $('.j-drop-faq-menu').click(function() {
+            $( ".b-faq__show-element" ).slideToggle( "duration: 200" );
+            $(this).toggleClass("active");
+        })
+    })('.b-faq__list-li');
 
 
     // // Подключение галерей со сликом
