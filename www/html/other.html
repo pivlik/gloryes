@@ -616,8 +616,7 @@
                                 <input type="text" name="name" placeholder="имя" class="b-ordering__buyer-form-name col-lg-9 col-md-12 col-34">
                                 <input type="text" name="name" placeholder="Фамилия" class="b-ordering__buyer-form-name col-lg-9 col-md-12 col-34">
                                 <input type="tel" name="phone" placeholder="телефон" class="b-ordering__buyer-form-tel col-lg-9 col-md-12 col-34 b-contacts__form-shadow_none">
-                                <input type="email" name="mail" placeholder="Email" class="b-ordering__">
-                                <buyer-form-mail class="col-lg-9 col-md-12 col-34"></buyer-form-mail>
+                                <input type="email" name="mail" placeholder="Email" class="b-ordering__buyer-form-mail col-lg-9 col-md-12 col-34">
                                 <input type="password" name="name" placeholder="Пароль" class="b-ordering__buyer-form-name col-lg-9 col-md-12 col-34">
                                 <div class="b-ordering__delivery-checkbox-wrapper b-ordering__delivery-wrapper_blue col-lg-15 col-md-15 col-25">
                                     <input checked="" type="checkbox" name="courier" id="checkbox-agreement" class="b-ordering__delivery-checkbox b-ordering__delivery-checkbox_blue b-contacts__checkbox-input">
@@ -1321,6 +1320,34 @@
                         </div>
                     </div>
                 </div>
+                <form action="" class="b-where-order col-lg-push-4 col-md-push-1 col-push-2">
+                    <div class="b-ordering__nav-line row col-lg-28 col-md-28 col-lg-post-4 col-md-post-4">
+                        <ul class="b-ordering__nav-line-list">
+                            <li class="b-ordering__nav-line-list-item">
+                                <a href="" class="b-ordering__nav-line-list-item-link">
+                                    <div class="b-ordering__nav-line-list-item-link-icon">
+                                        <svg class="b-icon__SVGs-21 ">
+                                            <use xlink:href="#SVGs-21"></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="b-ordering__nav-line-list-item">
+                                <a href="" class="b-ordering__nav-line-list-item-link">Где мой заказ?</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="b-ordering__title b-ordering__title__align-left col-32">проверка статуса заказа</div>
+                    <div class="b-color-gray">Введите номер вашего телефона или Email для проверки статуса заказа.</div>
+                    <div class="b-ordering__buyer col-lg-22 col-md-26 col-34 col-post-6 b-where-order__form">
+                        <div class="b-ordering__buyer-form">
+                            <input type="tel" name="phone" placeholder="номер телефона" class="b-ordering__buyer-form-tel col-lg-8 col-md-12 col-34 b-contacts__form-shadow_none">
+                            <div class="b-where-order__form-p col-1">или</div>
+                            <input type="email" name="mail" placeholder="Email" class="b-ordering__buyer-form-mail col-lg-8 col-md-12 col-34">
+                            <button type="submit" class="b-ordering__confirm row col-md-post-25 col-lg-7 col-md-10 col-30 b-contacts__form-btn">ПРОВЕРИТЬ СТАТУС</button>
+                        </div>
+                    </div>
+                </form>
             </main>
             <footer class="b-footer row">
                 <hr class="b-footer__hr row col-36"> </footer>
