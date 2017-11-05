@@ -565,3 +565,68 @@
     color: $gray;
   }
 }
+
+//наведение на корзину.................
+.b-hover-basket{
+  position: absolute;
+  width: 441px;
+  height: 535px;
+  border: 1px solid #e1e1e1;
+  background-color: $white;
+  right: 11px;
+  top: 47px;
+  z-index: 5;
+  color: $black;
+  display: none;
+}
+.b-header__main-info_ordering_menu{
+  position: relative;
+  &:hover .b-hover-basket{
+     display: block;
+    }
+}
+.b-hover-basket__item{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: -10px;
+  margin: 10px;
+  border-bottom: 1px solid $light-gray;
+}
+.b-hover-basket__image{
+  margin-bottom: 13px;
+}
+.b-hover-basket__calc{
+  text-align: right;
+  padding-right: 20px;
+  margin-top: 30px;
+}
+.b-hover-basket__second-line{
+  color: $header_pink;
+  font-weight: 700;
+}
+.b-hover-basket__btn{
+  margin-top: 30px;
+}
+.b-hover-basket__btn-1{
+  width: 195px;
+  height: 51px;
+  border-radius: 2px;
+  background-color: $header_pink;
+  border: none;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 700;
+  font-size: 17px;
+  cursor: pointer;
+}
+.b-hover-basket__btn-2{
+  width: 195px;
+  height: 51px;
+  border-radius: 2px;
+  border: 1px solid $gray;
+  background-color: $white;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+}
