@@ -4,7 +4,18 @@ block title
 block content
     .b-other-page__modal.col-32.col-push-4
         h1 МОДАЛЬНЫЕ ОКНА
-        a.popup-with-zoom-anim(href='#basket-add') После добавления в корзину
+        h3
+            a.popup-with-zoom-anim(href='#basket-add') После добавления в корзину<br>
+            a.popup-with-zoom-anim(href='#together') Теперь мы вместе!
+        #together.zoom-anim-dialog.mfp-hide
+            .b-together__title теперь мы вместе!
+            .b-together__text   Спасибо, что подписались на новости
+                |и акции от GlorYes! Мы приготовили для
+                |вас сюрприз - полезную и очаровательную
+                |инструкцию о том, как сэкономить, не
+                |экономя на малыше. Она ждет вас в ящике! :)
+            button(type='submit').b-hover-basket__btn-1.b-together__btn
+                | Отлично!
         #basket-add.zoom-anim-dialog.mfp-hide
             .b-hover-basket__item
                 img(src='/img/orders/layer-29.png').b-hover-basket__image

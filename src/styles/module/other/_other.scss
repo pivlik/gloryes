@@ -1,5 +1,5 @@
 .b-other-page__modal{
-  margin: 40px 100px;
+  margin: 40px 200px;
 }
 
 /* Styles for dialog window */
@@ -31,11 +31,29 @@
     color: $main-blue;
   }
 }
-  /**
-   * Fade-zoom animation for first dialog
-   */
+//////// МЫ ВМЕСТЕ
 
-/* start state */
+#together{
+  width: 512px;
+  height: 350px;
+  position: relative;
+  margin: auto;
+  background-color: $white;
+  text-align: center;
+  padding: 46px 40px;
+}
+.b-together__title{
+  font-size: 28px;
+  margin-bottom: 27px;
+}
+.b-together__text{
+  color: $gray;
+  margin-bottom: 39px;
+}
+.b-together__btn{
+  background-color: $main-blue;
+}
+  /* start state */
 .my-mfp-zoom-in .zoom-anim-dialog {
   opacity: 0;
 
