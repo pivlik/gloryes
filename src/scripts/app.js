@@ -147,13 +147,13 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
         })
     })('.b-delivery__tab-rus-title');
     (function ($DropMenuFAQ) {
-        if (!($DropMenuFAQ.length)) {
+        if (!$DropMenuFAQ.length) {
             return;
         }
-        $('.j-drop-faq-menu').click(function() {
-            $( ".b-faq__show-element" ).slideToggle( "duration: 200" );
+        $($DropMenuFAQ).on('click', function () {
+            $(this).next().slideToggle("duration: 200");
             $(this).toggleClass("active");
-        })
+        });
     })('.b-faq__list-li');
 
 
@@ -201,7 +201,23 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
         });
     })('.image-popup-fit-width');
 
+    $(document).ready(function() {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
 
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+    });
     // Стилизация селекта
     (function($selects) {
         if (!$selects.length) {
