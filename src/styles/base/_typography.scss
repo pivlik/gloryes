@@ -4,8 +4,7 @@
     @font-face {
         display-font: swap;
         font-family: quote($family);
-        src: url('/fonts/' + $src + '.woff2') format("woff2"),
-             url('/fonts/' + $src + '.woff') format("woff");
+        src: url('/fonts/' + $src + '.woff') format("woff");
 
         @if($weight) {
             font-weight: $weight;
