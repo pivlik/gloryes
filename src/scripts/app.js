@@ -187,7 +187,7 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
 
 
 
-    //Увеличение выбранной картинки...............................
+    //Увеличение выбранной картинки.................................
     (function ($ImageZoom) {
         if (!($ImageZoom.length)) {
             return;

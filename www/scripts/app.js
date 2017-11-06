@@ -185,7 +185,7 @@ define('app', ['jquery', 'slick-carousel', 'magnific-popup'], function ($) {
     // })($('.j-anim-label'));
 
 
-    //Увеличение выбранной картинки...............................
+    //Увеличение выбранной картинки.................................
     (function ($ImageZoom) {
         if (!$ImageZoom.length) {
             return;
@@ -199,8 +199,7 @@ define('app', ['jquery', 'slick-carousel', 'magnific-popup'], function ($) {
         });
     })('.image-popup-fit-width');
 
-    //Увеличение выбранной картинки...............................
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('.popup-with-zoom-anim').magnificPopup({
             type: 'inline',
 
