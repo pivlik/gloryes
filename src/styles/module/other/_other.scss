@@ -53,6 +53,22 @@
 .b-together__btn{
   background-color: $main-blue;
 }
+
+///// ОБРАТНЫЙ ЗВОНОК
+#back-call{
+  width: 511px;
+  height: 420px;
+  position: relative;
+  margin: auto;
+  background-color: $white;
+  text-align: center;
+  padding: 46px 67px;
+}
+.b-back-call__input{
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
   /* start state */
 .my-mfp-zoom-in .zoom-anim-dialog {
   opacity: 0;

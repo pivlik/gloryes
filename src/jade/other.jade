@@ -2,11 +2,20 @@ extends _layout
 block title
     title Другие страницы
 block content
-    .b-other-page__modal.col-32.col-push-4
+    .b-other-page__modal
         h1 МОДАЛЬНЫЕ ОКНА
         h3
             a.popup-with-zoom-anim(href='#basket-add') После добавления в корзину<br>
-            a.popup-with-zoom-anim(href='#together') Теперь мы вместе!
+            a.popup-with-zoom-anim(href='#together') Теперь мы вместе!<br>
+            a.popup-with-zoom-anim(href='#back-call') Обратный звонок
+        #back-call.zoom-anim-dialog.mfp-hide
+            .b-together__title закажите звонок, и<br> мы скоро вам перезвоним!
+            .b-ordering__buyer.col-lg-10.col-md-26.col-34
+                .b-ordering__buyer-form.b-back-call__input
+                    input(type='text' name='name' placeholder='имя').b-ordering__buyer-form-name.col-lg-9.col-md-12.col-34
+                    input(type='tel' name='phone' placeholder='телефон').b-ordering__buyer-form-tel.col-lg-9.col-md-12.col-34.b-contacts__form-shadow_none
+            button(type='submit').b-hover-basket__btn-1.b-together__btn
+                | ЗАКАЗАТЬ ЗВОНОК
         #together.zoom-anim-dialog.mfp-hide
             .b-together__title теперь мы вместе!
             .b-together__text   Спасибо, что подписались на новости
