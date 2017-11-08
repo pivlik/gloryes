@@ -63,7 +63,8 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
             vertical: true
         });
     })('.j-nav-slick');
-    (function ($HeaderSlick) {
+
+    function buildHeaderSlick($HeaderSlick) {
         if (!$HeaderSlick.length) {
             return;
         }
@@ -71,7 +72,7 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
             arrows: true,
             slidesToShow: 2,
         });
-    })('.j-slick-header');
+    };
 
     //ТАБЫ...................
     (function ($ReviewsTabs) {
@@ -166,8 +167,19 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
             return;
         }
         $($DropMenuHeader).on('click', function () {
-            $(this).next().slideToggle("duration: 200");
-            $(this).toggleClass("active");
+            if ($(this).hasClass('active')) {
+                $(this).next('.b-header__drop-menu').slideUp("duration: 200");
+                $(this).removeClass("active");
+            } else {
+                $('.b-header__site-sections_navigations-items').not(this).removeClass('active');
+                $('.b-header__site-sections_navigations-items').not(this).next('.b-header__drop-menu').slideUp();
+                $(this).next('.b-header__drop-menu').slideDown("duration: 200");
+                $(this).addClass("active");
+                var slickContainer = $(this).next('.b-header__drop-menu').find('.j-slick-header');
+                if (!(slickContainer.hasClass('slick-initialized'))) {
+                    buildHeaderSlick($(this).next('.b-header__drop-menu').find('.j-slick-header'));
+                }
+            }
         });
     })('.b-header__site-sections_navigations-items');
     (function ($HideHeader) {

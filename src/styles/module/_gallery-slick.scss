@@ -6,6 +6,8 @@
     box-sizing: border-box;
     user-select: none;
     touch-action: pan-y;
+
+
 }
 
 .slick-list {
@@ -57,6 +59,11 @@
     [dir='rtl'] & {
         float: right;
     }
+
+    &:focus{
+        outline: 0;
+    }
+
     img {
         display: block;
     }
