@@ -155,7 +155,15 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
             $(this).toggleClass("active");
         });
     })('.b-faq__list-li');
-
+    (function ($DropMenuHeader) {
+        if (!$DropMenuHeader.length) {
+            return;
+        }
+        $($DropMenuHeader).on('click', function () {
+            $(this).next().slideToggle("duration: 200");
+            $(this).toggleClass("active");
+        });
+    })('.b-header__site-sections_navigations-items');
 
     // // Подключение галерей со сликом
     // (function($gallerysSlick) {

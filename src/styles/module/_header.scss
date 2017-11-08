@@ -541,8 +541,17 @@
 .b-header__site-sections_navigations-items {
   position: relative;
   margin-bottom: 30px;
+  cursor: pointer;
   a {
     color: $black;
+  }
+  &.active{
+      color: $gray;
+    &:after{
+      transform: rotate(135deg);
+      top: 10px;
+      transition: 0.2s;
+    }
   }
   &:after {
     content: '';
@@ -556,13 +565,6 @@
     border-bottom: 1px solid $black;
     border-left: 1px solid $black;
     transform: rotate(-45deg);
-  }
-  &:first-child:after {
-    transform: rotate(135deg);
-    top: 10px;
-  }
-  .b-header__site-sections_navigations-item-1 {
-    color: $gray;
   }
 }
 
@@ -629,4 +631,30 @@
   color: black;
   font-size: 17px;
   cursor: pointer;
+}
+
+//ОКНА в нижнем меню..........................................
+.b-header__drop-menu{
+  //display: none;
+  position: absolute;
+  width: 1136px;
+  height: 488px;
+  background-color: #ffffff;
+  z-index: 10;
+  top: 340px;
+  left: 100px;
+  border: 1px solid rgba($light-gray, 0.2);
+}
+.b-header__drop-menu-ul{
+  margin: 40px 51px;
+  width: 346px;
+  height: 409px;
+  border-right: 1px solid $light-gray;
+}
+.b-header__drop-menu-ul-li{
+  padding-bottom: 8px;
+}
+.b-header__drop-menu-ul-li-a{
+  text-transform: none;
+  color: $black;
 }
