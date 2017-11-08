@@ -69,7 +69,7 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
         }
         $($HeaderSlick).slick({
             arrows: true,
-            slidesToShow: 2
+            slidesToShow: 2,
         });
     })('.j-slick-header');
 
