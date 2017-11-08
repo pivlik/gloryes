@@ -14,9 +14,8 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
     })('.j-hamburger');
 
 
-
+// СЛАЙДЕРЫ...............
     (function ($mygallery) {
-        // ТУТ МЫ ИНИЦИАЛИЗИРУЕМ ПЕРЕ
         if (!$mygallery.length) {
             return;
         }
@@ -42,9 +41,6 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
         });
     })('.j-slick-partners');
 
-    //ИНИЦИАЛИЗАЦИЯ...........................
-    // let LittleImg  = '.j-nav-little-slick';
-    // let MainImg = '.j-nav-main-slick';
     (function ($NavSlick) {
         if (!$NavSlick.length) {
             return;
@@ -67,7 +63,17 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
             vertical: true
         });
     })('.j-nav-slick');
+    (function ($HeaderSlick) {
+        if (!$HeaderSlick.length) {
+            return;
+        }
+        $($HeaderSlick).slick({
+            arrows: true,
+            slidesToShow: 2
+        });
+    })('.j-slick-header');
 
+    //ТАБЫ...................
     (function ($ReviewsTabs) {
         if (!($ReviewsTabs.length)) {
             return;

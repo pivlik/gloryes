@@ -635,7 +635,7 @@
 
 //ОКНА в нижнем меню..........................................
 .b-header__drop-menu{
-  //display: none;
+  display: none;
   position: absolute;
   width: 1136px;
   height: 488px;
@@ -645,11 +645,15 @@
   left: 100px;
   border: 1px solid rgba($light-gray, 0.2);
 }
+.b-header__drop-menu-slider-item{
+  margin-top: 20px;
+}
 .b-header__drop-menu-ul{
   margin: 40px 51px;
   width: 346px;
   height: 409px;
   border-right: 1px solid $light-gray;
+  float: left;
 }
 .b-header__drop-menu-ul-li{
   padding-bottom: 8px;
@@ -657,4 +661,27 @@
 .b-header__drop-menu-ul-li-a{
   text-transform: none;
   color: $black;
+}
+.b-header__drop-menu-slider{
+  right: 10px;
+}
+.b-header__drop-menu-slider-item-continer{
+  float: left;
+  text-align: center;
+  img{
+    margin: auto;
+  }
+  p{
+    color: $gray;
+    font-size: 12px;
+    margin: 0 40px;
+  }
+  .b-header__drop-menu-slider-item-price {
+    font-size: 15px;
+    margin: 3px 0;
+    color: $black;
+  }
+}
+.b-header__drop-menu-slider-item-title{
+  font-weight: 700;
 }

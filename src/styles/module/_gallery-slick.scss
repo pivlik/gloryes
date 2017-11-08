@@ -251,3 +251,20 @@
     }
 }
 
+.b-header__drop-menu-slider{
+    .slick-arrow{
+        border-bottom: 5px solid $gray;
+        border-left: 5px solid $gray;
+        opacity: 0.5;
+        z-index: 10;
+    }
+    .slick-prev{
+        transform: rotate(45deg);
+        top: 225px;
+        left: 440px;
+    }
+    .slick-next{
+        top: 225px;
+        right: 26px;
+    }
+}
