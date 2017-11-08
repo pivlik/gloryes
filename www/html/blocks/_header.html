@@ -358,13 +358,40 @@
             </li>
         </ul>
     </div>
-    <div class="b-header__city">
+    <div class="b-header__city b-header__city-hide">
         <div class="b-header__city-name">
             <p>Ваш город — Москва?</p>
             <div class="b-header__city-btn-wrap">
-                <button type="submit" class="b-header__city-btn">да, верно!</button>
-                <button type="submit" class="b-header__city-btn b-header__city-btn_color-lemon">нет, изментить город</button>
+                <button type="submit" class="b-header__city-btn b-header__city-choice-close">да, верно!</button>
+                <button type="submit" class="b-header__city-btn b-header__city-btn_color-lemon b-header__city-show">нет, изментить город</button>
             </div>
         </div>
+    </div>
+    <div class="b-header__city-choice b-header__city-hide">
+        <div class="b-header__city-choice-cross b-header__city-choice-close">
+            <svg class="b-icon__cross ">
+                <use xlink:href="#cross"></use>
+            </svg>
+        </div>
+        <div class="b-header__city-choice-title">Выберите ваш город</div>
+        <div class="b-header__city-choice-search-input">
+            <input type="search" placeholder="Введите название вашего города" /> </div>
+        <ul class="b-header__city-choice-ul">
+            <li class="b-header__city-choice-ul-li">
+                <a href="" class="b-header__city-choice-ul-li-a">Москва</a>
+            </li>
+            <li class="b-header__city-choice-ul-li">
+                <a href="" class="b-header__city-choice-ul-li-a">Санкт-Петербург</a>
+            </li>
+            <li class="b-header__city-choice-ul-li">
+                <a href="" class="b-header__city-choice-ul-li-a">Новосибирск</a>
+            </li>
+            <li class="b-header__city-choice-ul-li">
+                <a href="" class="b-header__city-choice-ul-li-a">Нижний Новгород</a>
+            </li>
+            <li class="b-header__city-choice-ul-li">
+                <a href="" class="b-header__city-choice-ul-li-a">Екатеринбург</a>
+            </li>
+        </ul>
     </div>
 </header>

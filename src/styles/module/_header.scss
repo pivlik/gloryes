@@ -737,3 +737,51 @@
   height: 34px;
   margin-left: 7px;
 }
+.b-header__city-btn{
+  cursor: pointer;
+}
+.b-header__city-choice{
+  position: absolute;
+  width: 691px;
+  height: 183px;
+  background-color: $white;
+  border: 1px solid rgba($light-gray, 0.2);
+  z-index: 10;
+  left: 370px;
+  top: 115px;
+  padding: 34px;
+}
+.b-header__city-choice-title {
+  width: 100%;
+  font-size: 18px;
+}
+.b-header__city-choice-search-input{
+  margin: 15px 0;
+  input{
+    width: 100%;
+    padding: 18px;
+    border: 1px solid $light-gray;
+  }
+}
+.b-header__city-choice-ul{
+  display: flex;
+  justify-content: space-between;
+}
+.b-header__city-choice-ul-li-a{
+  color: $gray;
+  font-weight: 600;
+  border-bottom: 1px solid;
+}
+.b-header__city-choice-cross{
+  .b-icon__cross{
+    position: absolute;
+    left: 650px;
+    top: 20px;
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+  }
+}
+.b-header__city-choice{
+  display: none;
+}

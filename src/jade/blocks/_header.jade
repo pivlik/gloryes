@@ -237,12 +237,30 @@ header.b-header
                 a(href='') аксессуары
             li.b-header__site-sections_navigations-items
                 a(href='') стиральный порошок
-    .b-header__city
+    .b-header__city.b-header__city-hide
         .b-header__city-name
             p Ваш город - Москва?
             .b-header__city-btn-wrap
-                button.b-header__city-btn(type='submit') да, верно!
-                button.b-header__city-btn.b-header__city-btn_color-lemon(type='submit') нет, изментить город
+                button.b-header__city-btn.b-header__city-choice-close(type='submit') да, верно!
+                button.b-header__city-btn.b-header__city-btn_color-lemon.b-header__city-show(type='submit') нет, изментить город
+    .b-header__city-choice.b-header__city-hide
+        .b-header__city-choice-cross.b-header__city-choice-close
+            +svg('cross')
+        .b-header__city-choice-title Выберите ваш город
+        .b-header__city-choice-search-input
+            input(type='search' placeholder='Введите название вашего города')
+        ul.b-header__city-choice-ul
+            li.b-header__city-choice-ul-li
+                a(href='').b-header__city-choice-ul-li-a Москва
+            li.b-header__city-choice-ul-li
+                a(href='').b-header__city-choice-ul-li-a Санкт-Петербург
+            li.b-header__city-choice-ul-li
+                a(href='').b-header__city-choice-ul-li-a Новосибирск
+            li.b-header__city-choice-ul-li
+                a(href='').b-header__city-choice-ul-li-a Нижний Новгород
+            li.b-header__city-choice-ul-li
+                a(href='').b-header__city-choice-ul-li-a Екатеринбург
+
 
 
 

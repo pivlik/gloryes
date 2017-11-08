@@ -398,14 +398,41 @@
                         </li>
                     </ul>
                 </div>
-                <div class="b-header__city">
+                <div class="b-header__city b-header__city-hide">
                     <div class="b-header__city-name">
                         <p>Ваш город — Москва?</p>
                         <div class="b-header__city-btn-wrap">
-                            <button type="submit" class="b-header__city-btn">да, верно!</button>
-                            <button type="submit" class="b-header__city-btn b-header__city-btn_color-lemon">нет, изментить город</button>
+                            <button type="submit" class="b-header__city-btn b-header__city-choice-close">да, верно!</button>
+                            <button type="submit" class="b-header__city-btn b-header__city-btn_color-lemon b-header__city-show">нет, изментить город</button>
                         </div>
                     </div>
+                </div>
+                <div class="b-header__city-choice b-header__city-hide">
+                    <div class="b-header__city-choice-cross b-header__city-choice-close">
+                        <svg class="b-icon__cross ">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </div>
+                    <div class="b-header__city-choice-title">Выберите ваш город</div>
+                    <div class="b-header__city-choice-search-input">
+                        <input type="search" placeholder="Введите название вашего города"> </div>
+                    <ul class="b-header__city-choice-ul">
+                        <li class="b-header__city-choice-ul-li">
+                            <a href="" class="b-header__city-choice-ul-li-a">Москва</a>
+                        </li>
+                        <li class="b-header__city-choice-ul-li">
+                            <a href="" class="b-header__city-choice-ul-li-a">Санкт-Петербург</a>
+                        </li>
+                        <li class="b-header__city-choice-ul-li">
+                            <a href="" class="b-header__city-choice-ul-li-a">Новосибирск</a>
+                        </li>
+                        <li class="b-header__city-choice-ul-li">
+                            <a href="" class="b-header__city-choice-ul-li-a">Нижний Новгород</a>
+                        </li>
+                        <li class="b-header__city-choice-ul-li">
+                            <a href="" class="b-header__city-choice-ul-li-a">Екатеринбург</a>
+                        </li>
+                    </ul>
                 </div>
             </header>
             <main class="l-main">
@@ -896,7 +923,7 @@
                 </ul>
             </div>
         </div>
-        <svg class="b-icons__svg" xmlns="http://www.w3.org/2000/svg">
+        <svg class="b-icons__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <symbol id="SVGs-01" viewBox="0 0 243.3 177" xmlns="http://www.w3.org/2000/svg">
                 <path class="st0" d="M47.7 127.9s.7-10.1-.4-13c-.6-1.6-8-1.8-8.6 1.3-.5 3.1-1.3 39.9-1 48.5.3 8.6-.9 10.9 2.9 11.1 3.8.1 6 .5 6.4-2.9.5-3.6.7-45 .7-45z" />
                 <path class="st1" d="M233.8 143c0 1.4.6 3.7 3.7 4.1 4.2.6 6.5-.3 5.7-5.6-.7-5.2-4.5-16.4-17.5-15.2-12.9 1.2-15.8 13.1-11.7 22.3 4.1 9.3 16.4 9.2 17.6 14 1.3 4.8-2.7 5.6-5.1 5.4-3.3-.3-4.4-2.4-4.7-5.1-.3-2.7-.2-4.7-3.9-4.5-3.7.3-7.7-.5-3.7 10.2 4 10.8 21.1 9.4 24.9 4 3.8-5.4 4.1-14.5-.8-18.7-4.4-3.7-14.3-4.9-15.4-9.2-1.1-4.3 0-10.2 6-9 5.1 1.1 4.9 4.6 4.9 7.3z"
@@ -1030,6 +1057,10 @@
             </symbol>
             <symbol id="SVGs-46" viewBox="0 0 78.7 72.2" xmlns="http://www.w3.org/2000/svg">
                 <path class="st7" d="M0 35.1l12.6-13.8c3.7-4 6.4-7.3 6.4-11.4 0-4.6-2.8-7.7-8.1-7.7-4.6 0-7.6 2.9-8.1 8H.3C.8 4.1 5 0 11 0c7.1 0 10.6 4.6 10.6 9.5 0 5-3.3 8.8-7.3 13.2L2.8 35.1h19.5v2.2H0v-2.2zm25.4-10.7v-2.1h17.1v2.1H25.4zM46.1 9.1c.5-4.3 4-9.1 10.7-9.1 6.3 0 10.3 4 10.3 9.2 0 4.1-3.3 7.3-7.3 8.2v.1c4.4.7 8.6 4 8.6 9.9 0 5.8-3.9 11-11.7 11-6.9 0-10.7-4.2-11.7-9.9h2.7c1 4.9 4.1 7.6 9.3 7.6 5.9 0 9-4.1 9-8.8 0-4.5-3-8.5-10.3-8.5h-2.1v-2.2H55c5.4 0 9.6-2.8 9.6-7.2 0-4.1-2.5-7.2-7.9-7.2S49 5.7 48.5 9h-2.4zM77.7 38.1v-3.8c-.4.6-1.2.9-2 .9-1.7 0-2.6-.8-2.6-2.8v-2.5h1v2.6c0 1.4.7 1.8 1.8 1.8s1.8-.6 1.8-1.9v-2.5h1v8.2h-1zM15.7 49.9h1.8c1.7 0 2.7.8 2.7 2.1 0 .9-.6 1.5-1.3 1.7 1.3.1 1.9 1 1.9 2.1 0 1.5-1.2 2.3-2.7 2.3h-2.4v-8.2zm1.8.9h-.8v2.6h.9c1 0 1.6-.5 1.6-1.3-.1-.9-.8-1.3-1.7-1.3zm.4 3.5h-1.3v2.9H18c1.1 0 1.6-.6 1.6-1.4.1-.9-.5-1.5-1.7-1.5zm4.2-4.4h2.4c1.8 0 3 .8 3 2.5 0 1.6-.9 2.5-3.1 2.5h-1.3V58h-1v-8.1zm2.5.9h-1.5v3.3h1.4c1.5 0 1.9-.7 1.9-1.6.1-1-.5-1.7-1.8-1.7zm8.5 0h-3.5v2.6H33v.9h-3.4v2.9h3.6v.9h-4.6v-8.2h4.5v.9zm10.2 7.3h-1l-.5-4.8c-.1-.6-.1-1.6-.2-2.2-.2.6-.5 1.5-.7 2.2l-1.6 4.8h-.9l-1.6-4.9c-.2-.6-.5-1.4-.7-2.1 0 .7-.1 1.4-.2 2l-.5 4.9h-1l.9-8.2h1.2l1.8 5.3c.1.4.3 1.1.4 1.5.1-.4.3-1.1.5-1.5l1.8-5.3h1.2l1.1 8.3zm3.2-3.5c-1-.2-1.9-1.1-1.9-2.3 0-1.1.7-2.4 2.8-2.4h2.4v8.2h-1v-3.4h-1.1l-2.5 3.4H44l2.5-3.5zm.8-.8h1.5v-2.9h-1.5c-1.1 0-1.6.5-1.6 1.5 0 .7.5 1.4 1.6 1.4zM4.9 69.2h.2c.6 0 1.5-.5 1.6-2.6l.3-4.7h5.2v7.3h1v3h-1v-2.1H5.9v2.1h-1v-3zm6.3-6.4H7.9l-.3 3.8c-.1 1.2-.4 2.1-.9 2.6h4.4v-6.4zm7.7 0h-3.5v2.6h3.4v.9h-3.4v2.9H19v.9h-4.6v-8.2h4.5v.9zm2.8-.9v6.6c.3-.5.8-1.3 1.7-2.7l2.6-3.9h1v8.2h-1V63.5c-.3.5-.6 1-1.7 2.7l-2.6 3.9h-.9v-8.2h.9zm4-2.4c0 .9-.8 1.6-1.9 1.6-1.2 0-1.8-.7-1.9-1.6h.8c0 .5.4.8 1.1.8.7 0 1.1-.4 1.1-.8h.8zM36.3 64h-1.1c-.4-.8-1.3-1.5-2.6-1.5-1.6 0-3.2 1.2-3.2 3.5 0 2 1.3 3.5 3.2 3.5 1.3 0 2.3-.7 2.7-1.6h1.1c-.7 1.5-1.9 2.5-3.9 2.5-2.5 0-4.2-1.9-4.2-4.4 0-2.5 1.8-4.3 4.2-4.3 2.3-.1 3.3 1.3 3.8 2.3zm2.9-1.2h-2.1v-.9h5.3v.9h-2.1v7.3h-1v-7.3zm4.2-.9h1.8c1.7 0 2.7.8 2.7 2.1 0 .9-.6 1.5-1.3 1.7 1.3.1 1.9 1 1.9 2.1 0 1.5-1.2 2.3-2.7 2.3h-2.4v-8.2zm1.8.9h-.8v2.6h.9c1 0 1.6-.5 1.6-1.3 0-.9-.7-1.3-1.7-1.3zm.5 3.5h-1.3v2.9h1.4c1.1 0 1.6-.6 1.6-1.4.1-.9-.6-1.5-1.7-1.5zm5.2-4.4v6.6c.3-.5.8-1.3 1.7-2.7l2.6-3.9h.9v8.2h-1V63.5c-.3.5-.6 1-1.7 2.7l-2.6 3.9h-.9v-8.2h1zm8.8 4.7c-1-.2-1.9-1.1-1.9-2.3 0-1.1.7-2.4 2.8-2.4H63v8.2h-1v-3.4h-1.1l-2.5 3.4h-1.3l2.6-3.5zm.8-.8H62v-2.9h-1.5c-1.1 0-1.6.5-1.6 1.5-.1.7.5 1.4 1.6 1.4z"
+                />
+            </symbol>
+            <symbol viewBox="0 0 21 21" id="cross" xmlns="http://www.w3.org/2000/svg">
+                <image width="21" height="21" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAA2klEQVQ4T73VPQrCMBQH8P9bJYvgFfQEvUBwdXHxkG6Cm4Uke04gegOhS3F9EimCafPRSOzY8n685H2UtNZ3ADchxL5pmicKH2vtou/7E4A1GWNaZt4CUEKIXQk8gGcAEkBL3ovZ8FQ8udOWwqG4N1oCxxL5oHPg1Mm+0Bw4BTpjhMbgHDCITsHMfCCi49A20S6ZzDRQvA7AMqefo6jDlVIrIroOYMfMGynlIzZ4/83UL8rPdxqqcnH1U4Gp76OWygnIGZB6s5+bod9GwS1VCsa2W43Nf6Ea/6gXjOVGNlN6RocAAAAASUVORK5CYII="
                 />
             </symbol>
         </svg>

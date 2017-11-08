@@ -170,6 +170,22 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
             $(this).toggleClass("active");
         });
     })('.b-header__site-sections_navigations-items');
+    (function ($HideHeader) {
+        if (!$HideHeader.length) {
+            return;
+        }
+        $($HideHeader).on('click', function () {
+            $('.b-header__city-hide').hide("duration: 100");
+        });
+    })('.b-header__city-choice-close');
+    (function ($ShowHeader) {
+        if (!$ShowHeader.length) {
+            return;
+        }
+        $($ShowHeader).on('click', function () {
+            $('.b-header__city-hide').show("duration: 100");
+        });
+    })('.b-header__city-show');
 
     // // Подключение галерей со сликом
     // (function($gallerysSlick) {
