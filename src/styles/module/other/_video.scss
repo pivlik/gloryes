@@ -1,7 +1,13 @@
 .b-video__catalog-title{
   text-align: center;
-  font-size: 18px;
+  font-size: 12px;
   margin-bottom: 12px;
+  @media #{$medium-up} {
+    font-size: 15px;
+  }
+  @media #{$large-up} {
+    font-size: 18px;
+  }
 }
 .b-video__catalog-element{
   margin-bottom: 30px;
@@ -11,9 +17,15 @@
   padding: 17px;
   text-align: center;
   color: $white;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 700;
   border-radius: 2px;
+  @media #{$medium-up} {
+    font-size: 15px;
+  }
+  @media #{$large-up} {
+    font-size: 17px;
+  }
 }
 .b-video__btn{
   text-align: center;
