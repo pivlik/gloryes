@@ -55,6 +55,14 @@
   float: right;
   position: relative;
   right: 5px;
+  text-align: center;
+  @media #{$medium-up} {
+      float: none;
+  }
+  @media #{$large-up} {
+     float: right;
+    text-align: left;
+  }
 }
 .b-contacts__list-text__margin-left{
   margin-left: 134px;
@@ -63,4 +71,22 @@
 .b-contacts-requisites{
   color: $gray;
   font-size: 12px;
+}
+.b-mobi-hide {
+  display: none;
+  @media #{$large-up} {
+    display: block;
+  }
+}
+.b-contacts__mobi-text {
+  padding-left: 10px;
+  bottom: 20px;
+  position: relative;
+  @media #{$medium-up} {
+    bottom: 0;
+    padding: 0;
+  }
+  @media #{$large-up} {
+    display: none;
+  }
 }
