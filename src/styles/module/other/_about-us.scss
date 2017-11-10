@@ -1,6 +1,11 @@
 .b-about-us__article-text{
   color: $gray;
-  margin-bottom: 32px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  @media #{$medium-up} {
+      font-size: 15px;
+    margin-bottom: 32px;
+  }
 }
 .b-about-us__achievements-title{
   font-size: 17px;
@@ -28,5 +33,17 @@
   ul{
     display: flex;
     justify-content: space-between;
+    li{
+      margin-right: 5px;
+      @media #{$large-up} {
+         margin-right: 0;
+      }
+    }
+  }
+}
+.b-about-us__article-image{
+  margin-bottom: 25px;
+  @media #{$large-up} {
+     margin-bottom: 0;
   }
 }
