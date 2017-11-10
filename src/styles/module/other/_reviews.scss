@@ -8,8 +8,17 @@
 }
 .tabs-li{
   float: left;
-  margin-right: 40px;
+  margin-right: 18px;
   margin-bottom: 30px;
+  font-size: 12px;
+  @media #{$medium-up} {
+    margin-right: 40px;
+    font-size: 14px;
+  }
+  @media #{$large-up} {
+     font-size: 15px;
+
+  }
   a{
     color: $gray;
     display: block;
