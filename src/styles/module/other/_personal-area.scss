@@ -2,6 +2,12 @@
   a{
     width: 100%;
   }
+  margin-right: 8px;
+  font-size: 12px;
+  @media #{$medium-up} {
+      font-size: 15px;
+    margin-right: 30px;
+  }
 }
 .b-personal-area__input{
   ::placeholder {
