@@ -5,3 +5,9 @@
 .b-how-make__text-li{
   margin-bottom: 20px;
 }
+.b-how-make__text{
+  font-size: 12px;
+  @media #{$medium-up} {
+      font-size: 15px;
+  }
+}
