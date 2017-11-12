@@ -1,6 +1,10 @@
 .b-faq__title{
   color: $main-blue;
   margin-bottom: 17px;
+  font-size: 12px;
+  @media #{$medium-up} {
+      font-size: 15px;
+  }
 }
 .b-faq__list{
   list-style-type: decimal !important;
@@ -8,6 +12,10 @@
   line-height: 27px;
   position: relative;
   margin-bottom: 30px;
+  font-size: 12px;
+  @media #{$medium-up} {
+    font-size: 15px;
+  }
   li {
     &:after {
       content: "";

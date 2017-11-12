@@ -1,6 +1,10 @@
 .b-delivery__text{
   margin-bottom: 35px;
   position: relative;
+  font-size: 12px;
+  @media #{$medium-up} {
+      font-size: 15px;
+  }
 }
 .b-delivery__tab-main-title, .b-delivery__tab-kz-title, .b-delivery__tab-world-title{
   text-transform: uppercase;
@@ -27,13 +31,20 @@
 .b-delivery__tab-kz-title{
   position: relative;
   &:after {
-    left: 359px;
+    left: 257px;
+    @media #{$medium-up} {
+      left: 325px;
+    }
+    @media #{$large-up} {
+      left: 359px;
+    }
+
   }
 }
 .b-delivery__tab-world-title{
   position: relative;
   &:after {
-    left: 82px;
+    left: 68px;
   }
 }
 .b-delivery__tab-msk-title, .b-delivery__tab-spb-title, .b-delivery__tab-rus-title{
