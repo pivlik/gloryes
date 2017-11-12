@@ -6,4 +6,8 @@
 .b-business-text-p{
   margin-bottom: 35px;
   color: $gray;
+  font-size: 12px;
+  @media #{$medium-up} {
+      font-size: 15px;
+  }
 }

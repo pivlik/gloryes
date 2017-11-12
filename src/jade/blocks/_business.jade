@@ -9,7 +9,7 @@ form(action='').b-business.col-lg-push-4.col-md-push-1.col-push-2
             li.b-ordering__nav-line-list-item
                 a(href='').b-ordering__nav-line-list-item-link Бизнес с нами
     .b-ordering__title.b-ordering__title__align-left.col-32 бизнес с нами
-    .b-business__text.col-23
+    .b-business__text.col-lg-23.col-32
         p.b-business-text-p Если вы хотите, чтобы продукты GlorYes! продавались в вашем магазине, то напишите в форму ниже
             |или на почту <a href='' class="b-contacts__list-link">gloryes.ru@gmail.com</a>, и мы вышлем вам все условия
             |для сотрудничества. С нами работает более 400 оптовых партнеров по всей России и за границей!
@@ -34,40 +34,41 @@ form(action='').b-business.col-lg-push-4.col-md-push-1.col-push-2
             |Возможность <b>бесплатной доставки</b>
     .b-ordering__buyer.col-lg-10.col-md-26.col-34
         .b-ordering__buyer-form
-            input(type='text' name='name' placeholder='имя').b-ordering__buyer-form-name.col-lg-10.col-md-12.col-34
-            input(type='email' name='mail' placeholder='Email').b-ordering__buyer-form-mail.col-lg-10.col-md-12.col-34
-            input(type='tel' name='phone' placeholder='телефон').b-ordering__buyer-form-tel.col-lg-10.col-md-12.col-34.b-contacts__form-shadow_none
+            input(type='text' name='name' placeholder='имя').b-ordering__buyer-form-name.col-lg-10.col-32
+            input(type='email' name='mail' placeholder='Email').b-ordering__buyer-form-mail.col-lg-10.col-32
+            input(type='tel' name='phone' placeholder='телефон').b-ordering__buyer-form-tel.col-lg-10.col-32.b-contacts__form-shadow_none
             .b-ordering__delivery-checkbox-wrapper.b-ordering__delivery-wrapper_blue.col-lg-15.col-md-15.col-25
                 input(checked='' type='checkbox' name='courier')#checkbox-agreement.b-ordering__delivery-checkbox.b-ordering__delivery-checkbox_blue.b-contacts__checkbox-input
                 label(for='checkbox-agreement') связаться по Email
             .b-ordering__delivery-checkbox-wrapper.col-lg-15.col-md-25.col-30
                 input(type='checkbox' name='courier')#checkbox-bank.b-ordering__delivery-checkbox.b-contacts__checkbox-input
                 label.b-contacts__checkbox-label(for='checkbox-bank') связаться по телефону
-            input(type='text' name='theme' placeholder='тема').b-ordering__buyer-form-last-name.col-lg-10.col-md-12.col-34.b-contacts__form-shadow_none
-            textarea(rows="7" cols="45" name="comment" placeholder='сообщение').b-ordering__buyer-form-comment.col-lg-10.col-md-25.col-34
-            button(type='submit').b-ordering__confirm.row.col-md-post-25.col-lg-4.col-md-10.col-30.b-contacts__form-btn
+            input(type='text' name='theme' placeholder='тема').b-ordering__buyer-form-last-name.col-lg-10.col-32.b-contacts__form-shadow_none
+            textarea(rows="7" cols="45" name="comment" placeholder='сообщение').b-ordering__buyer-form-comment.col-lg-10.col-32
+            button(type='submit').b-ordering__confirm.row.col-md-post-25.col-lg-4.col-md-10.col-32.b-contacts__form-btn
                 | Отправить
-    ul.b-contacts__list.col-push-2.col-11.col-post-8
+    ul.b-contacts__list.col-lg-push-2.col-lg-11.col-lg-post-8.col-33
         li
             a(href='').b-contacts__list-link
                 +svg('SVGs-02').b-contacts__list-icon
-            .b-contacts__list-text.col-3 ТЕЛЕФОН:
-            a(href='').b-contacts__list-link 8(800)333-90-32
+            .b-contacts__list-text.col-lg-3 ТЕЛЕФОН:
+            a(href='').b-contacts__list-link.col-lg-push-0.col-push-1 8(800)333-90-32
         li
             a(href='').b-contacts__list-link
                 +svg('SVGs-03').b-contacts__list-icon
-            .b-contacts__list-text.col-3  EMAIL:
+            .b-contacts__list-text.col-lg-3.col-15.col-md-post-15 EMAIL:
             .b-contacts__list-text-wrap
                 a(href='').b-contacts__list-link info@gloryes.ru
                 p по вопросам о заказах и продукции
                 a(href='').b-contacts__list-link gloryes.ru@gmail.com
                 p по вопросам оптовых продаж
-        li.col-15
+        li.col-lg-15
             a(href='').b-contacts__list-link
                 +svg('SVGs-04').b-contacts__list-icon
-            .b-contacts__list-text.col-3 АДРЕС:
-            | г. Санкт-Петербург, 4-й Предпорто- <span class="b-contacts__list-text__margin-left">вый пер., 5, литер Л</span>
-    p.b-contacts-requisites.col-push-1.col-12 Интернет-магазин многоразовой продукции GlorYes! Юридический адрес:
+            .b-contacts__list-text.col-lg-3.b-mobi-hide АДРЕС:
+            | <span class='b-mobi-hide'>г. Санкт-Петербург, 4-й Предпорто- <span class="b-contacts__list-text__margin-left">вый пер., 5, литер Л</span></span>
+            .b-contacts__mobi-text.col-push-1 АДРЕС: г. Санкт-Петербург, 4-й Предпортовый пер., 5, литер Л</span>
+    p.b-contacts-requisites.col-push-1.col-lg-12.col-33 Интернет-магазин многоразовой продукции GlorYes! Юридический адрес:
         | г. Санкт-Петербург, пр. Дунайский, 7, корп. 7. Склад в Санкт-Петербурге: г. Санкт-Петербург, пр. 4ый Предпортовый,
         | дом 5, лит. Л, 1 <br>Адрес самовывоза в Москве: г. Москва,Лучников пер., д.4, стр.2 ИНН 861903901400, ОГРН
         | 311861927300032, ИП Жибарюк Ульяна Валентиновна, РС 40802810729260000731, КС 30101810300000000811 в банке ЗАО
