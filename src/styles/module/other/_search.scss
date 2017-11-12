@@ -11,3 +11,13 @@
 .b-search__article{
   margin-bottom: 30px;
 }
+.align-center{
+  margin-left: 3px !important;
+  @media #{$medium-up} {
+    margin-left: 15px !important;
+  }
+  @media #{$large-up} {
+     margin-left: 39px !important;
+  }
+
+}
