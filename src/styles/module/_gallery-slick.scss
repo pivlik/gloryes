@@ -156,16 +156,25 @@
     display: flex;
     justify-content: center;
     position: relative;
-    bottom: 80px;
+    bottom: 60px;
+    @media #{$large-up} {
+        bottom: 80px;
+    }
     button {
         font-size: 0;
-        height: 12px;
-        width: 12px;
         background-color: $white;
-        margin: 20px;
-        border-radius: 6px;
+        margin: 3px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
         opacity: 0.78;
         border: none;
+        @media #{$large-up} {
+            height: 12px;
+            width: 12px;
+            border-radius: 6px;
+            margin: 20px;
+        }
         &:focus{
             outline: none;
         }
@@ -183,22 +192,27 @@
 
 // стрелки
 .slick-arrow{
-    position: absolute;
-    font-size: 0;
-    border: 0;
+    display: none !important;
+    width: 0;
+    height: 0;
     content: '';
-    display: block;
-    width: 31px;
-    height: 31px;
-    cursor: pointer;
-    background-color: transparent;
-    border-bottom: 5px solid $white;
-    border-left: 5px solid $white;
-    transform: rotate(-130deg);
-    z-index: 4;
-    opacity: 0.7;
-    &:focus{
-        outline: none;
+    @media #{$large-up} {
+        position: absolute;
+        font-size: 0;
+        border: 0;
+        content: '';
+        display: block !important;
+        width: 31px;
+        height: 31px;
+        cursor: pointer;
+        background-color: transparent;
+        border-bottom: 5px solid $white;
+        border-left: 5px solid $white;
+        z-index: 4;
+        opacity: 0.7;
+        &:focus{
+            outline: none;
+        }
     }
 }
 .slick-prev{
@@ -207,6 +221,7 @@
     left: 31px;
 }
 .slick-next{
+    transform: rotate(-130deg);
     bottom: 312px;
     right: 31px;
 }
