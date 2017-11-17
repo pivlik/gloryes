@@ -34,7 +34,13 @@
     font-size: 15px;
   }
 }
-
+.b-header__navigation-main{
+  background-color: $main-blue;
+  display: none;
+  @media #{$medium-up} {
+      display: block;
+  }
+}
 .b-header__navigation {
   background-color: $white;
   padding-top: 21px;
@@ -43,7 +49,7 @@
   overflow: hidden;
   margin-bottom: 14px;
   transition: width .2s ease-in-out;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   &.active {
@@ -799,12 +805,11 @@
 .b-hamburger__wrap{
   margin-top: 50px;
   padding: 18px 45px;
-  padding-right: 5px;
+  padding-right: 0;
 }
 .b-hamburger__title{
   background-color: $main-blue;
   color: $white;
-  width: 100%;
   height: 47px;
   padding-top: 12px;
   padding-left: 25px;
@@ -812,4 +817,38 @@
   font-weight: 700;
   position: relative;
   right: 25px;
+}
+.b-hamburger__drop-menu{
+  color: $gray;
+}
+.b-hamburger__drop-menu-title{
+  font-size: 12px;
+  height: 45px;
+  background-color: #f4f4f4;
+  position: relative;
+  right: 25px;
+  padding-top: 12px;
+  padding-left: 25px;
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 7px;
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent $main-blue;
+    transform: rotate(90deg);
+    left: 240px;
+    bottom: 15px;
+  }
+  &.active{
+    &:after{
+      transform: rotate(270deg);
+    }
+  }
+}
+.b-hamburger__drop-menu-title-list{
+  display: none;
 }
