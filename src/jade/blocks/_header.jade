@@ -5,7 +5,18 @@ header.b-header
             +svg('SVGs-06')
         .b-header__delivery-description
             | БЕСПЛАТНАЯ ДОСТАВКА заказов со стиральным ЭКОпорошком ИЛИ заказов от 4000 руб.
-    nav.b-header__navigation.j-navigation.row
+
+    //Мобильное меню..........................
+    .j-navigation.b-header__navigation.b_mobi-show
+        .b-hamburger__wrap
+            a(href='').b-hamburger-link Вход / Регистрация
+            .b-hamburger__title КАТАЛОГ ТОВАРОВ
+
+
+
+
+
+    nav.b-header__navigation.row
         ul.b-header__menu.col-lg-push-4.col-lg-11.col-md-push-1.col-md-16
             li
                 a(href='').b-header__menu-item отзывы
