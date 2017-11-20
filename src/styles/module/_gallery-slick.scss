@@ -192,27 +192,23 @@
 
 // стрелки
 .slick-arrow{
-    display: none !important;
     width: 0;
     height: 0;
     content: '';
-    @media #{$large-up} {
-        position: absolute;
-        font-size: 0;
-        border: 0;
-        content: '';
-        display: block !important;
-        width: 31px;
-        height: 31px;
-        cursor: pointer;
-        background-color: transparent;
-        border-bottom: 5px solid $white;
-        border-left: 5px solid $white;
-        z-index: 4;
-        opacity: 0.7;
-        &:focus{
-            outline: none;
-        }
+    position: absolute;
+    font-size: 0;
+    border: 0;
+    content: '';
+    width: 31px;
+    height: 31px;
+    cursor: pointer;
+    background-color: transparent;
+    border-bottom: 5px solid $white;
+    border-left: 5px solid $white;
+    z-index: 4;
+    opacity: 0.7;
+    &:focus{
+        outline: none;
     }
 }
 .slick-prev{
@@ -226,6 +222,11 @@
     right: 31px;
 }
 .b-index__recommendation-slider{
+    .slick-active {
+        button {
+            background-color: $main-blue !important;
+        }
+    }
     .slick-arrow{
         border-bottom: 5px solid $gray;
         border-left: 5px solid $gray;
@@ -242,11 +243,19 @@
     }
     .slick-dots{
         button{
-            display: none;
+            background-color: $light-gray;
+            margin-top: 62px;
         }
     }
+
 }
+
 .b-index__partners-slider{
+    .slick-active {
+        button {
+            background-color: $main-blue !important;
+        }
+    }
     .slick-arrow{
         border-bottom: 5px solid $gray;
         border-left: 5px solid $gray;
@@ -255,12 +264,30 @@
     .slick-prev{
         transform: rotate(45deg);
         top: 45px;
-        left: -70px;
+        @media #{$medium-up} {
+            left: -50px;
+        }
+        @media #{$large-up} {
+            left: -70px;
+        }
     }
     .slick-next{
-        bottom: 35px;
-        right: -36px;
+       @media #{$medium-up} {
+            right: -16px;
+            bottom: 40px;
+        }
+        @media #{$large-up} {
+            right: -36px;
+            bottom: 35px;
+        }
     }
+    .slick-dots{
+        button{
+            background-color: $light-gray;
+            margin-top: 92px;
+        }
+    }
+
 }
 .b-product__info-images{
     .j-nav-little-slick{

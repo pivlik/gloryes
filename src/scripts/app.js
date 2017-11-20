@@ -23,8 +23,14 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
             autoplay: true,
             autoplaySpeed: 2000,
             dots: true,
-            arrows: true
-        });
+            arrows: true,
+            responsive: [
+                {
+            breakpoint: 1024,
+            settings: {
+                arrows: false
+            }
+        }]});
     })('.j-slick');
     (function ($partners) {
         // ТУТ МЫ ИНИЦИАЛИЗИРУЕМ ПЕРЕ
@@ -37,8 +43,25 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
             arrows: true,
             infinite: true,
             slidesToShow: 6,
-            slidesToScroll: 2
-        });
+            slidesToScroll: 2,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1
+                    }
+                },
+                ]});
     })('.j-slick-partners');
 
     (function ($NavSlick) {

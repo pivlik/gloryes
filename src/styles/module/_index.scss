@@ -80,6 +80,7 @@
 .b-index__recommendation-link_left-mobi{
   color: $main-blue;
   font-size: 15px;
+  font-weight: 700;
   @media #{$medium-up} {
       display: none;
   }
@@ -453,5 +454,9 @@
   }
 }
 .b-index__partners-image{
-  margin-right: 50px;
+  margin-right: 10px;
+  @media #{$medium-up} {
+    margin-right: 50px;
+  }
+
 }
