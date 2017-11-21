@@ -133,9 +133,7 @@
     }
 }
 .b-product__dellvery_tablet{
-  display: block;
-  position: relative;
-  right: 60px;
+  margin-top: 29px;
   @media #{$large-up} {
      display: none;
   }
@@ -149,6 +147,11 @@
 .b-product__info-text-links-ul{
   display: flex;
   justify-content: space-between;
+  bottom: 40px;
+  position: relative;
+  @media #{$large-up} {
+    bottom: 0;
+  }
 }
 .b-product__info-text-links-ul-li-link{
   color: $main-blue;
