@@ -158,23 +158,17 @@
     position: relative;
     bottom: 60px;
     @media #{$large-up} {
-        bottom: 80px;
+        bottom: 70px;
     }
     button {
         font-size: 0;
         background-color: $white;
         margin: 3px;
-        width: 10px;
-        height: 10px;
+        width: 12px;
+        height: 12px;
         border-radius: 50%;
         opacity: 0.78;
         border: none;
-        @media #{$large-up} {
-            height: 12px;
-            width: 12px;
-            border-radius: 6px;
-            margin: 20px;
-        }
         &:focus{
             outline: none;
         }
