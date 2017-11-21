@@ -418,33 +418,30 @@
   font-size: 17px;
 }
 .b-index__top-slider-item-title{
-  position: absolute;
   z-index: 3;
   color: $white;
-  width: 130px;
-  height: 62px;
   text-align: center;
-  font-size: 14px;
-  line-height: 15px;
+  font-size: 16px;
+  line-height: 19px;
   font-weight: 600;
-  left: 173px;
-  top: 26px;
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 6%;
+  width: 160px;
+  height: 62px;
   @media #{$medium-up} {
       font-size: 28px;
     width: 291px;
     height: 92px;
     line-height: 34px;
-    left: 436px;
-    top: 40px;
   }
   @media #{$large-up} {
     font-size: 38px;
     width: 346px;
     height: 111px;
     line-height: 41.5px;
-    top: 100px;
-    left: 750px;
     font-weight: 900;
+    margin-left: 54%;
   }
 }
 .b-index__partners-slider{
