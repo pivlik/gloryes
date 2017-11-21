@@ -203,8 +203,8 @@
     height: 31px;
     cursor: pointer;
     background-color: transparent;
-    border-bottom: 5px solid $white;
-    border-left: 5px solid $white;
+    border-bottom: 4px solid $white;
+    border-left: 4px solid $white;
     z-index: 4;
     opacity: 0.7;
     &:focus{
@@ -228,8 +228,8 @@
         }
     }
     .slick-arrow{
-        border-bottom: 5px solid $gray;
-        border-left: 5px solid $gray;
+        border-bottom: 4px solid $gray;
+        border-left: 4px solid $gray;
         opacity: 0.5;
     }
     .slick-prev{
@@ -260,8 +260,8 @@
         }
     }
     .slick-arrow{
-        border-bottom: 5px solid $gray;
-        border-left: 5px solid $gray;
+        border-bottom: 4px solid $gray;
+        border-left: 4px solid $gray;
         opacity: 0.5;
     }
     .slick-prev{
@@ -305,8 +305,8 @@
 
 .b-header__drop-menu-slider{
     .slick-arrow{
-        border-bottom: 5px solid $gray;
-        border-left: 5px solid $gray;
+        border-bottom: 4px solid $gray;
+        border-left: 4px solid $gray;
         opacity: 0.5;
         z-index: 10;
     }

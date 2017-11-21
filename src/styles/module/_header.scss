@@ -4,8 +4,8 @@
 }
 
 .b-header__dellvery {
-  padding-top: 15px;
-  padding-bottom: 14px;
+  padding-top: 9px;
+  padding-bottom: 5px;
   justify-content: center;
   flex-flow: row nowrap;
   display: none;
@@ -39,6 +39,9 @@
   display: none;
   @media #{$medium-up} {
       display: block;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 11px;
   }
 }
 .b-header__navigation {
@@ -105,7 +108,7 @@
 }
 
 .b-header__promo-title {
-  color: $gray;
+  color: #576572;
   text-align: center;
   @media #{$medium-up} {
     font-size: 13px;
@@ -119,7 +122,7 @@
   .b-icon__SVGs-07 {
     width: 12px;
     height: 11px;
-    fill: $gray;
+    fill: #576572;
     margin-right: 7px;
   }
 }
@@ -163,7 +166,9 @@
   }
 }
 .b-header__login-enter{
+  font-size: 12px;
   @media #{$large-up} {
+    font-size: 15px;
     &:after{
       content: '/';
     }
@@ -177,6 +182,7 @@
   margin: 0;
   @media #{$large-up} {
      display: inline-block;
+    font-size: 15px;
   }
 }
 .b-header__main-info {
@@ -291,6 +297,8 @@
     color: $gray;
     font-size: 12px;
     font-weight: 400;
+    bottom: 7px;
+    position: relative;
 
     @media #{$medium-up} {
       font-size: 12px;
@@ -448,7 +456,7 @@
 }
 
 .b-header__main-info_ordering_menu-item1 {
-  color: $gray;
+  color: #576572;
   font-size: 15px;
   font-weight: 400;
   display: none;
@@ -493,7 +501,7 @@
     float: left;
     width: 24px;
     height: 19px;
-    fill: $gray;
+    fill: #576572;
     margin-top: 4px;
   }
 }
@@ -716,7 +724,7 @@
     width: 366px;
     height: 145px;
     background-color: $white;
-    border: 1px solid rgba($light-gray, 0.2);
+    box-shadow: 0 4px 2px rgba($light-gray ,0.5);
     z-index: 10;
     left: 70px;
     top: 115px;
@@ -755,7 +763,7 @@
   width: 691px;
   height: 183px;
   background-color: $white;
-  border: 1px solid rgba($light-gray, 0.2);
+  box-shadow: 0 4px 2px rgba($light-gray ,0.5);
   z-index: 10;
   left: 370px;
   top: 115px;
@@ -769,6 +777,8 @@
   margin: 15px 0;
   input{
     width: 100%;
+    font-size: 15px;
+    color: $light-gray;
     padding: 18px;
     border: 1px solid $light-gray;
   }

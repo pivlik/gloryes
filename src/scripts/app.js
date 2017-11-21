@@ -21,7 +21,7 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
         }
         $($mygallery).slick({
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 5500,
             dots: true,
             arrows: true,
             responsive: [
@@ -39,7 +39,7 @@ define('app', ['jquery', 'slick-carousel','magnific-popup' ], function($) {
         }
         $($partners).slick({
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 5500,
             arrows: true,
             infinite: true,
             slidesToShow: 6,
