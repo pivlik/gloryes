@@ -214,7 +214,13 @@
     flex-direction: column;
     align-items: center;
     .b-icon__SVGs-19 {
-      fill: $gray;
+      fill: #576673;
+      width: 67px;
+      height: 49px;
+      @media #{$large-up} {
+        width: 102px;
+        height: 75px;
+      }
     }
   }
 }
@@ -226,11 +232,11 @@
   font-family: $font-b-header__trebuchet;
 }
 .b-footer__logo_text_gray{
-  color: $gray;
+  color: #576673;
 }
 .b-footer__nav-list_element_link_gray{
   .b-icon__SVGs-19{
-    fill: $gray;
+    fill: #576673;
     @media #{$large-up} {
        display: none;
     }
