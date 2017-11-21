@@ -202,31 +202,49 @@
   }
 }
 .b-product__advantages-svg{
+  svg{
+    margin-right: 10px;
+    @media #{$medium-up} {
+        margin-right: 0;
+    }
+  }
   .b-icon__SVGs-40{
     fill: $gray;
     opacity: 0.5;
-    width: 82px;
+    width: 62px;
     height: 63px;
+    @media #{$medium-up} {
+      width: 82px;
+      height: 63px;
+    }
     @media #{$large-up} {
-      width: 108px;
+      width: 98px;
       height: 88px;
     }
   }
   .b-icon__SVGs-41{
     fill: $gray;
     opacity: 0.5;
-    width: 64px;
+    width: 54px;
     height: 78px;
+    @media #{$medium-up} {
+      width: 64px;
+      height: 78px;
+    }
     @media #{$large-up} {
-      width: 84px;
+      width: 74px;
       height: 109px;
     }
   }
   .b-icon__SVGs-42{
     fill: $gray;
     opacity: 0.5;
-    width: 66px;
+    width: 56px;
     height: 65px;
+    @media #{$medium-up} {
+      width: 66px;
+      height: 65px;
+    }
     @media #{$large-up} {
       width: 87px;
       height: 91px;
@@ -235,8 +253,12 @@
   .b-icon__SVGs-43{
     fill: $gray;
     opacity: 0.5;
-    width: 96px;
+    width: 76px;
     height: 79px;
+    @media #{$medium-up} {
+      width: 96px;
+      height: 79px;
+    }
     @media #{$large-up} {
       width: 125px;
       height: 110px;
@@ -265,7 +287,7 @@
   .b-icon__SVGs-46{
     fill: $gray;
     opacity: 0.5;
-    width: 80px;
+    width: 70px;
     height: 76px;
     @media #{$large-up} {
       width: 119px;
