@@ -238,8 +238,11 @@
         left: -69px;
     }
     .slick-next{
-        bottom: 105px;
+        bottom: 146px;
         right: -20px;
+        @media #{$large-up} {
+            bottom: 198px;
+        }
     }
     .slick-dots{
         button{
@@ -317,8 +320,16 @@
         right: 26px;
     }
 }
-.b-header__drop-menu__second-position{
-    .slick-next{
-        right: 16px;
+.b-product__info-images {
+    .slick-dots {
+        bottom: 0;
+        button {
+            background-color: #bfbfbf;
+        }
+        .slick-active {
+            button {
+                background-color: $main-blue !important;
+            }
+        }
     }
 }
