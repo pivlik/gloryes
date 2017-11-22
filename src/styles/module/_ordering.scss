@@ -471,8 +471,35 @@
     margin-bottom: 20px;
     float: left;
     border: 1px solid rgba($gray, .2);
-    color: $gray;
+    color: $light-gray;
   }
+  input::-webkit-input-placeholder{
+    color: $light-gray;
+  }
+  input::-moz-input-placeholder{
+    color: $light-gray;
+  }
+  input::-o-input-placeholder{
+    color: $light-gray;
+  }
+  input::-ms-input-placeholder{
+    color: $light-gray;
+  }
+  textarea::-webkit-input-placeholder {
+    color: $light-gray;
+  }
+  textarea::-moz-input-placeholder {
+    color: $light-gray;
+  }
+  textarea::-o-input-placeholder {
+    color: $light-gray;
+  }
+  textarea::-ms-input-placeholder {
+    color: $light-gray;
+  }
+}
+.b-ordering__buyer-form-last-name{
+  color: $light-gray;
 }
 .b-ordering__buyer-form-last-name,.b-ordering__buyer-form-tel{
   @media #{$medium-up} {
@@ -487,6 +514,8 @@
   padding: 18px;
   font-family: $font;
   border: 1px solid rgba($gray, .2);
+  color: $light-gray;
+  outline: none;
 }
 .b-ordering__buyer{
   margin-bottom: 34px;
@@ -586,6 +615,7 @@
 .b-ordering__pay-system-link{
   color: $main-blue;
   font-size: 12px;
+  margin-bottom: 16px;
 }
 .b-ordering__confirm{
   background-color: $main-blue;
@@ -643,6 +673,9 @@
   label {
   font-size: 12px;
     color: $light-gray;
+    @media #{$large-up} {
+      padding-top: 5px !important;
+    }
   }
 }
 
