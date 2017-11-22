@@ -7,7 +7,7 @@
   margin-bottom: 17px;
 }
 .b-ordering__nav-line-list-item-link{
-  color: $gray;
+  color: $light-gray;
 }
 .b-ordering__nav-line-list-item-link-icon{
   .b-icon__SVGs-21{
@@ -32,8 +32,8 @@
     width: 5px;
     height: 5px;
     background-color: transparent;
-    border-bottom: 1px solid $gray;
-    border-left: 1px solid $gray;
+    border-bottom: 1px solid $light-gray;
+    border-left: 1px solid $light-gray;
     transform: rotate(-130deg);
   }
   &:last-child {
@@ -52,7 +52,11 @@
   }
   @media #{$large-up} {
     font-size: 28px;
+    text-align: left;
   }
+}
+.margin-bottom35px{
+  margin-bottom: 35px !important;
 }
 .b-ordering__title__align-left{
   text-align: left;
@@ -89,6 +93,7 @@
   margin-bottom: 16px;
 }
 .b-ordering__basket-order-col-item{
+  color: $light-gray;
   &:first-child{
     margin-right: auto;
   }
@@ -122,7 +127,7 @@
   padding-top: 12px;
 }
 .b-ordering__basket-order-list-name-second{
-  color: $gray;
+  color: #a7a7a7;
   font-size: 15px;
   @media #{$large-up} {
      font-size: 18px;
@@ -142,7 +147,6 @@
   @media #{$large-up} {
     width: 43px;
     height: 43px;
-    box-shadow: 1px 0 1px rgba($gray, 0.3);
   }
 }
 .b-ordering__basket-order-list-price-value{
@@ -154,6 +158,9 @@
 .b-ordering__basket-order-list-price-value-delete{
   font-size: 12px;
   color: $main-blue;
+  margin-left: 2px;
+  position: relative;
+  bottom: 10px;
 }
 .b-ordering__basket-order-list-hr{
   float: inherit;
@@ -347,7 +354,7 @@
     margin-bottom: 32px;
   }
   @media #{$large-up} {
-    margin-bottom: 56px;
+    margin-bottom: 60px;
   }
 }
 .b-ordering__often-buy-art{
@@ -425,7 +432,7 @@
 }
 .b-ordering__delivery-form-city-text{
   font-size: 12px;
-  color: $gray;
+  color: $light-gray;
 }
 .b-ordering__delivery-title{
   text-transform: uppercase;
@@ -446,8 +453,7 @@
 }
 .b-ordering__delivery-methods-pickup-full-address{
   font-size: 12px;
-  color: $gray;
-  opacity: 0.7;
+  color: $light-gray;
   line-height: 20.83px;
   @media #{$medium-up} {
     margin-bottom: 20px;
@@ -469,7 +475,6 @@
   }
 }
 .b-ordering__buyer-form-last-name,.b-ordering__buyer-form-tel{
-  box-shadow: 1px 0 1px rgba($gray, 0.4);
   @media #{$medium-up} {
     margin-right: 24px;
   }
@@ -496,7 +501,7 @@
 .b-ordering__delivery-checkbox-wrapper{
   bottom: 10px;
   position: relative;
-  margin-bottom: 4px;
+  margin-bottom: 11px;
   font-size: 12px;
   @media #{$large-up} {
      font-size: 18px;
@@ -652,4 +657,11 @@
   @media #{$medium-up} {
     display: block;
   }
+}
+.b-ordering__basket-order-list-icon{
+  img{
+    width: 86px;
+    height: 86px;
+  }
+
 }
