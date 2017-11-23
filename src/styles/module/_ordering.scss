@@ -237,7 +237,7 @@
   color: $white;
   border-radius: 2px;
   text-transform: uppercase;
-  padding: 13px;
+  padding: 16px;
   text-align: center;
   font-size: 13px;
   font-weight: 700;
@@ -256,9 +256,10 @@
   border-radius: 2px;
   font-size: 12px;
   color: $gray;
+  padding-top: 13px;
+  padding-bottom: 13px;
   @media #{$medium-up} {
     padding:  5px 0;
-    font-size: 12px;
   }
   @media #{$large-up} {
     font-size: 15px;
@@ -268,7 +269,6 @@
 }
 .b-ordering__basket-info-item-btn-little-first{
   margin-right: 11px;
-  box-shadow: 1px 0 1px rgba($gray, 0.3);
 
   @media #{$medium-up} {
     margin-right: 1px;
